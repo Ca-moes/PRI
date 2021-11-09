@@ -6,23 +6,25 @@ export const brands = [
   'Motorola',
   'Nokia',
   'OnePlus',
-  'Samsung',
+  'Samsung Electronics',
   'Sony',
   'Xiaomi',
 ]
 
 export const brandKeywords = [
-  { brand: 'Apple', keywords: ['iPhone'] },
+  { brand: 'ASUS', keywords: ['Asus', 'ROG'] },
+  { brand: 'Apple', keywords: ['iPhone', 'iPad'] },
   { brand: 'Google', keywords: ['Pixel'] },
-  { brand: 'HUAWEI', keywords: ['Honor'] },
+  { brand: 'HUAWEI', keywords: ['Huawei', 'Honor'] },
   { brand: 'Motorola', keywords: ['Moto'] },
-  { brand: 'Samsung', keywords: ['Haven'] },
+  { brand: 'Samsung Electronics', keywords: ['Samsung', 'Galaxy', 'Haven'] },
   { brand: 'Sony', keywords: ['Xperia'] },
+  { brand: 'Xiaomi', keywords: ['Redmi', 'Poco']}
 ]
 
 export const categories = 'both'
 
-export const numberOfWorkers = 8
+export const numberOfWorkers = 10
 
 export const useBrowserless = false
 export const browserlessEndpoint = 'wss://chrome.browserless.io'
