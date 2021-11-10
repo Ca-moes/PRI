@@ -1,11 +1,5 @@
 import pandas as pd
-import os
-
-def delete_file(filepath):
-    try:
-        os.remove(filepath)
-    except:
-        print("Error while deleting " + filepath)
+from utils import delete_file
 
 # Tries to delete existing files before creating new ones
 delete_file('../data/items_merged.csv')
