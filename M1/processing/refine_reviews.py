@@ -1,0 +1,36 @@
+from numpy import split
+import pandas as pd
+from utils import delete_file
+
+if __name__ == '__main__':
+    delete_file('../data/reviews_refined.csv')
+
+    reviews = pd.read_csv('../data/reviews_merged.csv')
+
+    print("<==== Initial Info =====>")
+    print(reviews.head())
+    print(reviews.info())
+
+    # Fill NULL cells with default values
+    reviews['name'] = reviews['name'].fillna('Amazon Customer') # only 2
+    reviews['title'] = reviews['title'].fillna('') # 26
+    reviews['body'] = reviews['body'].fillna('') # 40
+    reviews['helpfulVotes'] = reviews['helpfulVotes'].fillna(0)
+
+    # Drop cells that have both title and body empty
+    # print(reviews[(reviews['title'] == '') & (reviews['body'] == '')].index)
+
+    # Split 'date' column into 'country' and 'date' since 2021 reviews contain the review's country
+    reviews[['country', 'date']] = reviews['date'].str.extract('(?:Reviewed in (?:the )?(?P<country>[\s\S]+) on )?(?P<date>[\s\S]+)')
+
+    # U.S. is the great majority in 2021 countries, fill the NULL values from 2019 with 'United States'
+    reviews['country'] = reviews['country'].fillna('United States')
+
+    # Convert date in <Month Day, Year> to <yyyy-mm-dd> format
+    reviews['date'] = pd.to_datetime(reviews['date']) # it takes sometime, improve it
+
+    print("\n<==== Refined Info =====>")
+    print(reviews.head())
+    print(reviews.info())
+
+    reviews.to_csv('../data/reviews_refined.csv', index=False)
