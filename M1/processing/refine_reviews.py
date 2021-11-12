@@ -1,11 +1,7 @@
-from numpy import split
 import pandas as pd
-from utils import delete_file
 
 if __name__ == '__main__':
-    delete_file('../data/reviews_refined.csv')
-
-    reviews = pd.read_csv('../data/reviews_merged.csv')
+    reviews = pd.read_csv('data/reviews_merged.csv')
 
     print("<==== Initial Info =====>")
     print(reviews.head())
@@ -13,12 +9,14 @@ if __name__ == '__main__':
 
     # Fill NULL cells with default values
     reviews['name'] = reviews['name'].fillna('Amazon Customer') # only 2
-    reviews['title'] = reviews['title'].fillna('') # 26
-    reviews['body'] = reviews['body'].fillna('') # 40
+    # reviews['title'] = reviews['title'].fillna('') # 26
+    # reviews['body'] = reviews['body'].fillna('') # 40
     reviews['helpfulVotes'] = reviews['helpfulVotes'].fillna(0)
 
-    # Drop cells that have both title and body empty
-    # print(reviews[(reviews['title'] == '') & (reviews['body'] == '')].index)
+    # Drop rows that have both title and body empty (they also have no helpfulVotes)
+    null_titles = reviews.loc[reviews['title'].isna()] # rows with empty title
+    indexDrop = null_titles.loc[null_titles['body'].isna()].index # rows' index with both empty title and body
+    reviews.drop(indexDrop, inplace=True)
 
     # Split 'date' column into 'country' and 'date' since 2021 reviews contain the review's country
     reviews[['country', 'date']] = reviews['date'].str.extract('(?:Reviewed in (?:the )?(?P<country>[\s\S]+) on )?(?P<date>[\s\S]+)')
@@ -33,4 +31,4 @@ if __name__ == '__main__':
     print(reviews.head())
     print(reviews.info())
 
-    reviews.to_csv('../data/reviews_refined.csv', index=False)
+    reviews.to_csv('data/reviews_refined.csv', index=False)
