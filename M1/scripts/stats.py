@@ -38,6 +38,9 @@ if __name__ == '__main__':
     items = pd.read_csv('data/items_refined.csv')
     reviews = pd.read_csv('data/reviews_refined.csv')
 
+    items['brand'].value_counts()[:20].plot(kind='bar',color='#8c2d19')
+    plt.savefig('stats/items_brand_bargraph.png', bbox_inches='tight')
+
     generate_wordcloud(items, 'items', 'title')
     generate_wordcloud(reviews, 'reviews', 'title')
     generate_wordcloud(reviews, 'reviews', 'body')
