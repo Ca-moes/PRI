@@ -14,6 +14,9 @@ if __name__ == '__main__':
     # 2021 dataset has 'Samsung Electronics' brand instead of just 'Samsung'
     items.loc[items['brand'] == 'Samsung Electronics', ['brand']] = 'Samsung'
 
+    # Capitalize Asus
+    items.loc[items['brand'] == 'ASUS', ['brand']] = 'Asus'
+
     # 2019 dataset didn't process Thousands in prices (only 2 items)
     items.loc[items['price'] == 1, ['price']] = 1000
     items.loc[items['originalPrice'] == 1, ['originalPrice']] = 1000
