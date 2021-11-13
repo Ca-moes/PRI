@@ -32,3 +32,5 @@ if __name__ == '__main__':
     print(reviews.info())
 
     reviews.to_csv('data/reviews_refined.csv', index=False)
+
+    print("\n-> Refined reviews and saved to data/reviews_refined.csv\n")

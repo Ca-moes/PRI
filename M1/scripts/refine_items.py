@@ -26,3 +26,5 @@ if __name__ == '__main__':
     print(items.info())
 
     items.to_csv('data/items_refined.csv', index=False)
+
+    print("\n-> Refined items and saved to data/items_refined.csv\n")

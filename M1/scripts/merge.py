@@ -26,4 +26,4 @@ all_reviews = all_reviews.drop_duplicates(subset=['asin', 'name', 'title']).rese
 print(f"Dropped {len(duplicated_reviews.index)} duplicated reviews")
 
 all_reviews.to_csv('data/reviews_merged.csv', index=False)
-print("Successfully merged reviews and saved to data/items_merged.csv")
+print("\n-> Successfully merged reviews and saved to data/items_merged.csv\n")
