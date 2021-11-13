@@ -7,16 +7,16 @@ if __name__ == '__main__':
     print(reviews.head())
     print(reviews.info())
 
+    # Drop rows that have both title and body empty (they also have no helpfulVotes)
+    null_titles = reviews.loc[reviews['title'].isna()] # rows with empty title
+    indexDrop = null_titles.loc[null_titles['body'].isna()].index # rows' index with both empty title and body
+    reviews.drop(indexDrop, inplace=True)
+
     # Fill NULL cells with default values
     reviews['name'] = reviews['name'].fillna('Amazon Customer') # only 2
     # reviews['title'] = reviews['title'].fillna('') # 26
     # reviews['body'] = reviews['body'].fillna('') # 40
     reviews['helpfulVotes'] = reviews['helpfulVotes'].fillna(0)
-
-    # Drop rows that have both title and body empty (they also have no helpfulVotes)
-    null_titles = reviews.loc[reviews['title'].isna()] # rows with empty title
-    indexDrop = null_titles.loc[null_titles['body'].isna()].index # rows' index with both empty title and body
-    reviews.drop(indexDrop, inplace=True)
 
     # Split 'date' column into 'country' and 'date' since 2021 reviews contain the review's country
     reviews[['country', 'date']] = reviews['date'].str.extract('(?:Reviewed in (?:the )?(?P<country>[\s\S]+) on )?(?P<date>[\s\S]+)')
