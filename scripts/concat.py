@@ -12,8 +12,8 @@ all_items = all_items.drop_duplicates(subset=['asin']).reset_index(drop=True)
 print(f"Dropped {len(duplicated_items.index)} duplicated items")
 
 # Write merged items to file
-all_items.to_csv('data/items_merged.csv', index=False)
-print("Successfully merged items and saved to data/items_merged.csv")
+all_items.to_csv('data/items_all.csv', index=False)
+print("Successfully merged items and saved to data/items_all.csv")
 
 
 # Same for reviews...
@@ -25,5 +25,5 @@ duplicated_reviews = all_reviews.loc[all_reviews.duplicated(subset=['asin', 'nam
 all_reviews = all_reviews.drop_duplicates(subset=['asin', 'name', 'title']).reset_index(drop=True)
 print(f"Dropped {len(duplicated_reviews.index)} duplicated reviews")
 
-all_reviews.to_csv('data/reviews_merged.csv', index=False)
-print("\n-> Successfully merged reviews and saved to data/items_merged.csv\n")
+all_reviews.to_csv('data/reviews_all.csv', index=False)
+print("\n-> Successfully merged reviews and saved to data/reviews_all.csv\n")

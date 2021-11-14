@@ -2,18 +2,18 @@
 
 default: seed
 
-stats: refine
+stats: clean_up
 	python3 scripts/stats.py
 
-seed: refine
+seed: clean_up
 	python3 scripts/seed.py
 
-refine: merge
-	python3 scripts/refine_items.py
-	python3 scripts/refine_reviews.py
+clean_up: concat
+	python3 scripts/clean_items.py
+	python3 scripts/clean_reviews.py
 
-merge:
-	python3 scripts/merge.py
+concat:
+	python3 scripts/concat.py
 
 clean:
-	rm -rf data/items_*.csv data/reviews_*.csv stats/*.png db/seed.sql
+	rm -rf data/items_*.csv data/reviews_*.csv db/seed.sql stats/*.png

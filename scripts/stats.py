@@ -35,8 +35,8 @@ def generate_wordcloud(df, name, column):
     plt.savefig('stats/' + name + '_' + column + '_wordcloud.png', bbox_inches='tight')
 
 if __name__ == '__main__':
-    items = pd.read_csv('data/items_refined.csv')
-    reviews = pd.read_csv('data/reviews_refined.csv')
+    items = pd.read_csv('data/items_clean.csv')
+    reviews = pd.read_csv('data/reviews_clean.csv')
 
     items['brand'].value_counts()[:20].plot(kind='bar',color='#8c2d19')
     plt.savefig('stats/items_brand_bargraph.png', bbox_inches='tight')

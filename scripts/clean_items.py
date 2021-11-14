@@ -1,7 +1,7 @@
 import pandas as pd
 
 if __name__ == '__main__':
-    items = pd.read_csv('data/items_merged.csv')
+    items = pd.read_csv('data/items_all.csv')
 
     print("<==== Initial Info =====>")
     print(items.head())
@@ -21,10 +21,10 @@ if __name__ == '__main__':
     items.loc[items['price'] == 1, ['price']] = 1000
     items.loc[items['originalPrice'] == 1, ['originalPrice']] = 1000
 
-    print("\n<==== Refined Info =====>")
+    print("\n<==== Clean Info =====>")
     print(items.head())
     print(items.info())
 
-    items.to_csv('data/items_refined.csv', index=False)
+    items.to_csv('data/items_clean.csv', index=False)
 
-    print("\n-> Refined items and saved to data/items_refined.csv\n")
+    print("\n-> Cleaned items and saved to data/items_clean.csv\n")

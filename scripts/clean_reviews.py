@@ -1,7 +1,7 @@
 import pandas as pd
 
 if __name__ == '__main__':
-    reviews = pd.read_csv('data/reviews_merged.csv')
+    reviews = pd.read_csv('data/reviews_all.csv')
 
     print("<==== Initial Info =====>")
     print(reviews.head())
@@ -27,10 +27,10 @@ if __name__ == '__main__':
     # Convert date in <Month Day, Year> to <yyyy-mm-dd> format
     reviews['date'] = pd.to_datetime(reviews['date']) # it takes sometime, improve it
 
-    print("\n<==== Refined Info =====>")
+    print("\n<==== Clean Info =====>")
     print(reviews.head())
     print(reviews.info())
 
-    reviews.to_csv('data/reviews_refined.csv', index=False)
+    reviews.to_csv('data/reviews_clean.csv', index=False)
 
-    print("\n-> Refined reviews and saved to data/reviews_refined.csv\n")
+    print("\n-> Cleaned reviews and saved to data/reviews_clean.csv\n")
