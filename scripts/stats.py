@@ -38,8 +38,11 @@ if __name__ == '__main__':
     items = pd.read_csv('data/items_clean.csv')
     reviews = pd.read_csv('data/reviews_clean.csv')
 
-    items['brand'].value_counts()[:20].plot(kind='bar',color='#8c2d19')
+    items['brand'].value_counts().plot(kind='bar',color='#8c2d19', title='Number of cellphones per brand')
     plt.savefig('stats/items_brand_bargraph.png', bbox_inches='tight')
+
+    reviews['country'].value_counts().plot(kind='bar',color='#8c2d19', title='Number of reviews per country')
+    plt.savefig('stats/reviews_country_bargraph.png', bbox_inches='tight')
 
     generate_wordcloud(items, 'items', 'title')
     generate_wordcloud(reviews, 'reviews', 'title')
