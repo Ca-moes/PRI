@@ -2,8 +2,25 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud, STOPWORDS
 
-import seaborn as sns
-sns.set()
+def bar_graph(df, column, sort, title, xlabel, ylabel, file_name):
+    freq = df[column].value_counts()
+    if sort:
+        freq = freq.sort_index()
+
+    graph = freq.plot(kind='bar',color='#8c2d19')
+
+    # Add number to the top of the bar
+    bars = graph.patches
+    for bar, num in zip(bars, freq):
+        graph.text(bar.get_x() + bar.get_width()/2, bar.get_height()+5, num, ha='center')
+
+    plt.title(title)
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.savefig('stats/'+file_name, bbox_inches='tight')
+    plt.clf()
+    print('Saved ' + file_name)
+
 
 def generate_wordcloud(df, name, column):
     text = ''
@@ -36,57 +53,42 @@ def generate_wordcloud(df, name, column):
     
     # Save image
     plt.savefig('stats/' + name + '_' + column + '_wordcloud.png', bbox_inches='tight')
+    print('Saved ' + name + '_' + column + '_wordcloud.png')
 
+def generate_average_ratings(items):
+    freq = items.groupby('brand')['rating'].agg('mean').round(2)
 
-def generate_dist_ratings_by_brand(items_merged, brand):
-    brand_items = items_merged[items_merged["brand"] == brand]
-    if brand_items.size > 0:
-        # we want the ratings from the reviews -> rating_y
-        brand_items["rating_y"].value_counts().sort_index().plot(kind='bar',color='#8c2d19', title=brand + ' reviews distribution')
-        plt.savefig('stats/' + brand + '_reviews_dist_bargraph.png', bbox_inches='tight')
-        plt.clf()
+    graph = freq.plot(kind='bar',color='#8c2d19')
 
-def generate_average_ratings(all_items):
-    # items.groupby(all_items['brand'])['rating'].value_counts().mean().sort_index().plot(kind='bar',color='#8c2d19', title='average ratings by brand')
-    plt.savefig('stats/average_ratings_by_brand_bargraph.png', bbox_inches='tight')
+    # Add number to the top of the bar
+    bars = graph.patches
+    for bar, num in zip(bars, freq):
+        graph.text(bar.get_x() + bar.get_width()/2, bar.get_height()+0.05, num, ha='center')
+
+    plt.title('Average item\'s rating by brand')
+    plt.xlabel('Brand')
+    plt.ylabel('Rating')
+    plt.savefig('stats/average_rating_items_brand.png', bbox_inches='tight')
     plt.clf()
+    print('Saved average_rating_items_brand.png')
 
 
 
 if __name__ == '__main__':
     items = pd.read_csv('data/items_clean.csv')
     reviews = pd.read_csv('data/reviews_clean.csv')
-
     merged_data = pd.merge(items, reviews, on='asin', how='inner')
 
-    items['brand'].value_counts().plot(kind='bar',color='#8c2d19', title='Number of cellphones per brand')
-    plt.savefig('stats/items_brand_bargraph.png', bbox_inches='tight')
-    plt.clf()
+    bar_graph(items, 'brand', False, 'Number of cell phones per brand', 'Brand', 'Num. cell phones','items_brand_bargraph.png')
+    bar_graph(reviews, 'country', False, 'Number of reviews per country', 'Country', 'Num. reviews', 'reviews_country_bargraph.png')
+    bar_graph(reviews, 'rating', True, 'Review\'s rating distribution globally', 'Rating', 'Num. reviews', 'reviews_rating_dist_globally_bargraph.png')
+    bar_graph(merged_data, 'brand', False, 'Number of reviews per brand', 'Brand', 'Num. reviews', 'reviews_brand_bargraph.png')
 
-    reviews['country'].value_counts().plot(kind='bar',color='#8c2d19', title='Number of reviews per country')
-    plt.savefig('stats/reviews_country_bargraph.png', bbox_inches='tight')
-    plt.clf()
+    for brand in items['brand'].unique():
+        bar_graph(merged_data.loc[merged_data['brand'] == brand], 'rating_y', True, brand+' reviews\' rating distribution', 'Rating', 'Num. reviews', brand+'_reviews_dist_bargraph.png')
 
-    reviews['rating'].value_counts().sort_index().plot(kind='bar',color='#8c2d19', title='Review distribution globally')
-    plt.savefig('stats/review_dist_globally_bargraph.png', bbox_inches='tight')
-    plt.clf()
+    generate_average_ratings(items)
 
-    # generate_dist_ratings_by_brand(merged_data, 'ASUS')
-    # generate_dist_ratings_by_brand(merged_data, 'Apple')
-    # generate_dist_ratings_by_brand(merged_data, 'Google')
-    # generate_dist_ratings_by_brand(merged_data, 'HUAWEI')
-    # generate_dist_ratings_by_brand(merged_data, 'Motorola')
-    # generate_dist_ratings_by_brand(merged_data, 'Nokia')
-    # generate_dist_ratings_by_brand(merged_data, 'OnePlus')
-    # generate_dist_ratings_by_brand(merged_data, 'Samsung')
-    # generate_dist_ratings_by_brand(merged_data, 'Sony')
-    # generate_dist_ratings_by_brand(merged_data, 'Xiaomi')
-
-    # generate_wordcloud(items, 'items', 'title')
-    # generate_wordcloud(reviews, 'reviews', 'title')
-    # generate_wordcloud(reviews, 'reviews', 'body')
-
-    # generate_average_ratings(items)
-
-
-
+    generate_wordcloud(items, 'items', 'title')
+    generate_wordcloud(reviews, 'reviews', 'title')
+    generate_wordcloud(reviews, 'reviews', 'body')
