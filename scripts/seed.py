@@ -12,6 +12,14 @@ with open("db/seed.sql", "w") as f:
         brand_dict[brand] = index
         f.write(f"INSERT INTO Brand VALUES ({index}, '{brand}');\n")
 
+    f.write("\n--COUNTRIES--\n")
+    index = 0
+    country_dict = {}
+    for country in reviews['country'].unique():
+        index += 1
+        country_dict[country] = index
+        f.write(f"INSERT INTO Country VALUES ({index}, '{country}');\n")
+
     f.write("\n--CELLPHONES--\n")
     for index, row in items.iterrows():
         brand_id = brand_dict[row['brand']]
@@ -24,7 +32,8 @@ with open("db/seed.sql", "w") as f:
         title = str(row['title']).replace("'", "''")
         body = str(row['body']).replace("'", "''")
         cellphone_id = items['asin'].eq(row['asin']).idxmax() + 1
-        f.write(f"INSERT INTO Review VALUES ({index+1}, {cellphone_id}, '{name}', {row['rating']}, '{row['date']}', {row['verified']}, '{title}', '{body}', {row['helpfulVotes']}, '{row['country']}');\n")
+        country_id = country_dict[row['country']]
+        f.write(f"INSERT INTO Review VALUES ({index+1}, {cellphone_id}, '{name}', {row['rating']}, '{row['date']}', {row['verified']}, '{title}', '{body}', {row['helpfulVotes']}, {country_id});\n")
 
     f.close()
 
