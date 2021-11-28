@@ -16,20 +16,20 @@ if __name__ == '__main__':
     # Merge respective reviews to items
     for item in items:
         asin = item['id']
-        #item['content_type'] = 'parentDocument'
+        item['content_type'] = 'parentDocument'
         item['_childDocuments_'] = []
         
         i=0
         for review in reviews:
             if review['id'] == asin:
                 review['id'] = asin + '-r' + str(i)
-                #review['content_type'] = 'childDocument'
+                review['content_type'] = 'childDocument'
                 item['_childDocuments_'].append(review)
                 reviews.remove(review)
                 i+=1
 
     # Save merged data
-    with open("solr/data.json", "w") as f:
+    with open("solr/data/data.json", "w") as f:
         f.write(json.dumps(items, indent=4))
         f.close()
 

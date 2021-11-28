@@ -1,0 +1,106 @@
+{
+    "add-field": [
+        {
+            "name": "brand",
+            "type": "string",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "title_item",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "url",
+            "type": "string",
+            "indexed": false,
+            "stored": true
+        },
+        {
+            "name": "image",
+            "type": "string",
+            "indexed": false,
+            "stored": true
+        },
+        {
+            "name": "rating_item",
+            "type": "pfloat",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "reviewUrl",
+            "type": "string",
+            "indexed": false,
+            "stored": true
+        },
+        {
+            "name": "totalRatings",
+            "type": "pint",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "price",
+            "type": "pfloat",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "originalPrice",
+            "type": "pfloat",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "name",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "rating_review",
+            "type": "pint",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "date",
+            "type": "pdate",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "verified",
+            "type": "boolean",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "title_review",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "body",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "helpfulVotes",
+            "type": "pint",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "country",
+            "type": "string",
+            "indexed": true,
+            "stored": true
+        }
+    ]
+}
