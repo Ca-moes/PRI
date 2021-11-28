@@ -10,6 +10,9 @@ stats: clean_up
 seed: clean_up
 	python3 scripts/seed.py
 
+json: clean_up
+	python3 scripts/merge_json.py
+
 # Refine the previous csv files, generating items_clean.csv and reviews_clean.csv
 clean_up: concat
 	python3 scripts/clean_items.py
@@ -22,4 +25,4 @@ concat:
 
 # Delete all created files
 clean:
-	rm -rf data/items_*.csv data/reviews_*.csv db/seed.sql stats/*.png
+	rm -rf data/items_*.* data/reviews_*.* db/seed.sql stats/*.png
