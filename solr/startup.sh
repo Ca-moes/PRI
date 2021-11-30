@@ -7,6 +7,11 @@ solr start
 
 sleep 3
 
+# Schema definition via API
+curl -X POST -H 'Content-type:application/json' \
+    --data-binary @/data/schema.json \
+    http://localhost:8983/solr/amazon/schema 
+
 # Populate collection
 bin/post -c amazon /data/data.json
 

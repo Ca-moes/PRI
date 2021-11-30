@@ -1,6 +1,12 @@
 {
     "add-field": [
         {
+            "name": "asin",
+            "type": "string",
+            "indexed": true,
+            "stored": true
+        },
+        {
             "name": "brand",
             "type": "string",
             "indexed": true,
