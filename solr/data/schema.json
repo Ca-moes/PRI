@@ -1,4 +1,47 @@
 {
+    "add-field-type": [
+        {
+            "name":"title",
+            "class":"solr.TextField",
+            "analyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.EdgeNGramTokenizerFactory", "minGramSize":"2", "maxGramSize":"5"},    
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name":"text_body",
+            "class":"solr.TextField",
+            "analyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.StopFilterFactory", "words":"stopwords.txt", "ignoreCase":"true"},    
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name":"text_space",
+            "class":"solr.TextField",
+            "analyzer":{
+                "tokenizer":{
+                    "class":"solr.WhitespaceTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        }
+    ],
     "add-field": [
         {
             "name": "asin",
@@ -14,7 +57,7 @@
         },
         {
             "name": "title_item",
-            "type": "text_general",
+            "type": "title",
             "indexed": true,
             "stored": true
         },
@@ -22,13 +65,13 @@
             "name": "url",
             "type": "string",
             "indexed": false,
-            "stored": true
+            "stored": false
         },
         {
             "name": "image",
             "type": "string",
             "indexed": false,
-            "stored": true
+            "stored": false
         },
         {
             "name": "rating_item",
@@ -40,7 +83,7 @@
             "name": "reviewUrl",
             "type": "string",
             "indexed": false,
-            "stored": true
+            "stored": false
         },
         {
             "name": "totalRatings",
@@ -86,13 +129,13 @@
         },
         {
             "name": "title_review",
-            "type": "text_general",
+            "type": "title",
             "indexed": true,
             "stored": true
         },
         {
             "name": "body",
-            "type": "text_general",
+            "type": "text_body",
             "indexed": true,
             "stored": true
         },
@@ -104,7 +147,7 @@
         },
         {
             "name": "country",
-            "type": "string",
+            "type": "text_space",
             "indexed": true,
             "stored": true
         }
