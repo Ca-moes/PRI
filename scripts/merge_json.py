@@ -5,15 +5,16 @@ if __name__ == '__main__':
     items_df = pd.read_csv('data/items_clean.csv')
     reviews_df = pd.read_csv('data/reviews_clean.csv')
 
-    items_df.rename(columns={'asin':'id', 'title':'title_item', 'rating':'rating_item'} ,inplace=True)
+    # Rename duplicate columns
+    items_df.rename(columns={'title':'title_item', 'rating':'rating_item'} ,inplace=True)
     reviews_df.rename(columns={'title':'title_review', 'rating':'rating_review'} ,inplace=True)
-    reviews_df.insert(0, 'id', '')
 
+    # Col to distinguish content
     items_df['content_type'] = 'item'
     reviews_df['content_type'] = 'review'
 
-    print(items_df)
-    print(reviews_df)
+    # Add item id
+    items_df['id'] = items_df['asin']
     
     items = items_df.to_dict(orient='records')
     reviews = reviews_df.to_dict(orient='records')
@@ -29,8 +30,6 @@ if __name__ == '__main__':
             id_set.add(review['asin'])
         review['id'] = review['asin'] + '-r' + str(id)
         id += 1
-
-    print(len(reviews))
 
     # Save merged data
     with open("solr/data/data.json", "w") as f:
