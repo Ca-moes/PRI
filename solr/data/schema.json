@@ -50,6 +50,12 @@
             "stored": true
         },
         {
+            "name": "content_type",
+            "type": "string",
+            "indexed": true,
+            "stored": false
+        },
+        {
             "name": "brand",
             "type": "string",
             "indexed": true,

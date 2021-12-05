@@ -15,28 +15,28 @@ if __name__ == '__main__':
 
     # Add item id
     items_df['id'] = items_df['asin']
+    reviews_df['date'] = reviews_df['date'].apply(lambda x: x + 'T00:00:00Z')
     
     items = items_df.to_dict(orient='records')
     reviews = reviews_df.to_dict(orient='records')
 
     print("Merging data...")
 
-    # Create unique id for reviews
-    id_set = set()
-    id = 0
-    for review in reviews:
-        if review['asin'] not in id_set:
-            id = 0
-            id_set.add(review['asin'])
-        review['id'] = review['asin'] + '-r' + str(id)
-        id += 1
+    # Merge respective reviews to items
+    for item in items:
+        asin = item['asin']
+        item['reviews'] = []
+
+        i=0
+        for review in reviews:
+            if review['asin'] == asin:
+                review['id'] = asin + '-r' + str(i)
+                item['reviews'].append(review)
+                i+=1
 
     # Save merged data
     with open("solr/data/data.json", "w") as f:
         f.write(json.dumps(items, indent=4))
-        f.close()
-    with open("solr/data/data.json", "a") as f:
-        f.write(json.dumps(reviews, indent=4))
         f.close()
 
     print("-> Successfully merged items and reviews, saved to solr/data.json\n")
