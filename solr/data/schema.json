@@ -8,7 +8,7 @@
                     "class":"solr.StandardTokenizerFactory"
                 },
                 "filters":[
-                    {"class":"solr.EdgeNGramTokenizerFactory", "minGramSize":"2", "maxGramSize":"5", "preserveOriginal":true},    
+                    {"class":"solr.EdgeNGramFilterFactory", "minGramSize":"2", "maxGramSize":"5", "preserveOriginal":true},    
                     {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
                     {"class":"solr.EnglishMinimalStemFilterFactory"},
                     {"class":"solr.LowerCaseFilterFactory"}
