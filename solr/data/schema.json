@@ -23,7 +23,7 @@
                     {"class":"solr.EnglishMinimalStemFilterFactory"},
                     {"class":"solr.LowerCaseFilterFactory"}
                 ]
-            }
+            }   
         },
         {
             "name":"text_body",
