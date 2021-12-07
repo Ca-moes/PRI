@@ -3,13 +3,24 @@
         {
             "name":"title",
             "class":"solr.TextField",
-            "analyzer":{
+            "indexAnalyzer":{
                 "tokenizer":{
                     "class":"solr.StandardTokenizerFactory"
                 },
                 "filters":[
-                    {"class":"solr.EdgeNGramTokenizerFactory", "minGramSize":"2", "maxGramSize":"5"},    
+                    {"class":"solr.EdgeNGramTokenizerFactory", "minGramSize":"2", "maxGramSize":"5", "preserveOriginal":true},    
                     {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.EnglishMinimalStemFilterFactory"},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.EnglishMinimalStemFilterFactory"},
                     {"class":"solr.LowerCaseFilterFactory"}
                 ]
             }
@@ -29,11 +40,11 @@
             }
         },
         {
-            "name":"text_space",
+            "name":"text_standard",
             "class":"solr.TextField",
             "analyzer":{
                 "tokenizer":{
-                    "class":"solr.WhitespaceTokenizerFactory"
+                    "class":"solr.StandardTokenizerFactory"
                 },
                 "filters":[
                     {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
@@ -111,7 +122,7 @@
         },
         {
             "name": "name",
-            "type": "text_general",
+            "type": "text_standard",
             "indexed": true,
             "stored": true
         },
@@ -153,7 +164,7 @@
         },
         {
             "name": "country",
-            "type": "text_space",
+            "type": "text_standard",
             "indexed": true,
             "stored": true
         }
