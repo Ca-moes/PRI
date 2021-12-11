@@ -1,5 +1,6 @@
 import pandas as pd
 import json
+import random
 
 if __name__ == '__main__':
     items_df = pd.read_csv('data/items_clean.csv')
@@ -20,7 +21,7 @@ if __name__ == '__main__':
     items = items_df.to_dict(orient='records')
     reviews = reviews_df.to_dict(orient='records')
 
-    print("Merging data...")
+    print("Merging data...\n")
 
     # Merge respective reviews to items
     for item in items:
@@ -39,4 +40,19 @@ if __name__ == '__main__':
         f.write(json.dumps(items, indent=4))
         f.close()
 
-    print("-> Successfully merged items and reviews, saved to solr/data.json\n")
+    print("-> Successfully merged items and reviews, saved data to solr/data.json\n")
+
+    random.seed(1)
+    indexes = sorted(random.sample(range(len(items)), 100))
+
+    with open("solr/data/data_subset.json", "w") as f:
+        f.write('[\n')
+        f.write(json.dumps(items[indexes[0]], indent=4))
+        del indexes[0]
+        for index in indexes:
+            f.write(',\n')
+            f.write(json.dumps(items[index], indent=4))
+        f.write('\n]')
+        f.close()
+
+    print("-> Successfully saved data subset to solr/data_subset.json\n")

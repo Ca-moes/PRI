@@ -35,6 +35,7 @@
                 "filters":[
                     {"class":"solr.StopFilterFactory", "words":"stopwords.txt", "ignoreCase":"true"},    
                     {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.EnglishMinimalStemFilterFactory"},
                     {"class":"solr.LowerCaseFilterFactory"}
                 ]
             }
@@ -58,7 +59,7 @@
             "name": "asin",
             "type": "string",
             "indexed": true,
-            "stored": true
+            "stored": false
         },
         {
             "name": "content_type",
