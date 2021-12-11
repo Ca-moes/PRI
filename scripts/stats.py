@@ -1,6 +1,20 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud, STOPWORDS
+from collections import Counter 
+
+def count_words_fast(text):
+    text = text.lower()
+    skips = [".", ", ", ":", ";", "'", '"']
+    for ch in skips:
+        text = text.replace(ch, "")
+    word_counts = Counter(text.split(" "))
+    return word_counts
+
+def word_stats(word_counts):
+    counts = sum(word_counts.values())
+    num_unique = len(word_counts)
+    return (counts, num_unique)
 
 def bar_graph(df, column, sort, title, xlabel, ylabel, file_name):
     freq = df[column].value_counts()
@@ -75,9 +89,28 @@ def generate_average_ratings(items):
 
 
 if __name__ == '__main__':
+    print("<== STATS ==>")
+
     items = pd.read_csv('data/items_clean.csv')
     reviews = pd.read_csv('data/reviews_clean.csv')
     merged_data = pd.merge(items, reviews, on='asin', how='inner')
+
+    print("\n> Words stats")
+
+    title_items = ' '. join(items['title'])
+    title_reviews = ' '.join(reviews['title'].dropna())
+    body_reviews = ' '.join(reviews['body'].dropna())
+
+    (count_ti, unique_ti) = word_stats(count_words_fast(title_items))
+    (count_tr, unique_tr) = word_stats(count_words_fast(title_reviews))
+    (count_br, unique_br) = word_stats(count_words_fast(body_reviews))
+
+    print("                | Total   | Unique")
+    print(f"Items' Titles   | {count_ti}   | {unique_ti}")
+    print(f"Reviews' Titles | {count_tr}  | {unique_tr}")
+    print(f"Reviews' Body   | {count_br} | {unique_br}")
+
+    print("\n> Generating graphs into /stats")
 
     bar_graph(items, 'brand', False, 'Number of cell phones per brand', 'Brand', 'Num. cell phones','items_brand_bargraph.png')
     bar_graph(reviews, 'country', False, 'Number of reviews per country', 'Country', 'Num. reviews', 'reviews_country_bargraph.png')
