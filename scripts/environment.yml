@@ -1,0 +1,12 @@
+name: pri
+channels:
+  - defaults
+dependencies:
+  - matplotlib
+  - python=3.9
+  - numpy
+  - pandas
+  - requests
+  - scikit-learn
+  - flake8
+prefix: /home/dani/miniconda3/envs/pri
