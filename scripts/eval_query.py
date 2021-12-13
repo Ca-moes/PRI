@@ -18,7 +18,7 @@ queries = [
     (2, 'http://localhost:8983/solr/amazon/select?defType=edismax&fq=content_type%3Areview&fq=date%3A%5B2020-11-01T00%3A00%3A00Z%20TO%202021-01-31T00%3A00%3A00Z%5D&indent=true&q.op=OR&q=Gift&qf=body%20title_review&rows=30'),
     (3, 'http://localhost:8983/solr/amazon-subset/select?defType=edismax&fq=content_type%3Areview&fq=helpfulVotes%3A%5B10%20TO%20*%5D&fq=rating_review%3A5&fq=verified%3Atrue&indent=true&q.op=OR&q=Great%20Good&qf=title_review%20body'),
     (4, 'http://localhost:8983/solr/amazon/select?defType=edismax&fq=content_type%3Aitem&indent=true&q.op=OR&q=(Google%20AND%204g)%20OR%20(iphone%20AND%20refurbished)&qf=brand%20title_item&rows=30'),
-    (5, 'http://localhost:8983/solr/amazon/select?defType=edismax&fq=-originalPrice%3A%200.0&fq=content_type%3Aitem&indent=true&q.op=OR&q=Samsung&qf=brand%20title_item&sort=dist(2%2C%20originalPrice%2C%200%2C%20price%2C%200)%20desc')
+    (5, 'http://localhost:8983/solr/amazon/select?defType=edismax&fq=-originalPrice%3A%200.0&fq=content_type%3Aitem&indent=true&q.op=OR&q=samsung&qf=brand%20title_item&sort=dist(2%2C%20originalPrice%2C%200%2C%20price%2C%200)%20desc')
     ]
 
 queries_boosted = [
@@ -26,7 +26,7 @@ queries_boosted = [
     (2, 'http://localhost:8983/solr/amazon/select?defType=edismax&fq=content_type%3Areview&fq=date%3A%5B2020-11-01T00%3A00%3A00Z%20TO%202021-01-31T00%3A00%3A00Z%5D&indent=true&q.op=OR&q=Gift&qf=body%20title_review%5E1.7&rows=30'),
     (3, 'http://localhost:8983/solr/amazon-subset/select?defType=edismax&fq=content_type%3Areview&fq=helpfulVotes%3A%5B10%20TO%20*%5D&fq=rating_review%3A5&fq=verified%3Atrue&indent=true&q.op=OR&q=Great%20Good&qf=title_review%5E1.7%20body'),
     (4, 'http://localhost:8983/solr/amazon/select?defType=edismax&fq=content_type%3Aitem&indent=true&q.op=OR&q=(Google%20AND%204g)%20OR%20(iphone%20AND%20refurbished)&qf=brand%20title_item%5E1.5&rows=30'),
-    (5, 'http://localhost:8983/solr/amazon/select?defType=edismax&fq=-originalPrice%3A%200.0&fq=content_type%3Aitem&indent=true&q.op=OR&q=Samsung&qf=brand%20title_item%5E1.5&sort=dist(2%2C%20originalPrice%2C%200%2C%20price%2C%200)%20desc')
+    (5, 'http://localhost:8983/solr/amazon/select?defType=edismax&fq=-originalPrice%3A%200.0&fq=content_type%3Aitem&indent=true&q.op=OR&q=samsung&qf=brand%20title_item%5E1.5&sort=dist(2%2C%20originalPrice%2C%200%2C%20price%2C%200)%20desc')
     ]
 
 SCHEMA = -1  # 1 if using schema, 0 if filterless, -1 if creating graphs
@@ -51,15 +51,30 @@ def process_query(index: int, q_type: str, query_file: str, query_url: str):
     @metric
     def ap(results, relevant):
         """Average Precision"""
+        relevant_index = []
+        index = 0
+        for res in results:
+            if (i != 0 and res['id'] in relevant) or (i == 0 and res['id'][0] in relevant):
+                relevant_index.append(index)
+            index = index + 1
+
+        if len(relevant_index) == 0:
+            return 0
+
         precision_values = [
             len([
                 doc
                 for doc in results[:idx]
-                if doc['id'] in relevant
+                if (i != 0 and doc['id'] in relevant) or (i == 0 and doc['id'][0] in relevant)
             ]) / idx
-            for idx in range(1, len(results))
+            for idx in range(1, len(results) + 1)
         ]
-        return sum(precision_values)/len(precision_values) if len(precision_values) != 0 else 0
+        
+        precision_sum = 0
+        for ind in relevant_index:
+            precision_sum = precision_sum + precision_values[ind]
+
+        return precision_sum/len(relevant_index)
 
     @metric
     def p10(results, relevant, n=10):
@@ -112,13 +127,13 @@ def process_query(index: int, q_type: str, query_file: str, query_url: str):
     precision_recall_match = {k: v for k, v in zip(recall_values, precision_values)}
 
     # Extend recall_values to include traditional steps for a better curve (0.1, 0.2 ...)
-    recall_values.extend([step for step in np.arange(0.1, 1.1, 0.1) if step not in recall_values])
+    recall_values.extend([step for step in np.arange(0, 1.1, 0.1) if step not in recall_values])
     recall_values = sorted(set(recall_values))
 
     # Extend matching dict to include these new intermediate steps
     for idx, step in enumerate(recall_values):
         if step not in precision_recall_match:
-            if recall_values[idx-1] in precision_recall_match:
+            if idx > 0 and recall_values[idx-1] in precision_recall_match:
                 precision_recall_match[step] = precision_recall_match[recall_values[idx-1]]
             else:
                 precision_recall_match[step] = precision_recall_match[recall_values[idx+1]]
