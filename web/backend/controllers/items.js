@@ -1,6 +1,56 @@
 const core = require('../config');
 const Item = require("../models/item");
 
+function parseItem(doc) {
+  return new Item(
+    doc.asin,
+    doc.brand,
+    doc.title_item,
+    doc.url,
+    doc.image,
+    doc.rating_item,
+    doc.reviewUrl,
+    doc.totalRatings,
+    doc.price,
+    doc.originalPrice
+  )
+}
+
+function searchItem(req, res) {
+  const query = req.params.query;
+
+  const params = {
+    'q': query,
+    'q.op': 'OR',
+    'fq': 'content_type:item',
+    'start': 0,
+    'rows': 10,
+    'wt': 'json',
+    'defType': 'edismax',
+    'qf': 'brand title_item^1.5',
+  }
+
+  core.get('/select', {params: params})
+    .then((response) => {
+      const num = response.data.response.numFound;
+
+      if(num === 0) {
+        return res.status(404).send('Not found');
+      }
+
+      const items = [];
+
+      response.data.response.docs.forEach((doc) => {
+        items.push(doc);
+      })
+
+      return res.send(items);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+
 function getItemByAsin(req, res) {
   const asin = req.params.asin;
 
@@ -19,19 +69,7 @@ function getItemByAsin(req, res) {
         return res.status(404).send('Not found');
       }
 
-      const docs = response.data.response.docs[0];
-      const item = new Item(
-        docs.asin,
-        docs.brand,
-        docs.title,
-        docs.url,
-        docs.image,
-        docs.rating,
-        docs.reviewUrl,
-        docs.totalReviews,
-        docs.price,
-        docs.originalPrice
-      )
+      const item = parseItem(response.data.response.docs[0])
 
       return res.send(item);
     })
@@ -41,5 +79,6 @@ function getItemByAsin(req, res) {
 }
 
 module.exports =  {
+  searchItem,
   getItemByAsin,
 }
