@@ -22,6 +22,10 @@ const items = require('./routes/items');
 
 app.use('/api/items', items);
 
+const reviews = require('./routes/reviews');
+
+app.use('/api/reviews', reviews);
+
 app.use((req, res, next) => {
     // Website you wish to allow to connect
     res.setHeader('Access-Control-Allow-Origin', '*');
