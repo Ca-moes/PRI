@@ -3,20 +3,16 @@
         {
             "name":"title",
             "class":"solr.TextField",
-            "indexAnalyzer":{
+            "analyzer":{
                 "tokenizer":{
                     "class":"solr.StandardTokenizerFactory"
                 },
                 "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.EnglishMinimalStemFilterFactory"},
+                    {"class":"solr.LowerCaseFilterFactory"}
                 ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                ]
-            }   
+            }
         },
         {
             "name":"text_body",
@@ -26,6 +22,10 @@
                     "class":"solr.StandardTokenizerFactory"
                 },
                 "filters":[
+                    {"class":"solr.StopFilterFactory", "words":"lang/stopwords_en.txt", "ignoreCase":true},    
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.EnglishMinimalStemFilterFactory"},
+                    {"class":"solr.LowerCaseFilterFactory"}
                 ]
             }
         },
@@ -37,6 +37,8 @@
                     "class":"solr.StandardTokenizerFactory"
                 },
                 "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
                 ]
             }
         }
@@ -107,6 +109,26 @@
             "type": "pfloat",
             "indexed": true,
             "stored": true
+        },
+        {
+            "name": "description",
+            "type": "text_body",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "about",
+            "type": "text_body",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true
+        },
+        {
+            "name": "overview",
+            "type": "text_body",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true
         },
         {
             "name": "name",

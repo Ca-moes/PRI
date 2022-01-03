@@ -1,5 +1,7 @@
 import pandas as pd
 
+pd.set_option("display.max_colwidth", 10000)
+
 if __name__ == '__main__':
     items = pd.read_csv('data/items_all.csv')
 
@@ -20,6 +22,13 @@ if __name__ == '__main__':
     # 2019 dataset didn't process Thousands in prices (only 2 items)
     items.loc[items['price'] == 1, ['price']] = 1000
     items.loc[items['originalPrice'] == 1, ['originalPrice']] = 1000
+
+    # 9 Apple iPhone items had Asus as their Brand
+    items.loc[items['title'].str.contains("iPhone"), ['brand']] = 'Apple'
+
+    details = pd.read_csv('data/items_details.csv')
+
+    items = items.merge(details, on='asin')
 
     print("\n<==== Clean Info =====>")
     print(items.head())

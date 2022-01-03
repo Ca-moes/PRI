@@ -1,4 +1,5 @@
 import pandas as pd
+import ast
 import json
 import random
 
@@ -6,9 +7,13 @@ if __name__ == '__main__':
     items_df = pd.read_csv('data/items_clean.csv')
     reviews_df = pd.read_csv('data/reviews_clean.csv')
 
+    # Parse columns with lists
+    items_df['about'] = items_df['about'].map(ast.literal_eval)
+    items_df['overview'] = items_df['overview'].map(ast.literal_eval)
+
     # Rename duplicate columns
-    items_df.rename(columns={'title':'title_item', 'rating':'rating_item'} ,inplace=True)
-    reviews_df.rename(columns={'title':'title_review', 'rating':'rating_review'} ,inplace=True)
+    items_df.rename(columns={'title':'title_item', 'rating':'rating_item'}, inplace=True)
+    reviews_df.rename(columns={'title':'title_review', 'rating':'rating_review'}, inplace=True)
 
     # Col to distinguish content
     items_df['content_type'] = 'item'
