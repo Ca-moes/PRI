@@ -124,8 +124,46 @@
             "multiValued": true
         },
         {
-            "name": "overview",
+            "name": "more",
             "type": "text_body",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true
+        },
+        {
+            "name": "wireless_carrier",
+            "type": "text_standard",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true
+        },
+        {
+            "name": "operating_system",
+            "type": "text_standard",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "color",
+            "type": "text_standard",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "screen_size",
+            "type": "pfloat",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "memory_storage_capacity",
+            "type": "pfloat",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "cellular_technology",
+            "type": "text_standard",
             "indexed": true,
             "stored": true,
             "multiValued": true
