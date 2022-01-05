@@ -73,9 +73,9 @@ with open('urls.txt', 'r') as urllist, open('items_details.csv', 'w', newline=''
                 details['about'].append(feature.find("span", class_="a-list-item").getText().strip())
 
             overview = soup.find(id="productOverview_feature_div").find_all("tr")
-            details['overview'] = []
+            details['more'] = []
             for tr in overview:
                 data = tr.find_all("span")
-                details['overview'].append(data[0].find(text=True, recursive=False).strip() + ": " + data[1].find(text=True, recursive=True).strip())
+                details['more'].append(data[0].find(text=True, recursive=False).strip() + ": " + data[1].find(text=True, recursive=True).strip())
             
             writer.writerow(details)

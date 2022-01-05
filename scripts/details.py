@@ -1,33 +1,68 @@
 import pandas as pd
 import ast
 
-#TODO Change `create_new` to return Series with only keep_indexes
-# apply again on details['overview'] to remove strings with keep_indexes from the list
+keep_indexes = ['Wireless Carrier', 'Screen Size', 'Color', 'Memory Storage Capacity', 'Cellular Technology', 'Operating System']
 
-
-
-keep_indexes = ['Wireless Carrier', 'Operating System', 'Color', 'Memory Storage Capacity', 'Cellular Technology']
-
-def create_new(list):
+# Create new columns from `key: value` strings in list
+def create_columns(list):
     indexes = []
     values = []
 
     for string in list:
         index, value = string.split(': ', 1)
-        indexes.append(index)
-        values.append(value)
+        if index in keep_indexes:
+            if index == "Wireless Carrier":
+                value = value.replace("Unlocked for All Carriers", "Unlocked").split(", ")
+
+            elif index == "Screen Size":
+                value = value.split(" ")[0]
+
+            elif index == "Memory Storage Capacity":
+                if "MB" in value:
+                    continue
+                
+                value = value.split(" ")[0]
+
+            elif index == "Cellular Technology":
+                value = value.replace(" ", "").replace("/",",").upper().split(",")
+
+            elif index == "Operating System":
+                if "android" in value.lower():
+                    value = "Android"
+                elif "ios" in value.lower():
+                    value = "iOS"
+                elif "windows" in value.lower():
+                    value = "Windows Phone"
+
+            indexes.append(index.lower().replace(" ","_"))
+            values.append(value)
 
     series = pd.Series(values, index=indexes)
 
     return series
 
-details = pd.read_csv('../data/items_details.csv')
+# Remove strings used to create columns
+def remove_strings(list):
+    to_drop = keep_indexes + ['Brand', 'Manufacturer']
 
-# Parse columns with lists
-details['about'] = details['about'].map(ast.literal_eval)
-details['overview'] = details['overview'].map(ast.literal_eval)
+    return [string for string in list if string.split(': ', 1)[0] not in to_drop]
 
-df = details['overview'].apply(lambda x: create_new(x))
+def main():
+    details = pd.read_csv('../data/items_details.csv')
 
-print(df)
-print(df['Color'].value_counts())
+    # Parse columns with lists
+    details['more'] = details['more'].map(ast.literal_eval)
+
+
+    df = details['more'].apply(lambda x: create_columns(x))
+    details['more'] = details['more'].apply(lambda x: remove_strings(x))
+
+    for col in keep_indexes:
+        filename = col.replace(" ","") + ".txt"
+        df[col].value_counts().to_csv(filename)
+
+    concated = pd.concat([details, df], axis=1)
+    concated.to_csv("items_details_clean.csv", index=False)
+
+if __name__ == '__main__':
+    main()

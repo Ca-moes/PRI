@@ -9,7 +9,7 @@ if __name__ == '__main__':
 
     # Parse columns with lists
     items_df['about'] = items_df['about'].map(ast.literal_eval)
-    items_df['overview'] = items_df['overview'].map(ast.literal_eval)
+    items_df['more'] = items_df['more'].map(ast.literal_eval)
 
     # Rename duplicate columns
     items_df.rename(columns={'title':'title_item', 'rating':'rating_item'}, inplace=True)
