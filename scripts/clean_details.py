@@ -57,7 +57,7 @@ def main():
     details['more'] = details['more'].apply(lambda x: remove_strings(x))
 
     concated = pd.concat([details, df], axis=1)
-    concated.to_csv("data/details_clean.csv", index=False)
+    concated.to_pickle("data/details_clean.pkl")
 
 if __name__ == '__main__':
     main()

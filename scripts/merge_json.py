@@ -4,12 +4,14 @@ import json
 import random
 
 if __name__ == '__main__':
-    items_df = pd.read_csv('data/items_clean.csv')
+    items_df = pd.read_csv('data/items_clean.csv', )
     reviews_df = pd.read_csv('data/reviews_clean.csv')
 
     # Parse columns with lists
     items_df['about'] = items_df['about'].map(ast.literal_eval)
     items_df['more'] = items_df['more'].map(ast.literal_eval)
+    items_df['wireless_carrier'] = items_df['wireless_carrier'].map(ast.literal_eval)
+    items_df['cellular_technology'] = items_df['cellular_technology'].map(ast.literal_eval)
 
     # Rename duplicate columns
     items_df.rename(columns={'title':'title_item', 'rating':'rating_item'}, inplace=True)

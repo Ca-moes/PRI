@@ -3,7 +3,7 @@ import pandas as pd
 pd.set_option("display.max_colwidth", 10000)
 
 if __name__ == '__main__':
-    items = pd.read_csv('data/items_all.csv')
+    items = pd.read_pickle('data/items_all.pkl')
 
     print("<==== Initial Info =====>")
     print(items.head())
@@ -26,7 +26,7 @@ if __name__ == '__main__':
     # 9 Apple iPhone items had Asus as their Brand
     items.loc[items['title'].str.contains("iPhone"), ['brand']] = 'Apple'
 
-    details = pd.read_csv('data/details_clean.csv')
+    details = pd.read_pickle('data/details_clean.pkl')
 
     items = items.merge(details, on='asin')
 
@@ -34,6 +34,6 @@ if __name__ == '__main__':
     print(items.head())
     print(items.info())
 
-    items.to_csv('data/items_clean.csv', index=False)
+    items.to_pickle('data/items_clean.pkl')
 
-    print("\n-> Cleaned items and saved to data/items_clean.csv\n")
+    print("\n-> Cleaned items and saved to data/items_clean.pkl\n")
