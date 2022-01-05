@@ -91,8 +91,8 @@ def generate_average_ratings(items):
 if __name__ == '__main__':
     print("<== STATS ==>")
 
-    items = pd.read_csv('data/items_clean.csv')
-    reviews = pd.read_csv('data/reviews_clean.csv')
+    items = pd.read_csv('data/items_clean.pkl')
+    reviews = pd.read_csv('data/reviews_clean.pkl')
     merged_data = pd.merge(items, reviews, on='asin', how='inner')
 
     print("\n> Words stats")

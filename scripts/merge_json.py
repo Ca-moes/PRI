@@ -1,15 +1,10 @@
 import pandas as pd
-import ast
 import json
 import random
 
 if __name__ == '__main__':
-    items_df = pd.read_csv('data/items_clean.csv')
-    reviews_df = pd.read_csv('data/reviews_clean.csv')
-
-    # Parse columns with lists
-    items_df['about'] = items_df['about'].map(ast.literal_eval)
-    items_df['overview'] = items_df['overview'].map(ast.literal_eval)
+    items_df = pd.read_pickle('data/items_clean.pkl', )
+    reviews_df = pd.read_pickle('data/reviews_clean.pkl')
 
     # Rename duplicate columns
     items_df.rename(columns={'title':'title_item', 'rating':'rating_item'}, inplace=True)
@@ -21,7 +16,10 @@ if __name__ == '__main__':
 
     # Add item id
     items_df['id'] = items_df['asin']
-    reviews_df['date'] = reviews_df['date'].apply(lambda x: x + 'T00:00:00Z')
+    reviews_df['date'] = reviews_df['date'].apply(lambda x: str(x).replace(' ','T')+'Z')
+
+    items_df.fillna('', inplace=True)
+    reviews_df.fillna('', inplace=True)
     
     items = items_df.to_dict(orient='records')
     reviews = reviews_df.to_dict(orient='records')

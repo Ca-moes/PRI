@@ -46,7 +46,7 @@ def scrape(url):
     # Return the HTML of the page
     return r.content
 
-with open('urls.txt', 'r') as urllist, open('items_details.csv', 'w', newline='', encoding='utf-8') as outfile:
+with open('urls.txt', 'r') as urllist, open('details.csv', 'w', newline='', encoding='utf-8') as outfile:
     csv_columns = ['asin', 'description', 'about', 'overview']
 
     writer = csv.DictWriter(outfile, fieldnames=csv_columns)
@@ -73,9 +73,9 @@ with open('urls.txt', 'r') as urllist, open('items_details.csv', 'w', newline=''
                 details['about'].append(feature.find("span", class_="a-list-item").getText().strip())
 
             overview = soup.find(id="productOverview_feature_div").find_all("tr")
-            details['overview'] = []
+            details['more'] = []
             for tr in overview:
                 data = tr.find_all("span")
-                details['overview'].append(data[0].find(text=True, recursive=False).strip() + ": " + data[1].find(text=True, recursive=True).strip())
+                details['more'].append(data[0].find(text=True, recursive=False).strip() + ": " + data[1].find(text=True, recursive=True).strip())
             
             writer.writerow(details)

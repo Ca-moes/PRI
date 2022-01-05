@@ -1,7 +1,7 @@
 import pandas as pd
 
 if __name__ == '__main__':
-    reviews = pd.read_csv('data/reviews_all.csv')
+    reviews = pd.read_pickle('data/reviews_all.pkl')
 
     print("<==== Initial Info =====>")
     print(reviews.head())
@@ -31,6 +31,6 @@ if __name__ == '__main__':
     print(reviews.head())
     print(reviews.info())
 
-    reviews.to_csv('data/reviews_clean.csv', index=False)
+    reviews.to_pickle('data/reviews_clean.pkl')
 
-    print("\n-> Cleaned reviews and saved to data/reviews_clean.csv\n")
+    print("\n-> Cleaned reviews and saved to data/reviews_clean.pkl\n")
