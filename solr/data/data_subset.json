@@ -18,18 +18,21 @@
         "Up to 4.5 hours of talk time, up to 212 hours (8.8 days) of standby time; measures 4.6 x 2.5 x 0.47 inches (HxWxD)",
         "Includes: handset, rechargeable battery, travel charger, data cable, VZ Access Manager CD, ActiveSync CD, quick-start guide, user manual"
     ],
-    "overview": [
-        "Wireless Carrier: Verizon",
-        "Brand: Motorola",
-        "Operating System: Windows_mobile",
-        "Color: Black",
+    "more": [
         "Included Components: Adapter",
-        "Manufacturer: Motorola",
         "Connectivity Technology: Bluetooth",
         "Item Weight: 135.52 Grams",
         "Shooting Modes: Sports",
         "Human Interface Input: Keyboard"
     ],
+    "wireless_carrier": [
+        "Verizon"
+    ],
+    "operating_system": "Windows Phone",
+    "color": "Black",
+    "screen_size": "",
+    "memory_storage_capacity": "",
+    "cellular_technology": "",
     "content_type": "item",
     "id": "B001A5B4GS",
     "reviews": [
@@ -116,17 +119,20 @@
         "This product has been carefully audited and is certified to be 100% functional.",
         "This offer includes the following accessories 1. Battery 2. Battery Cover (if applicable) 3. Wall Charger"
     ],
-    "overview": [
+    "more": [
         "Model Name: Droid",
-        "Wireless Carrier: Verizon",
-        "Brand: Motorola",
         "Form Factor: Smartphone",
-        "Operating System: Android OS, v2.2 Froyo, upgradable to v2.3 Gingerbread",
-        "Color: Black",
-        "Cellular Technology: 3G",
-        "Included Components: Adapter",
-        "Screen Size: 3.1 Inches",
-        "Manufacturer: Motorola"
+        "Included Components: Adapter"
+    ],
+    "wireless_carrier": [
+        "Verizon"
+    ],
+    "operating_system": "Android",
+    "color": "Black",
+    "screen_size": "3.1",
+    "memory_storage_capacity": "",
+    "cellular_technology": [
+        "3G"
     ],
     "content_type": "item",
     "id": "B005JGSUNY",
@@ -645,17 +651,19 @@
         "Processor Speed: 1.5 GHz",
         "OS: Android 4.3 (Jelly Bean)"
     ],
-    "overview": [
+    "more": [
         "Model Name: Galaxy S3",
-        "Brand: Samsung Electronics",
         "Form Factor: Candy_bar",
-        "Memory Storage Capacity: 16 GB",
-        "Operating System: Android",
-        "Color: White",
-        "Cellular Technology: 4G",
         "Included Components: Video Recorder, Camera",
-        "Screen Size: 4.8 Inches",
         "Display Type: AMOLED"
+    ],
+    "wireless_carrier": "",
+    "operating_system": "Android",
+    "color": "White",
+    "screen_size": "4.8",
+    "memory_storage_capacity": "16",
+    "cellular_technology": [
+        "4G"
     ],
     "content_type": "item",
     "id": "B00891PTQM",
@@ -3319,17 +3327,19 @@
         "Processor Speed: 2.2 GHz",
         "OS: Windows 8"
     ],
-    "overview": [
+    "more": [
         "Model Name: Lumia 1520",
-        "Brand: Nokia",
         "Form Factor: Candy_bar",
-        "Memory Storage Capacity: 16 GB",
-        "Operating System: Microsoft Windows",
-        "Color: Black",
-        "Cellular Technology: 4G",
         "Included Components: Video Recorder, Camera",
-        "Screen Size: 6 Inches",
         "Display Type: Full HD 1080p"
+    ],
+    "wireless_carrier": "",
+    "operating_system": "Windows Phone",
+    "color": "Black",
+    "screen_size": "6",
+    "memory_storage_capacity": "16",
+    "cellular_technology": [
+        "4G"
     ],
     "content_type": "item",
     "id": "B00GANEUQG",
@@ -5652,13 +5662,16 @@
     "about": [
         "We don't know when or if this item will be back in stock."
     ],
-    "overview": [
-        "Wireless Carrier: Unlocked",
-        "Brand: Samsung Electronics",
-        "Memory Storage Capacity: 8 GB",
-        "Color: Black",
-        "Cellular Technology: 3G",
-        "Manufacturer: Samsung"
+    "more": [],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "",
+    "color": "Black",
+    "screen_size": "",
+    "memory_storage_capacity": "8",
+    "cellular_technology": [
+        "3G"
     ],
     "content_type": "item",
     "id": "B00GZZTD3Y",
@@ -5709,17 +5722,20 @@
         "5+ megapixel camera, hearing aid compatible, multiple languages (English, Spanish, Korean, Chinese, Vietnamese), TTY/TDD digital, vibrate, bluetooth, NFC, micro USB connector.",
         "Wi-fi, touch screen, micro SD card slot, 3.5mm headphone jack, DLNA, speaker phone."
     ],
-    "overview": [
+    "more": [
         "Model Name: Galaxy S",
-        "Wireless Carrier: Verizon",
-        "Brand: Samsung Electronics",
         "Form Factor: Smartphone",
-        "Operating System: Android",
-        "Color: Blue",
-        "Cellular Technology: 4G",
-        "Screen Size: 4 Inches",
-        "Manufacturer: Samsung",
         "Connectivity Technology: Bluetooth, Wi-Fi, USB, NFC"
+    ],
+    "wireless_carrier": [
+        "Verizon"
+    ],
+    "operating_system": "Android",
+    "color": "Blue",
+    "screen_size": "4",
+    "memory_storage_capacity": "",
+    "cellular_technology": [
+        "4G"
     ],
     "content_type": "item",
     "id": "B00MWDO5A4",
@@ -5783,17 +5799,19 @@
         "Moto E smartphone includes VGA front-facing camera",
         "4.5\" qHD display"
     ],
-    "overview": [
+    "more": [
         "Model Name: Moto E",
-        "Wireless Carrier: Verizon",
-        "Brand: Motorola",
-        "Form Factor: Smartphone",
-        "Memory Storage Capacity: 8 GB",
-        "Operating System: Android",
-        "Color: Black",
-        "Cellular Technology: 4G",
-        "Screen Size: 4.5 Inches",
-        "Manufacturer: Motorola"
+        "Form Factor: Smartphone"
+    ],
+    "wireless_carrier": [
+        "Verizon"
+    ],
+    "operating_system": "Android",
+    "color": "Black",
+    "screen_size": "4.5",
+    "memory_storage_capacity": "8",
+    "cellular_technology": [
+        "4G"
     ],
     "content_type": "item",
     "id": "B00SIE2YQ8",
@@ -8094,17 +8112,22 @@
         "5 Megapixel Camera (2592 ? 1944 pixels) w/ Autofocus, 1/4-inch sensor size, Geo-Tagging, Panorama + Video",
         "Internal Memory: 8GB, 512 MB/ 1GB RAM + microSD Slot Expandable up to 128GB"
     ],
-    "overview": [
+    "more": [
         "Model Name: Lumia 635",
-        "Wireless Carrier: Unlocked",
-        "Brand: Nokia",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 8 GB",
-        "Operating System: Windows_phone",
-        "Color: Black",
-        "Cellular Technology: 4G, 3G, 2G",
-        "Screen Size: 4.5 Inches",
         "Display Type: LCD"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Windows Phone",
+    "color": "Black",
+    "screen_size": "4.5",
+    "memory_storage_capacity": "8",
+    "cellular_technology": [
+        "4G",
+        "3G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B00THPVPQW",
@@ -12224,17 +12247,20 @@
         "Processor Speed: OCTA Core 64-bit",
         "OS: Android 5.0 (Lollipop)"
     ],
-    "overview": [
+    "more": [
         "Model Name: Galaxy S6 edge",
-        "Wireless Carrier: Verizon",
-        "Brand: Samsung Electronics",
         "Form Factor: Candy_bar",
-        "Memory Storage Capacity: 32 GB",
-        "Operating System: Android",
-        "Color: Black",
-        "Cellular Technology: 4G",
-        "Included Components: Pre-Installed SIM Card, Galaxy S6 Edge, Wall Charger, SIM Removal Tool, Stereo Headset, USB Cable, Quick Start Guide",
-        "Screen Size: 5.1 Inches"
+        "Included Components: Pre-Installed SIM Card, Galaxy S6 Edge, Wall Charger, SIM Removal Tool, Stereo Headset, USB Cable, Quick Start Guide"
+    ],
+    "wireless_carrier": [
+        "Verizon"
+    ],
+    "operating_system": "Android",
+    "color": "Black",
+    "screen_size": "5.1",
+    "memory_storage_capacity": "32",
+    "cellular_technology": [
+        "4G"
     ],
     "content_type": "item",
     "id": "B00V7FY076",
@@ -13014,17 +13040,21 @@
         "Includes a brand new, generic charging cable that is certified Mfi (Made for iPhone) and a brand new, generic wall plug that is UL certified for performance and safety. Also includes a SIM tray removal tool but does not come with headphones or a SIM card.",
         "Backed by the same one-year satisfaction guarantee as brand new Apple products."
     ],
-    "overview": [
+    "more": [
         "Model Name: IPhone 11",
-        "Wireless Carrier: T-Mobile",
-        "Brand: Apple",
         "Form Factor: Foldable Case",
-        "Memory Storage Capacity: 64 GB",
-        "Operating System: IOS 14",
-        "Color: Purple",
-        "Cellular Technology: 2G",
         "SIM card slot count: Dual SIM",
         "Included Components: USB Cable"
+    ],
+    "wireless_carrier": [
+        "T-Mobile"
+    ],
+    "operating_system": "iOS",
+    "color": "Purple",
+    "screen_size": "",
+    "memory_storage_capacity": "64",
+    "cellular_technology": [
+        "2G"
     ],
     "content_type": "item",
     "id": "B011SDYBZW",
@@ -14257,17 +14287,19 @@
         "Expandable memory to 200GB",
         "12MP rear Camera with Dual pixel 5MP Front Camera"
     ],
-    "overview": [
+    "more": [
         "Model Name: S7 Edge",
-        "Brand: Samsung Electronics",
         "Form Factor: Touchscreen",
-        "Memory Storage Capacity: 32 GB",
-        "Operating System: Google_android",
-        "Color: Gold",
-        "Cellular Technology: 2G",
         "Included Components: Phone",
-        "Screen Size: 5.5 Inches",
         "Display Type: LCD"
+    ],
+    "wireless_carrier": "",
+    "operating_system": "Android",
+    "color": "Gold",
+    "screen_size": "5.5",
+    "memory_storage_capacity": "32",
+    "cellular_technology": [
+        "2G"
     ],
     "content_type": "item",
     "id": "B01CP4CGBE",
@@ -14664,17 +14696,21 @@
     "originalPrice": 0.0,
     "description": "Only for GSM Carriers , phone DOES NOT Work on Verizon Boost Virgin or any CDMA Carrier",
     "about": [],
-    "overview": [
-        "Wireless Carrier: Unlocked",
-        "Brand: Motorola",
-        "Memory Storage Capacity: 32 GB",
-        "Color: Gold",
-        "Cellular Technology: 4G, 2G",
-        "Screen Size: 5.2 Inches",
-        "Manufacturer: Motorola",
+    "more": [
         "Other camera features: Front",
         "Connectivity Technology: Bluetooth, Wi-Fi",
         "Item Weight: 155 Grams"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "",
+    "color": "Gold",
+    "screen_size": "5.2",
+    "memory_storage_capacity": "32",
+    "cellular_technology": [
+        "4G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B06XKMMWPM",
@@ -14695,16 +14731,20 @@
     "about": [
         "Brand New in box. The product ships with all relevant accessories"
     ],
-    "overview": [
+    "more": [
         "Model Name: Pixel 2 XL",
-        "Wireless Carrier: Unlocked",
-        "Brand: Google",
-        "Memory Storage Capacity: 64 GB",
-        "Color: Just Black",
-        "Cellular Technology: 4G, 2G",
-        "Screen Size: 5 Inches",
-        "Manufacturer: Google",
         "Item Weight: 175 Grams"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "",
+    "color": "Just Black",
+    "screen_size": "5",
+    "memory_storage_capacity": "64",
+    "cellular_technology": [
+        "4G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B077CTDDQ6",
@@ -14989,17 +15029,22 @@
         "Glass: Corning Gorilla Glass 5, Network: Unlocked World-wide network/carrier compatibility with GSM/EDGE: Quad-band (850, 900, 1800, 1900 MHz) CDMA EVDO Rev A: BC0/BC1/BC10 WCDMA: W1/W2 Camera Resolution: 12.2MP HDR Support (UHDA certification), 4K Video Recording Rear Camera: 12.2MP dual pixel, f/1.8 aperture, Autofocus and dual pixel phase detection, Optical and electronic image stabilization, Spectral and flicker sensor Dual Front Cameras: 8MP wide angle and normal FoV cameras.",
         "RAM: 4 GB, Storage Capacity: 64GB, Processor: Qualcomm Snapdragon 845 (2.5GHz plus 1.6GHz), 64Bit Octa Core Adreno 630 ,Battery: 3430 mAh battery, 18w fast charging, Qi wireless charging, 18w/2A USB Type C charger, Wireless and Location: Wi Fi 2.4GHz plus 5.0GHz 802.11a/b/g/n/ac, Bluetooth 5.0 LE Materials: Aluminum frame plus hybrid coating, Style: Bar"
     ],
-    "overview": [
-        "Wireless Carrier: Unlocked",
-        "Brand: Google",
+    "more": [
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 64 GB",
-        "Operating System: Android 9.0",
-        "Color: Just Black",
-        "Cellular Technology: 4G, 3G, 2G",
         "Included Components: Adapter",
-        "Screen Size: 6.3 Inches",
         "Display Type: OLED"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "Just Black",
+    "screen_size": "6.3",
+    "memory_storage_capacity": "64",
+    "cellular_technology": [
+        "4G",
+        "3G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B07HKPMFZ5",
@@ -17357,7 +17402,7 @@
     "totalRatings": 2269,
     "price": 0.0,
     "originalPrice": 0.0,
-    "description": NaN,
+    "description": "",
     "about": [
         "4G Bands: LTE band 2(1900), 3(1800), 4(1700/2100), 5(850), 7(2600), 28(700) , 3G Bands: B8/B1/B2/B5/AWS",
         "6.5 inch 19.5 : 9 FHD+ (2340 x 1080) Display, Hisilicon Kirin 710 Chipset, 3 GB RAM + 64 GB ROM, microSD, up to 400 GB, Non-removable Li-Ion 4000 mAh battery",
@@ -17365,17 +17410,23 @@
         "Sensors: Fingerprint sensor, Proximity sensor, Ambient light sensor, Digital compass, Gravity sensor, Gyroscope",
         "International model phone, will work with Most GSM SIM cards in U.S. and Latin Including AT&T, T-Mobile, MetroPCS, Etc. Does not have US warranty. Will NOT work with CDMA Carriers Such as Verizon, Sprint, Boost."
     ],
-    "overview": [
+    "more": [
         "Model Name: Huawei Y9",
-        "Wireless Carrier: Unlocked",
-        "Brand: HUAWEI",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 64 GB",
-        "Color: Blue",
-        "Cellular Technology: 4G, 3G, 2G",
         "SIM card slot count: Dual SIM",
-        "Year: 2019",
-        "Screen Size: 5.93 Inches"
+        "Year: 2019"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "",
+    "color": "Blue",
+    "screen_size": "5.93",
+    "memory_storage_capacity": "64",
+    "cellular_technology": [
+        "4G",
+        "3G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B07JNKYBZ4",
@@ -18480,17 +18531,19 @@
         "12 Megapixel Camera with Dual Pixel Autofocus, OIS, F/1.7, 26mm, phase detection autofocus, LED Flash, 1/2.5\" sensor size, 1.4 \u00b5m pixel size, geo-tagging, simultaneous 4K video and 9MP image recording, touch focus, face/smile detection, Auto HDR, panorama + 5 Megapixel Front Camera with F/1.7, Selfie Flash, 22mm Lens, Dual Video Call, Auto HDR",
         "Internal Memory: 32GB, 4GB RAM - microSD Up to 256GB"
     ],
-    "overview": [
-        "Wireless Carrier: Unlocked",
-        "Brand: Samsung Electronics",
+    "more": [
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 32 GB",
-        "Operating System: Android 6.0",
-        "Color: Gold",
-        "Cellular Technology: 2G",
-        "Screen Size: 5.5 Inches",
-        "Manufacturer: Samsung",
         "Other camera features: Rear, Front"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "Gold",
+    "screen_size": "5.5",
+    "memory_storage_capacity": "32",
+    "cellular_technology": [
+        "2G"
     ],
     "content_type": "item",
     "id": "B07KSNGBX6",
@@ -18514,17 +18567,19 @@
         "2915 mAH battery + Qi wireless charging",
         "12.2 MP dual-pixel"
     ],
-    "overview": [
-        "Wireless Carrier: Unlocked",
-        "Brand: Google",
+    "more": [
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 64 GB",
-        "Operating System: Android",
-        "Color: Just Black",
-        "Cellular Technology: 4G",
-        "Screen Size: 5.5 Inches",
-        "Manufacturer: Google",
         "Other camera features: Rear, Front"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "Just Black",
+    "screen_size": "5.5",
+    "memory_storage_capacity": "64",
+    "cellular_technology": [
+        "4G"
     ],
     "content_type": "item",
     "id": "B07KX8DXW8",
@@ -18551,17 +18606,20 @@
         "Sleek Design: Samsung Galaxy\u00a0S10+\u00a0boasts a super-slim design that fits comfortably in your pocket and easily sits in the hand. A\u00a06.4\u201d\u00a0endless quad HD+ dynamic\u00a0AMOLED\u00a0screen with nearly\u00a0bezel-less\u00a0infinity display offers a cinematic viewing experience",
         "All-day Battery: Fast-charging, long-lasting intelligent power features super-speed processing, Wireless PowerShare, and massive storage, and tailors battery usage to how you live and work to optimize battery life to last all day"
     ],
-    "overview": [
+    "more": [
         "Model Name: S10+",
-        "Wireless Carrier: Unlocked",
-        "Brand: Samsung Electronics",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 512 GB",
-        "Operating System: Android 9.0",
-        "Color: White",
-        "Cellular Technology: LTE",
-        "Included Components: PLACEHOLDER",
-        "Screen Size: 6.4 Inches"
+        "Included Components: PLACEHOLDER"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "White",
+    "screen_size": "6.4",
+    "memory_storage_capacity": "512",
+    "cellular_technology": [
+        "LTE"
     ],
     "content_type": "item",
     "id": "B07N4GKVZZ",
@@ -18580,16 +18638,18 @@
     "originalPrice": 0.0,
     "description": "Premium experience that exceeds any expectations. This Samsung Galaxy S10 features a powerful pro-grade camera, intelligent battery, in-display ultrasonic fingerprint ID, and an immersive cinematic screen in a slim, balanced form. Galaxy S10 takes your Galaxy to the next level.",
     "about": [],
-    "overview": [
-        "Wireless Carrier: AT&T",
-        "Brand: Samsung Electronics",
+    "more": [
         "Form Factor: Touchscreen",
-        "Memory Storage Capacity: 256 GB",
-        "Color: Black",
-        "Screen Size: 5.8 Inches",
-        "Manufacturer: Samsung Mobile",
         "Human Interface Input: Touchscreen"
     ],
+    "wireless_carrier": [
+        "AT&T"
+    ],
+    "operating_system": "",
+    "color": "Black",
+    "screen_size": "5.8",
+    "memory_storage_capacity": "256",
+    "cellular_technology": "",
     "content_type": "item",
     "id": "B07P141TBG",
     "reviews": []
@@ -18613,17 +18673,21 @@
         "The device does not come with headphones or a SIM card. It does include a generic (Mfi certified) charger and charging cable.",
         "Inspected and guaranteed to have minimal cosmetic damage, which is not noticeable when the device is held at arm's length."
     ],
-    "overview": [
+    "more": [
         "Model Name: A1984",
-        "Wireless Carrier: Unlocked",
-        "Brand: Apple",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 64 GB",
-        "Operating System: IOS",
-        "Color: Black",
-        "Cellular Technology: 4G",
         "SIM card slot count: Single SIM",
         "Year: 2018"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "iOS",
+    "color": "Black",
+    "screen_size": "",
+    "memory_storage_capacity": "64",
+    "cellular_technology": [
+        "4G"
     ],
     "content_type": "item",
     "id": "B07P6Y7954",
@@ -20599,17 +20663,22 @@
         "2G: B2/B3/B5/B8, 3G: B1/B2/B4/B5/B8, 4G: LTE B2/B4/B5/B7/B28",
         "International Model, Does not have US Warranty. Will work with Most GSM SIM cards in U.S. and world Including AT&T, T-Mobile, Etc. Will NOT work with CDMA Carriers Such as Verizon, Sprint, Boost."
     ],
-    "overview": [
-        "Wireless Carrier: T-Mobile",
-        "Brand: HUAWEI",
+    "more": [
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 32 GB",
-        "Color: Blue",
-        "Cellular Technology: 4G, 3G, 2G",
         "SIM card slot count: Dual SIM",
-        "Year: 2019",
-        "Screen Size: 5.5 Inches",
-        "Manufacturer: Huawei"
+        "Year: 2019"
+    ],
+    "wireless_carrier": [
+        "T-Mobile"
+    ],
+    "operating_system": "",
+    "color": "Blue",
+    "screen_size": "5.5",
+    "memory_storage_capacity": "32",
+    "cellular_technology": [
+        "4G",
+        "3G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B07THF23SP",
@@ -20634,17 +20703,20 @@
         "Cosmetic Condition: Grade A+",
         "Screen Size: 6.8 in."
     ],
-    "overview": [
+    "more": [
         "Model Name: Samsung Galaxy Note 10+ 5G",
-        "Wireless Carrier: Verizon",
-        "Brand: Samsung Electronics",
         "Form Factor: Slate",
-        "Memory Storage Capacity: 256 GB",
-        "Operating System: Android",
-        "Color: Aura Glow",
-        "Cellular Technology: 5G",
-        "Included Components: USB Charging Cable, USB Charging Block",
-        "Screen Size: 6.8 Inches"
+        "Included Components: USB Charging Cable, USB Charging Block"
+    ],
+    "wireless_carrier": [
+        "Verizon"
+    ],
+    "operating_system": "Android",
+    "color": "Aura Glow",
+    "screen_size": "6.8",
+    "memory_storage_capacity": "256",
+    "cellular_technology": [
+        "5G"
     ],
     "content_type": "item",
     "id": "B07YXB153C",
@@ -20668,17 +20740,20 @@
         "Wireless communication technology, Cellular",
         "Package Dimensions, 5.2 L x 16.7 H x 8.8 W (centimeters)"
     ],
-    "overview": [
-        "Wireless Carrier: Unlocked",
-        "Brand: Google",
+    "more": [
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 64 GB",
-        "Color: Black",
-        "Cellular Technology: 2G",
-        "Screen Size: 5.6 Inches",
-        "Manufacturer: Google",
         "Other camera features: Rear, Front",
         "Item Weight: 5.19 Ounces"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "",
+    "color": "Black",
+    "screen_size": "5.6",
+    "memory_storage_capacity": "64",
+    "cellular_technology": [
+        "2G"
     ],
     "content_type": "item",
     "id": "B07ZP9ZWFM",
@@ -20977,17 +21052,21 @@
         "The device does not come with headphones or a SIM card. It does include a generic (Mfi certified) charger and charging cable.",
         "Tested for battery health and guaranteed to have a minimum battery capacity of 80%."
     ],
-    "overview": [
+    "more": [
         "Model Name: IPhone 11 Pro Max",
-        "Wireless Carrier: Unlocked",
-        "Brand: Apple",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 64 GB",
-        "Operating System: IOS",
-        "Color: Midnight Green",
-        "Cellular Technology: 4G",
         "SIM card slot count: Single SIM",
         "Year: 2018"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "iOS",
+    "color": "Midnight Green",
+    "screen_size": "",
+    "memory_storage_capacity": "64",
+    "cellular_technology": [
+        "4G"
     ],
     "content_type": "item",
     "id": "B07ZQS6LPZ",
@@ -21143,17 +21222,20 @@
         "Display: 5.5 inches IPS LCD capacitive touchscreen - Resolution: 720 x 1440 pixels",
         "Battery: Removable Li-Po 3000 mAh battery"
     ],
-    "overview": [
-        "Wireless Carrier: Unlocked for All Carriers",
-        "Brand: Motorola",
+    "more": [
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 32 GB",
-        "Operating System: Android 9.0",
-        "Color: Ocean Blue",
-        "Cellular Technology: 2G",
         "SIM card slot count: Dual SIM",
-        "Included Components: USB Cable",
-        "Screen Size: 5.5 Inches"
+        "Included Components: USB Cable"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "Ocean Blue",
+    "screen_size": "5.5",
+    "memory_storage_capacity": "32",
+    "cellular_technology": [
+        "2G"
     ],
     "content_type": "item",
     "id": "B0813YVK1D",
@@ -21323,17 +21405,22 @@
         "8MP Front Camera / 16MP + 8MP Dual Wide-angle Rear Camera, MicroSD Card Slot (up to 256GB). Fingerprint sensor camera activation support",
         "Dual Nano SIM slots (SIM Slot A supports 2/3/4G \u2013 SIM Slot B supports 3G/2G voice)"
     ],
-    "overview": [
+    "more": [
         "Model Name: ZenFone Max Plus",
-        "Wireless Carrier: Unlocked",
-        "Brand: ASUS",
-        "Memory Storage Capacity: 32 GB",
-        "Operating System: Android",
-        "Color: Black",
-        "Cellular Technology: 4G, 3G, 2G",
         "SIM card slot count: Dual SIM",
-        "Included Components: USB Cable",
-        "Screen Size: 5.7 Inches"
+        "Included Components: USB Cable"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "Black",
+    "screen_size": "5.7",
+    "memory_storage_capacity": "32",
+    "cellular_technology": [
+        "4G",
+        "3G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B083Z6MX33",
@@ -21352,17 +21439,21 @@
     "originalPrice": 0.0,
     "description": "This is an unlocked international mobile phone and it may be used with any GSM network in the world that uses a frequency or band that this device supports. This phone/tablet will NOT work with Verizon, Sprint, Boost, or any other CDMA network. Wireless frequencies for 3G, 4G, and LTE vary by network. Even when 3G/4G/LTE frequencies are supported, a new SIM card or additional configuration may be required, and coverage may vary by location. Please check with your carrier or our customer service team if you have any questions regarding compatibility.",
     "about": [],
-    "overview": [
-        "Wireless Carrier: T-Mobile",
-        "Brand: Samsung Electronics",
+    "more": [
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 32 GB",
-        "Operating System: Android 9.0",
-        "Color: Black",
-        "Cellular Technology: 4G, 2G",
         "SIM card slot count: Dual SIM",
-        "Screen Size: 6.2 Inches",
         "Display Type: LCD"
+    ],
+    "wireless_carrier": [
+        "T-Mobile"
+    ],
+    "operating_system": "Android",
+    "color": "Black",
+    "screen_size": "6.2",
+    "memory_storage_capacity": "32",
+    "cellular_technology": [
+        "4G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B0849XTMVL",
@@ -21387,17 +21478,22 @@
         "2G bands: GSM 850 / 900 / 1800 / 1900, 3G bands: HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100, 4G LTE bands: 1, 2, 3, 4, 5, 7, 8, 20, 28, 38, 40",
         "International Model - No Warranty in US. Compatible with Most GSM Carriers like T-Mobile, AT&T, MetroPCS, etc. Will NOT work with CDMA Carriers Such as Verizon, Cricket, Boost. - FCC ID: 2AFZZJ6A1G"
     ],
-    "overview": [
+    "more": [
         "Model Name: 6941059640431",
-        "Wireless Carrier: Unlocked",
-        "Brand: Xiaomi",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 4 GB",
-        "Operating System: Android 10.0",
-        "Color: Aurora Blue",
-        "Cellular Technology: 4G, 3G, 2G",
-        "Included Components: Adapter",
-        "Screen Size: 6.67 Inches"
+        "Included Components: Adapter"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "Aurora Blue",
+    "screen_size": "6.67",
+    "memory_storage_capacity": "4",
+    "cellular_technology": [
+        "4G",
+        "3G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B085S47W3M",
@@ -22463,17 +22559,22 @@
         "2G bands: GSM 850 / 900 / 1800 / 1900, 3G bands: HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100, 4G LTE bands: 1, 2, 3, 4, 5, 7, 8, 20, 28, 38, 40",
         "International Model - No Warranty in US. Compatible with Most GSM Carriers like T-Mobile, AT&T, MetroPCS, etc. Will NOT work with CDMA Carriers Such as Verizon, Sprint, Boost. - FCC ID: 2AFZZJ6A1G"
     ],
-    "overview": [
+    "more": [
         "Model Name: Redmi Note 9S",
-        "Wireless Carrier: Unlocked",
-        "Brand: Xiaomi",
-        "Memory Storage Capacity: 4 GB",
-        "Operating System: Android 10.0",
-        "Color: Aurora Blue",
-        "Cellular Technology: 4G, 3G, 2G",
         "SIM card slot count: Dual SIM",
-        "Included Components: Adapter",
-        "Screen Size: 6.67 Inches"
+        "Included Components: Adapter"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "Aurora Blue",
+    "screen_size": "6.67",
+    "memory_storage_capacity": "4",
+    "cellular_technology": [
+        "4G",
+        "3G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B088LKZHLF",
@@ -22627,17 +22728,20 @@
         "Display Size: 6.67 inches QHD+ AMOLED Display | Resolution: 1440 x 3120 pixels, Aspect Ratio: 19.5:9 | Type: AMOLED | Cover Glass: 3D Corning Gorilla Glass. 90Hz Refresh Rate: delivers a fluid viewing experience that makes everything you do faster and smoother. HDR 10+. In-display fingerprint sensor - Simply touch the screen to unlock your device in just 0.21 seconds.",
         "Triple Rear Camera: 48MP Main (f/1.6) + 16MP Ultra Wide Angle (f/2.2) + 8MP Telephoto (f/2.4). Dual LED Flash, Video: 4K resolution at 30/60 fps | 1080p resolution at 30/60 fps | Super Slow Motion: 1080p videos at 240 fps | 720p video at 480 fps, Time-Lapse, Video Editor. Pop-up front camera: 16MP, Video: 1080p resolution at 30 fps | Time-Lapse."
     ],
-    "overview": [
-        "Wireless Carrier: T-Mobile",
-        "Brand: OnePlus",
+    "more": [
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 256 GB",
-        "Operating System: Android",
-        "Color: Mirror Grey",
-        "Cellular Technology: 2G",
         "SIM card slot count: Dual SIM",
-        "Screen Size: 6.67 Inches",
         "Display Type: AMOLED"
+    ],
+    "wireless_carrier": [
+        "T-Mobile"
+    ],
+    "operating_system": "Android",
+    "color": "Mirror Grey",
+    "screen_size": "6.67",
+    "memory_storage_capacity": "256",
+    "cellular_technology": [
+        "2G"
     ],
     "content_type": "item",
     "id": "B089LKV86J",
@@ -22917,17 +23021,22 @@
     "originalPrice": 0.0,
     "description": "Immerse yourself in the large 6.5 inch Infinity-O Display of Galaxy A21s. A wide aspect ratio fills your screen with content from edge to edge. Watch your favorite videos, games and live streams on its HD+ display. Galaxy A21s has a glossy and holographic finish that catches the eye. The smooth curves of the body allow for an easy and secure grip when navigating the screen. Go ultra high-res with a 48MP Main Cam for crisp, clear photos day and night. A 123\u00b0 8MP Ultra Wide Cam captures more of the view. Choose the upgraded 2MP Macro Cam for highly refined close-ups, and make sure the subject always stands out with the 2MP Depth Camera\u2019s multiple Live Focus effects. Capture the wider world with the Ultra Wide Camera's wider field of vision. And with the 48MP Main Camera, your story stays bright and clear throughout the day. Quad Cam\u2019s built-in 2MP Macro Cam (40mm) shoots with clarity and quality helping you bring out the ultra-fine details of your close-up shots. Apply natural background blur to isolate your subject and make it stand out. The 2MP Depth Camera lets you adjust the depth of field before and after you nail the shot. It reduces unwanted background noise from your images to make them look more professional. You want your selfie to look good. So for stunning daytime looks, Galaxy A21s' 13MP front camera gives you clear, high-resolution photos. And with Live focus to gently blur the background, your face becomes the star. When out living life, you need a phone that can last. A 5,000mAh battery gives you the power to stream, share and game on. And if you start running low, plug in and power up with up to 15W of fast charging. Built into the phone's hardware and software from the start, Samsung Knox protects your phone from the minute it's turned on. Offering multi-layered security, it defends your most sensitive information from malware and malicious threats. Enjoy peace of mind when you choose to buy a galaxy smartphone",
     "about": [],
-    "overview": [
-        "Wireless Carrier: MVNO",
-        "Brand: Samsung Electronics",
+    "more": [
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 64 GB",
-        "Operating System: Android 9.0",
-        "Cellular Technology: 4G, 2G",
         "SIM card slot count: Dual SIM",
         "Year: 2020",
-        "Included Components: USB Cable",
-        "Screen Size: 6.5 Inches"
+        "Included Components: USB Cable"
+    ],
+    "wireless_carrier": [
+        "MVNO"
+    ],
+    "operating_system": "Android",
+    "color": "",
+    "screen_size": "6.5",
+    "memory_storage_capacity": "64",
+    "cellular_technology": [
+        "4G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B089XZ3SZN",
@@ -23213,17 +23322,22 @@
         "2G bands: GSM 850 / 900 / 1800 / 1900, 3G bands: HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100, 4G bands: 1, 2, 3, 4, 5, 7, 8, 20, 28, 38, 40, 41",
         "International Model - No Warranty in the US. Compatible with Most GSM Carriers like T-Mobile, AT&amp;amp;T, MetroPCS, etc. Will NOT work with CDMA Carriers Such as Verizon, Sprint, Boost. - FCC ID: 2AFZZJ19G"
     ],
-    "overview": [
+    "more": [
         "Model Name: REDMI 9",
-        "Wireless Carrier: Unlocked for All Carriers",
-        "Brand: Xiaomi",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 4 GB",
-        "Color: Ocean Green",
-        "Cellular Technology: 4G, 3G, 2G",
-        "Year: 2021",
-        "Screen Size: 6.5 Inches",
-        "Manufacturer: Xiaomi"
+        "Year: 2021"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "",
+    "color": "Ocean Green",
+    "screen_size": "6.5",
+    "memory_storage_capacity": "4",
+    "cellular_technology": [
+        "4G",
+        "3G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B08B3VCF9G",
@@ -23769,17 +23883,23 @@
         "2G bands: GSM 850 / 900 / 1800 / 1900, 3G bands: HSDPA 800 / 850 / 900 / 1700(AWS) / 1800 / 1900 / 2100, 4G bands: 1, 2, 3, 4, 5, 7, 8, 12, 13, 17, 18, 19, 20, 25, 26, 28, 29, 30, 34, 38, 39, 41, 46, 48, 66, 71",
         "T-Mobile Unlocked Version. Compatible with Most GSM Carriers like T-Mobile, AT&T, MetroPCS, etc. Will NOT work with CDMA Carriers Such as Verizon, Sprint, Boost."
     ],
-    "overview": [
+    "more": [
         "Model Name: OnePlus 7T",
-        "Wireless Carrier: 3",
-        "Brand: OnePlus",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 128 GB",
-        "Color: Frosted Silver",
-        "Cellular Technology: 4G, 3G, 2G",
         "SIM card slot count: Single SIM",
-        "Screen Size: 6.55 Inches",
         "Display Type: AMOLED"
+    ],
+    "wireless_carrier": [
+        "3"
+    ],
+    "operating_system": "",
+    "color": "Frosted Silver",
+    "screen_size": "6.55",
+    "memory_storage_capacity": "128",
+    "cellular_technology": [
+        "4G",
+        "3G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B08C27KCTC",
@@ -23935,17 +24055,23 @@
         "Wireless network: Supports protocols: 802.11 b/g/n Supports 2.4G WiFi / WiFi Direct Support Bluetooth 5.0 Supports FM radio (with headphones). Network Bands GSM B2/3/5/8 WCDMA B1/2/4/5/8 LTE-FDD B1/2/3/4/5/7/8/20/28 LTE-TDD B38/40/41(2535-2655MHz)",
         "M2006C3LG Global Version Unlocked - No Warranty in US. Compatible with Most GSM Carriers like T-Mobile, AT&T, MetroPCS, etc. Will NOT work with CDMA Carriers Such as Verizon, Sprint, Boost. - FCC ID: FCC ID 2AFZZC3MG"
     ],
-    "overview": [
+    "more": [
         "Model Name: Redmi 9A",
-        "Wireless Carrier: Blue",
-        "Brand: Xiaomi",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 2 GB",
-        "Operating System: Android 10.0",
-        "Color: Granite Grey",
-        "Cellular Technology: 4G, 3G, 2G",
         "SIM card slot count: Dual SIM",
         "Year: 2021"
+    ],
+    "wireless_carrier": [
+        "Blue"
+    ],
+    "operating_system": "Android",
+    "color": "Granite Grey",
+    "screen_size": "",
+    "memory_storage_capacity": "2",
+    "cellular_technology": [
+        "4G",
+        "3G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B08CGXVPXW",
@@ -24231,18 +24357,19 @@
         "Camera 12.2 MP Front Camera 8 MP",
         "Locked to Verizon"
     ],
-    "overview": [
-        "Wireless Carrier: Verizon",
-        "Brand: Google",
-        "Memory Storage Capacity: 64 GB",
-        "Operating System: Android",
-        "Color: Black",
+    "more": [
         "SIM card slot count: Single SIM",
-        "Screen Size: 5.6 Inches",
         "Display Type: OLED",
-        "Manufacturer: Google",
         "Other camera features: Front"
     ],
+    "wireless_carrier": [
+        "Verizon"
+    ],
+    "operating_system": "Android",
+    "color": "Black",
+    "screen_size": "5.6",
+    "memory_storage_capacity": "64",
+    "cellular_technology": "",
     "content_type": "item",
     "id": "B08CLNM313",
     "reviews": []
@@ -24267,17 +24394,20 @@
         "Expandable Memory: Save all that matters with 16GB of built-in mobile memory; If you need more, you can expand storage to 512GB with a microSD card (sold separately)",
         "Galaxy 5G for Everyone: With 5G, your phone now delivers mind-boggling speeds, superior connections and nearly undetectable lag times. (5G speeds vary and require optimal network and connection (factors include frequency, bandwidth, congestion); see carrier for availability)"
     ],
-    "overview": [
+    "more": [
         "Model Name: Galaxy A51",
-        "Wireless Carrier: Unlocked",
-        "Brand: Samsung Electronics",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 128 GB",
-        "Operating System: Android 10.0",
-        "Color: Black",
-        "Cellular Technology: 5G",
-        "Included Components: Travel Adapter, Data Cable, STD Battery, Handset + Cling",
-        "Screen Size: 6.5 Inches"
+        "Included Components: Travel Adapter, Data Cable, STD Battery, Handset + Cling"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "Black",
+    "screen_size": "6.5",
+    "memory_storage_capacity": "128",
+    "cellular_technology": [
+        "5G"
     ],
     "content_type": "item",
     "id": "B08DHPBD4H",
@@ -24301,17 +24431,20 @@
         "IP68 Water and Dust Resistant",
         "Bluetooth 5.0 and USB-C Charging Port"
     ],
-    "overview": [
-        "Wireless Carrier: Verizon",
-        "Brand: Google",
+    "more": [
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 64 GB",
-        "Color: White",
-        "Manufacturer: Google",
         "Connectivity Technology: Bluetooth, USB",
         "Shooting Modes: High Dynamic Range",
         "Scanner Resolution: 2280 x 1080"
     ],
+    "wireless_carrier": [
+        "Verizon"
+    ],
+    "operating_system": "",
+    "color": "White",
+    "screen_size": "",
+    "memory_storage_capacity": "64",
+    "cellular_technology": "",
     "content_type": "item",
     "id": "B08DRR49SC",
     "reviews": []
@@ -24335,17 +24468,20 @@
         "Power Packed: Advanced processor and impressive 12GB RAM give you fast and powerful performance for fluid multitasking and gaming with little lag \u2014 and 256GB internal storage gives your cellular phone the space to hold it all",
         "5G Connectivity: Get next-level power for everything you love to do with Galaxy Z Fold 5G; Share more, game harder, experience more and never miss a beat"
     ],
-    "overview": [
+    "more": [
         "Model Name: Galaxy Fold2",
-        "Wireless Carrier: Unlocked",
-        "Brand: Samsung Electronics",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 256 GB",
-        "Operating System: Android",
-        "Color: Mystic Black",
-        "Cellular Technology: 5G",
-        "Included Components: Travel Adapter, Data Cable, STD Battery, Handset + Cling",
-        "Screen Size: 7.6 Inches"
+        "Included Components: Travel Adapter, Data Cable, STD Battery, Handset + Cling"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "Mystic Black",
+    "screen_size": "7.6",
+    "memory_storage_capacity": "256",
+    "cellular_technology": [
+        "5G"
     ],
     "content_type": "item",
     "id": "B08GL5YRQT",
@@ -24500,17 +24636,20 @@
         "4G LTE; Wi-Fi Capable; Bluetooth 4.2 wireless technology; GPS Capable",
         "CARRIER: This phone is locked to Tracfone, which means this device can only be used on the Tracfone wireless network."
     ],
-    "overview": [
+    "more": [
         "Model Name: Galaxy A11",
-        "Wireless Carrier: Tracfone",
-        "Brand: Samsung Electronics",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 32 GB",
-        "Operating System: Android 10.0",
-        "Color: Black",
-        "Cellular Technology: LTE",
-        "Included Components: Phone, Manual, Charger, USB Cable",
-        "Screen Size: 6.4 Inches"
+        "Included Components: Phone, Manual, Charger, USB Cable"
+    ],
+    "wireless_carrier": [
+        "Tracfone"
+    ],
+    "operating_system": "Android",
+    "color": "Black",
+    "screen_size": "6.4",
+    "memory_storage_capacity": "32",
+    "cellular_technology": [
+        "LTE"
     ],
     "content_type": "item",
     "id": "B08J4LFDSR",
@@ -24926,17 +25065,20 @@
         "Single-Take AI: One tap of the screen captures multiple images and video all at once; Lenses, effects and filters capture the best of every moment, every time",
         "Power of 5G: Get next-level power for everything you love to do with Samsung Galaxy 5G; More sharing, more gaming, more experiences and never miss a beat"
     ],
-    "overview": [
+    "more": [
         "Model Name: Galazy S20 FE",
-        "Wireless Carrier: Unlocked",
-        "Brand: Samsung Electronics",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 128 GB",
-        "Operating System: IOS",
-        "Color: Cloud Navy",
-        "Cellular Technology: 5G",
-        "SIM card slot count: Single SIM",
-        "Screen Size: 6.5 Inches"
+        "SIM card slot count: Single SIM"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "iOS",
+    "color": "Cloud Navy",
+    "screen_size": "6.5",
+    "memory_storage_capacity": "128",
+    "cellular_technology": [
+        "5G"
     ],
     "content_type": "item",
     "id": "B08L34JQ9C",
@@ -25093,17 +25235,20 @@
         "Network : GSM /HSPA / LTE, GSM Bands: 850 / 900 / 1800 / 1900, 3G Bands HSDPA 850 / 900 / 2100, 4G Bands 1, 3, 5, 7, 8, 20, 28, 38, 40, 41, Speed HSPA 42.2/5.76 Mbps, LTE Cat4 150/50 Mbps",
         "6.5 inches Display, Type: PLS IPS, 720 x 1600 pixels Resolution, 3.5 mm Jack, USB Type C 2.0, Wi -FI Direct, Hotspot Bluetooth 5.0 A2DP,LE, GPS, GLONASS, GALILEO BDS, Sensors: Fingerprint, accelerometer, Fast Charging 15w Will NOT work with CDMA Carriers Such as Verizon, Sprint, Boost"
     ],
-    "overview": [
+    "more": [
         "Model Name: A12",
-        "Wireless Carrier: Unlocked for All Carriers",
-        "Brand: Samsung Electronics",
         "Form Factor: Touchscreen",
-        "Memory Storage Capacity: 4 GB",
-        "Operating System: Android 10.0",
-        "Color: BLACK",
-        "Cellular Technology: 4G",
-        "Year: 2020",
-        "Screen Size: 6.5 Inches"
+        "Year: 2020"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "BLACK",
+    "screen_size": "6.5",
+    "memory_storage_capacity": "4",
+    "cellular_technology": [
+        "4G"
     ],
     "content_type": "item",
     "id": "B08QFZRVKV",
@@ -25133,17 +25278,20 @@
         "Durable Corning Gorilla Glass 6, water resistant (IP65/68)",
         "Customizable shortcut button to launch any app of your choice"
     ],
-    "overview": [
+    "more": [
         "Model Name: XQAQ62/B",
-        "Wireless Carrier: Unlocked",
-        "Brand: Sony",
         "Form Factor: Bar",
-        "Memory Storage Capacity: 512 GB",
-        "Operating System: Android 10.0",
-        "Color: Black",
-        "Cellular Technology: 5G",
-        "Included Components: Phone, USB-C cable, USB-C power adapter",
-        "Screen Size: 6.5 Inches"
+        "Included Components: Phone, USB-C cable, USB-C power adapter"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "Black",
+    "screen_size": "6.5",
+    "memory_storage_capacity": "512",
+    "cellular_technology": [
+        "5G"
     ],
     "content_type": "item",
     "id": "B08S9CGBL2",
@@ -25299,18 +25447,20 @@
         "Platform: Android -- Qualcomm SDM450 Snapdragon 450 -- Octa-core 1.8 GHz Cortex-A53 -- Adreno 506",
         "Battery: Li-Po 5000 mAh, non-removable, Fast charging 15W"
     ],
-    "overview": [
+    "more": [
         "Model Name: GALAXY A02s",
-        "Wireless Carrier: Unlocked for All Carriers",
-        "Brand: Samsung Electronics",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 32 GB",
-        "Color: Black",
         "SIM card slot count: Dual SIM",
-        "Screen Size: 6.5 Inches",
-        "Display Type: LCD",
-        "Manufacturer: Samsung"
+        "Display Type: LCD"
     ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "",
+    "color": "Black",
+    "screen_size": "6.5",
+    "memory_storage_capacity": "32",
+    "cellular_technology": "",
     "content_type": "item",
     "id": "B08TSV6DZ8",
     "reviews": []
@@ -25333,18 +25483,20 @@
         "Package Dimensions - 9.79 inches L X 4.36inches W X 2.23 inches H",
         "Package Weight - 0.74 Lbs"
     ],
-    "overview": [
+    "more": [
         "Model Name: Moto G Stylus - 2021",
-        "Wireless Carrier: Unlocked",
-        "Brand: Motorola",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 128 GB",
-        "Operating System: Android 10.0",
-        "Color: Black",
         "Year: 2021",
-        "Included Components: Stylus",
-        "Screen Size: 6.8 Inches"
+        "Included Components: Stylus"
     ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "Black",
+    "screen_size": "6.8",
+    "memory_storage_capacity": "128",
+    "cellular_technology": "",
     "content_type": "item",
     "id": "B08WHZTL29",
     "reviews": []
@@ -25362,17 +25514,20 @@
     "originalPrice": 0.0,
     "description": "Minimalist Design With Striking Style. Wrap Your Hands Around the Elegant soft Edge Design on the Stunning Galaxy A32. NOTE: Compatible With Most GSM Carriers and will NOT Work With CDMA Carriers. Storage: 128GB 6GB RAM Display: 6.4\" Super AMOLED, 90Hz Platform: Android 11, One UI 3.1, MediaTek Helio G80, Octa-core, Mali-G52 MC2 Camera: 64MP + 8MP + 5MP + 5MP Battery: Li-Po 5000 mAh, non-Removable",
     "about": [],
-    "overview": [
+    "more": [
         "Model Name: Samsung Galaxy A32 4G",
-        "Wireless Carrier: Unlocked for All Carriers",
-        "Brand: Samsung Electronics",
         "Form Factor: Slate",
-        "Memory Storage Capacity: 128 GB",
-        "Operating System: Android 11",
-        "Color: BLUE",
-        "Cellular Technology: 2G",
-        "Year: 2021",
-        "Screen Size: 6.4 Inches"
+        "Year: 2021"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "BLUE",
+    "screen_size": "6.4",
+    "memory_storage_capacity": "128",
+    "cellular_technology": [
+        "2G"
     ],
     "content_type": "item",
     "id": "B08X6FP8LY",
@@ -25397,17 +25552,22 @@
         "Platform: Qualcomm SM7150 Snapdragon 732G (8 nm) | Octa-core (2x2.3 GHz Kryo 470 Gold & 6x1.8 GHz Kryo 470 Silver) | Adreno 618",
         "Factory Unlocked Smartphones are compatible with GSM carriers. This phone is not compatible with CDMA carriers like Verizon/Sprint/Boost."
     ],
-    "overview": [
+    "more": [
         "Model Name: Redmi Note 10 Pro",
-        "Wireless Carrier: Unlocked for All Carriers",
-        "Brand: Xiaomi",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 64 GB",
-        "Color: Blue",
-        "Cellular Technology: 4G",
         "SIM card slot count: Dual SIM",
         "Year: 2021",
         "Included Components: Adapter"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "",
+    "color": "Blue",
+    "screen_size": "",
+    "memory_storage_capacity": "64",
+    "cellular_technology": [
+        "4G"
     ],
     "content_type": "item",
     "id": "B08Z6Z79SK",
@@ -25434,17 +25594,21 @@
         "Product is compatible with GSM carriers like AT&T, T-Mobile, Mint, and other GSM carriers. Product is not compatible with Verizon.",
         "Keep the family safe with a side fingerprint sensor and secure face recognition."
     ],
-    "overview": [
+    "more": [
         "Model Name: G10",
-        "Wireless Carrier: Unlocked",
-        "Brand: Nokia",
         "Form Factor: Bar",
-        "Memory Storage Capacity: 512 GB",
-        "Operating System: Android 11",
-        "Color: Polar Night",
-        "Cellular Technology: LTE",
         "SIM card slot count: Dual SIM",
         "Year: 2021"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "Polar Night",
+    "screen_size": "",
+    "memory_storage_capacity": "512",
+    "cellular_technology": [
+        "LTE"
     ],
     "content_type": "item",
     "id": "B093QPTSK7",
@@ -25535,13 +25699,15 @@
         "No SIM Card Slot / Network - Wi-Fi Only.",
         "International Model, Does not have US Warranty."
     ],
-    "overview": [
-        "Model Name: TAB A7 LITE",
-        "Brand: Samsung Electronics",
-        "Screen Size: 8.7 Inches",
-        "Operating System: Android",
-        "Memory Storage Capacity: 32 GB"
+    "more": [
+        "Model Name: TAB A7 LITE"
     ],
+    "wireless_carrier": "",
+    "operating_system": "Android",
+    "color": "",
+    "screen_size": "8.7",
+    "memory_storage_capacity": "32",
+    "cellular_technology": "",
     "content_type": "item",
     "id": "B0977PTQTK",
     "reviews": [
@@ -25578,17 +25744,20 @@
         "Internal Memory: 128GB, 6GB RAM - microSD Up to 512GB BT - 5.0, A2DP, LE, aptX; NFC - Yes; USB - 3.1, Type-C 1.0 Reversible Connector",
         "Bundle"
     ],
-    "overview": [
+    "more": [
         "Model Name: Note9",
-        "Wireless Carrier: Unlocked for All Carriers",
-        "Brand: Samsung Electronics",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 128 GB",
-        "Color: Black",
-        "Cellular Technology: 2G",
-        "Screen Size: 6.4 Inches",
-        "Display Type: AMOLED",
-        "Manufacturer: Samsung"
+        "Display Type: AMOLED"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "",
+    "color": "Black",
+    "screen_size": "6.4",
+    "memory_storage_capacity": "128",
+    "cellular_technology": [
+        "2G"
     ],
     "content_type": "item",
     "id": "B09FCSZ3RS",
@@ -25614,17 +25783,19 @@
         "Torch , Battery:1020 mAh, Removable USB connection:Micro USB (USB 2.0)",
         "FM radio (wired & wireless dual mode), MP3 Player and 3-in-1 speaker"
     ],
-    "overview": [
+    "more": [
         "Model Name: Ta-1395",
-        "Wireless Carrier: Unlocked for All Carriers",
-        "Brand: Nokia",
-        "Memory Storage Capacity: 32 GB",
-        "Operating System: Serie 30+",
-        "Color: Black",
-        "Cellular Technology: 4G",
-        "Screen Size: 1.8 Inches",
-        "Display Type: LCD",
-        "Manufacturer: Nokia"
+        "Display Type: LCD"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Serie 30+",
+    "color": "Black",
+    "screen_size": "1.8",
+    "memory_storage_capacity": "32",
+    "cellular_technology": [
+        "4G"
     ],
     "content_type": "item",
     "id": "B09G782SXL",
@@ -25649,17 +25820,22 @@
         "3 years of monthly security updates and 2 years of OS upgrades",
         "This Android 5G smartphone lets you choose or change carriers and data plans; compatible with GSM carriers including T-Mobile, Cricket, and AT&T (AT&T 4G only, AT&T 5G not supported)"
     ],
-    "overview": [
+    "more": [
         "Model Name: Nokia G50",
-        "Wireless Carrier: Unlocked",
-        "Brand: Nokia",
         "Form Factor: Bar",
-        "Memory Storage Capacity: 128 GB",
-        "Operating System: Android 11.0",
-        "Color: Ocean Blue",
-        "Cellular Technology: 5G, 4G LTE",
         "SIM card slot count: Single SIM",
         "Year: 2021"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "Ocean Blue",
+    "screen_size": "",
+    "memory_storage_capacity": "128",
+    "cellular_technology": [
+        "5G",
+        "4GLTE"
     ],
     "content_type": "item",
     "id": "B09GW969LH",
@@ -25684,17 +25860,21 @@
         "Includes a brand new, generic charging cable that is certified Mfi (Made for iPhone) and a brand new, generic wall plug that is UL certified for performance and safety. Also includes a SIM tray removal tool but does not come with headphones or a SIM card.",
         "Backed by a one-year satisfaction guarantee."
     ],
-    "overview": [
+    "more": [
         "Model Name: IPhone 12 Pro Max",
-        "Wireless Carrier: Unlocked",
-        "Brand: Apple",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 256 GB",
-        "Operating System: IOS 12",
-        "Color: Gold",
-        "Cellular Technology: LTE",
         "Included Components: SIM Tray Ejector, USB Cable",
         "Display Type: OLED"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "iOS",
+    "color": "Gold",
+    "screen_size": "",
+    "memory_storage_capacity": "256",
+    "cellular_technology": [
+        "LTE"
     ],
     "content_type": "item",
     "id": "B09JF3TGRV",
@@ -25719,17 +25899,21 @@
         "Includes a brand new, generic charging cable that is certified Mfi (Made for iPhone) and a brand new, generic wall plug that is UL certified for performance and safety. Also includes a SIM tray removal tool but does not come with headphones or a SIM card.",
         "Backed by a one-year satisfaction guarantee."
     ],
-    "overview": [
+    "more": [
         "Model Name: IPhone 12 Pro",
-        "Wireless Carrier: Unlocked",
-        "Brand: Apple",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 128 GB",
-        "Operating System: IOS 12",
-        "Color: Gold",
-        "Cellular Technology: LTE",
         "Included Components: SIM Tray Ejector, USB Cable",
         "Display Type: OLED"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "iOS",
+    "color": "Gold",
+    "screen_size": "",
+    "memory_storage_capacity": "128",
+    "cellular_technology": [
+        "LTE"
     ],
     "content_type": "item",
     "id": "B09JFC967X",
@@ -25754,17 +25938,21 @@
         "Includes a brand new, generic charging cable that is certified Mfi (Made for iPhone) and a brand new, generic wall plug that is UL certified for performance and safety. Also includes a SIM tray removal tool but does not come with headphones or a SIM card.",
         "Backed by a one-year satisfaction guarantee."
     ],
-    "overview": [
+    "more": [
         "Model Name: IPhone 12 Pro",
-        "Wireless Carrier: Unlocked",
-        "Brand: Apple",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 128 GB",
-        "Operating System: IOS 12",
-        "Color: Silver",
-        "Cellular Technology: LTE",
         "Included Components: SIM Tray Ejector, USB Cable",
         "Display Type: OLED"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "iOS",
+    "color": "Silver",
+    "screen_size": "",
+    "memory_storage_capacity": "128",
+    "cellular_technology": [
+        "LTE"
     ],
     "content_type": "item",
     "id": "B09JFPZXM4",
@@ -25789,17 +25977,21 @@
         "Includes a brand new, generic charging cable that is certified Mfi (Made for iPhone) and a brand new, generic wall plug that is UL certified for performance and safety. Also includes a SIM tray removal tool but does not come with headphones or a SIM card.",
         "Backed by a one-year satisfaction guarantee."
     ],
-    "overview": [
+    "more": [
         "Model Name: IPhone 12 Pro Max",
-        "Wireless Carrier: Unlocked",
-        "Brand: Apple",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 256 GB",
-        "Operating System: IOS 12",
-        "Color: Graphite",
-        "Cellular Technology: LTE",
         "Included Components: SIM Tray Ejector, USB Cable",
         "Display Type: OLED"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "iOS",
+    "color": "Graphite",
+    "screen_size": "",
+    "memory_storage_capacity": "256",
+    "cellular_technology": [
+        "LTE"
     ],
     "content_type": "item",
     "id": "B09JFTKZ9F",
@@ -25824,17 +26016,21 @@
         "Includes a brand new, generic charging cable that is certified Mfi (Made for iPhone) and a brand new, generic wall plug that is UL certified for performance and safety. Also includes a SIM tray removal tool but does not come with headphones or a SIM card.",
         "Backed by a one-year satisfaction guarantee."
     ],
-    "overview": [
+    "more": [
         "Model Name: IPhone 12 Pro Max",
-        "Wireless Carrier: Unlocked",
-        "Brand: Apple",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 128 GB",
-        "Operating System: IOS 12",
-        "Color: Silver",
-        "Cellular Technology: LTE",
         "Included Components: SIM Tray Ejector, USB Cable",
         "Display Type: OLED"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "iOS",
+    "color": "Silver",
+    "screen_size": "",
+    "memory_storage_capacity": "128",
+    "cellular_technology": [
+        "LTE"
     ],
     "content_type": "item",
     "id": "B09JFZRDPH",
@@ -25859,15 +26055,19 @@
         "No Bullet points has been entered by primary contributor.",
         "No Bullet points has been entered by primary contributor."
     ],
-    "overview": [
-        "Wireless Carrier: Verizon, Verizon Wireless",
-        "Brand: Samsung Electronics",
+    "more": [
         "Form Factor: Flip",
-        "Color: Grey",
-        "Screen Size: 7.5 Inches",
-        "Manufacturer: Samsung",
         "Connectivity Technology: Bluetooth"
     ],
+    "wireless_carrier": [
+        "Verizon",
+        "Verizon Wireless"
+    ],
+    "operating_system": "",
+    "color": "Grey",
+    "screen_size": "7.5",
+    "memory_storage_capacity": "",
+    "cellular_technology": "",
     "content_type": "item",
     "id": "B004C7NVD0",
     "reviews": [
@@ -27243,17 +27443,19 @@
         "Processor Speed: 1.9 GHz",
         "OS: Android 4.2 (Jelly Bean)"
     ],
-    "overview": [
+    "more": [
         "Model Name: Galaxy S4",
-        "Brand: Samsung Electronics",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 16 GB",
-        "Operating System: Android",
-        "Color: Black",
-        "Cellular Technology: 4G",
         "Year: 2014",
-        "Included Components: Video Recorder, Camera",
-        "Screen Size: 5 Inches"
+        "Included Components: Video Recorder, Camera"
+    ],
+    "wireless_carrier": "",
+    "operating_system": "Android",
+    "color": "Black",
+    "screen_size": "5",
+    "memory_storage_capacity": "16",
+    "cellular_technology": [
+        "4G"
     ],
     "content_type": "item",
     "id": "B00CEKXJ3Y",
@@ -34436,17 +34638,18 @@
     "originalPrice": 0.0,
     "description": "Nokia Lumia 925 runs on Windows Phone 8 operating system and has 2000 mAh battery capacity. This smartphone features a convenient 8.7MP camera, so you can capture images and store them on 16 GB memory space. This Nokia smartphone supports GSM 850 / 900 / 1800 / 1900 HSDPA 850 / 900 / 1700 / 1900 / 2100 LTE band 1(2100)/ 5(850)/ 7(2600)/ 8(900)/ 17(700)/ 20(800)/ 25(1900) and 4G networks. It comes in black.",
     "about": [],
-    "overview": [
-        "Brand: Nokia",
+    "more": [
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 16",
-        "Operating System: Microsoft Windows Phone 8, upgradeable to v8.1",
-        "Color: White",
-        "Cellular Technology: 4G",
         "Year: 2013",
-        "Screen Size: 4.5 Inches",
-        "Display Type: AMOLED",
-        "Manufacturer: Nokia"
+        "Display Type: AMOLED"
+    ],
+    "wireless_carrier": "",
+    "operating_system": "Windows Phone",
+    "color": "White",
+    "screen_size": "4.5",
+    "memory_storage_capacity": "16",
+    "cellular_technology": [
+        "4G"
     ],
     "content_type": "item",
     "id": "B00CS2ZWKQ",
@@ -35655,17 +35858,22 @@
         "8 Megapixel Camera (3264 x 2448 pixels) w/ Carl Zeiss Optics, PureView technology, Optical image Stabilization (OIS) a& Xenon Flash + Front-Facing 1.3 Megapixel Camera",
         "Internal Memory: 32GB, 1GB RAM (memory not expandable)"
     ],
-    "overview": [
+    "more": [
         "Model Name: Lumia 928",
-        "Wireless Carrier: Unlocked",
-        "Brand: Nokia",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 32 GB",
-        "Operating System: Windows 8",
-        "Color: White",
-        "Cellular Technology: 4G, 3G, 2G",
-        "Screen Size: 3.2 Inches",
         "Display Type: AMOLED"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Windows Phone",
+    "color": "White",
+    "screen_size": "3.2",
+    "memory_storage_capacity": "32",
+    "cellular_technology": [
+        "4G",
+        "3G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B00I2KY5TM",
@@ -35859,17 +36067,20 @@
         "Processor Speed: 2.7 GHz",
         "OS: Android 4.4 (KitKat)"
     ],
-    "overview": [
+    "more": [
         "Model Name: DROID Turbo",
-        "Wireless Carrier: Verizon",
-        "Brand: Motorola",
         "Form Factor: Candy_bar",
-        "Memory Storage Capacity: 32 GB",
-        "Operating System: Android",
-        "Color: Black",
-        "Cellular Technology: 4G",
-        "Included Components: Pre-Installed SIM Card, Quick Reference Guide, Wall Adapter, Battery, Smartphone, USB Cable",
-        "Screen Size: 5.2 Inches"
+        "Included Components: Pre-Installed SIM Card, Quick Reference Guide, Wall Adapter, Battery, Smartphone, USB Cable"
+    ],
+    "wireless_carrier": [
+        "Verizon"
+    ],
+    "operating_system": "Android",
+    "color": "Black",
+    "screen_size": "5.2",
+    "memory_storage_capacity": "32",
+    "cellular_technology": [
+        "4G"
     ],
     "content_type": "item",
     "id": "B00OZTSY6Y",
@@ -42603,14 +42814,16 @@
         "Front-Facing FaceTime camera with 1.2MP photos & 720p HD video recording.",
         "iOS 7 features - Siri, Apple Designed Maps, Integrated Facebook, Shared Photo Streams, Passbook & more"
     ],
-    "overview": [
-        "Brand: Apple",
+    "more": [
         "Connectivity Technology: Wi-Fi",
-        "Color: Space Gray",
-        "Component Type: Display",
-        "Memory Storage Capacity: 16 GB",
-        "Screen Size: 4 Inches"
+        "Component Type: Display"
     ],
+    "wireless_carrier": "",
+    "operating_system": "",
+    "color": "Space Gray",
+    "screen_size": "4",
+    "memory_storage_capacity": "16",
+    "cellular_technology": "",
     "content_type": "item",
     "id": "B00VQQ294C",
     "reviews": [
@@ -43349,17 +43562,20 @@
         "16MP rear-facing camera",
         "Single-SIM. SIM size:Nano-SIM (4FF)."
     ],
-    "overview": [
+    "more": [
         "Model Name: Galaxy S6 Edge G925F 32GB",
-        "Wireless Carrier: Unlocked",
-        "Brand: Samsung Electronics",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 32 GB",
-        "Operating System: Android",
-        "Color: Black Sapphire",
-        "Cellular Technology: 2G",
-        "SIM card slot count: Single SIM",
-        "Screen Size: 5.1 Inches"
+        "SIM card slot count: Single SIM"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "Black Sapphire",
+    "screen_size": "5.1",
+    "memory_storage_capacity": "32",
+    "cellular_technology": [
+        "2G"
     ],
     "content_type": "item",
     "id": "B00WIYFBWI",
@@ -43476,17 +43692,22 @@
         "16 Megapixel Camera (2988 x 5312 pixels) + Front-Facing 5 Megapixel Camera w/ Dual-Video, Auto HDR, Panorama, and Optical Image Stabilization",
         "Internal Memory: 64GB, 3GB RAM (not expandable)"
     ],
-    "overview": [
+    "more": [
         "Model Name: Galaxy S6",
-        "Wireless Carrier: Unlocked",
-        "Brand: Samsung Electronics",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 64 GB",
-        "Operating System: Android 5.0",
-        "Color: White",
-        "Cellular Technology: 4G, 3G, 2G",
-        "Screen Size: 5.1 Inches",
         "Display Type: AMOLED"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "White",
+    "screen_size": "5.1",
+    "memory_storage_capacity": "64",
+    "cellular_technology": [
+        "4G",
+        "3G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B018TUJE9U",
@@ -43693,17 +43914,20 @@
         "Brighter, better, faster photos. The Galaxy S7 has a dual-pixel Camera with faster, more precise Autofocus and a new low-light sensor.",
         "Take charge of the charge. Fast, wireless charging lets you power Galaxy S7 from 0-100% in virtually no time."
     ],
-    "overview": [
+    "more": [
         "Model Name: Galaxy S7",
-        "Wireless Carrier: Verizon",
-        "Brand: Samsung Electronics",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 32 GB",
-        "Operating System: Android",
-        "Color: Gold",
-        "Cellular Technology: 4G",
-        "Included Components: Samsung Galaxy S7;Pre-Installed SIM Card;Wall Charger;USB Cable",
-        "Screen Size: 5.5 Inches"
+        "Included Components: Samsung Galaxy S7;Pre-Installed SIM Card;Wall Charger;USB Cable"
+    ],
+    "wireless_carrier": [
+        "Verizon"
+    ],
+    "operating_system": "Android",
+    "color": "Gold",
+    "screen_size": "5.5",
+    "memory_storage_capacity": "32",
+    "cellular_technology": [
+        "4G"
     ],
     "content_type": "item",
     "id": "B01CJ3SCJ6",
@@ -46614,7 +46838,7 @@
             "date": "2018-05-07T00:00:00Z",
             "verified": true,
             "title_review": "DON'T BUY FROM CLEAN ELECTRIC!!!!!",
-            "body": NaN,
+            "body": "",
             "helpfulVotes": 0.0,
             "country": "United States",
             "content_type": "review",
@@ -46835,17 +47059,19 @@
         "Processor Speed: 2.4 GHz",
         "OS: Android 4.4 (KitKat)"
     ],
-    "overview": [
+    "more": [
         "Model Name: Droid Maxx",
-        "Wireless Carrier: Verizon",
-        "Brand: Motorola",
-        "Form Factor: Smartphone",
-        "Memory Storage Capacity: 16 GB",
-        "Operating System: Google_android",
-        "Color: Black",
-        "Cellular Technology: 4G",
-        "Screen Size: 5 Inches",
-        "Manufacturer: Motorola"
+        "Form Factor: Smartphone"
+    ],
+    "wireless_carrier": [
+        "Verizon"
+    ],
+    "operating_system": "Android",
+    "color": "Black",
+    "screen_size": "5",
+    "memory_storage_capacity": "16",
+    "cellular_technology": [
+        "4G"
     ],
     "content_type": "item",
     "id": "B01HFJR6NW",
@@ -47073,17 +47299,19 @@
     "originalPrice": 0.0,
     "description": "Elevate your productivity with the beautiful and powerful Samsung Galaxy Note 5. Multitask with ease on a 5.7\" Quad HD Super AMOLED display, capture clearer images with a 16MP camera, and never miss a detail using the Advanced S Pen. Get more done and look great doing it.",
     "about": [],
-    "overview": [
+    "more": [
         "Model Name: Galaxy Note 5",
-        "Wireless Carrier: Sprint",
-        "Brand: Samsung Electronics",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 64 GB",
-        "Color: Gold",
-        "Screen Size: 5.7 Inches",
-        "Display Type: AMOLED",
-        "Manufacturer: Samsung"
+        "Display Type: AMOLED"
     ],
+    "wireless_carrier": [
+        "Sprint"
+    ],
+    "operating_system": "",
+    "color": "Gold",
+    "screen_size": "5.7",
+    "memory_storage_capacity": "64",
+    "cellular_technology": "",
     "content_type": "item",
     "id": "B01N37MPDI",
     "reviews": [
@@ -47173,18 +47401,19 @@
         "The device does not come with headphones or a SIM card. It does include a generic (Mfi certified) charger and charging cable.",
         "Tested for battery health and guaranteed to have a minimum battery capacity of 80%."
     ],
-    "overview": [
+    "more": [
         "Model Name: IPhone 7 Plus",
-        "Brand: Apple",
-        "Memory Storage Capacity: 128 GB",
-        "Color: Rose Gold",
         "Included Components: Adapter, USB Cable",
-        "Screen Size: 5.5 Inches",
-        "Manufacturer: Apple Computer",
         "Connectivity Technology: Wi-Fi",
         "Item Weight: 6.63 Ounces",
         "Human Interface Input: Buttons"
     ],
+    "wireless_carrier": "",
+    "operating_system": "",
+    "color": "Rose Gold",
+    "screen_size": "5.5",
+    "memory_storage_capacity": "128",
+    "cellular_technology": "",
     "content_type": "item",
     "id": "B06XGLHP8V",
     "reviews": [
@@ -47924,13 +48153,17 @@
         "Regular size Sim Card with activated DATA PLAN required. (No SIM card or Services included)",
         "WiFi 802.11b/g/n. Up to 10 different WiFi devices including laptops, iPhone, smartphone, iPad, tablet, gaming consoles and many more. (Needs to connect to PC or Usb Chager)"
     ],
-    "overview": [
-        "Brand: HUAWEI",
+    "more": [
         "Internet service provider: T-mobile",
         "Connectivity Technology: USB, WiFi",
-        "Item Dimensions LxWxH: 3.75 x 0.5 x 1.2 inches",
-        "Color: White"
+        "Item Dimensions LxWxH: 3.75 x 0.5 x 1.2 inches"
     ],
+    "wireless_carrier": "",
+    "operating_system": "",
+    "color": "White",
+    "screen_size": "",
+    "memory_storage_capacity": "",
+    "cellular_technology": "",
     "content_type": "item",
     "id": "B0711S4T9J",
     "reviews": [
@@ -48437,17 +48670,26 @@
         "WHAT DOES UNLOCKED REALLY MEAN: Unlocked devices are compatible with GSM carriers the kinds that Use SIM Cards for Service like AT&T and T-Mobile as well as with GSM SIM cards (e.g. H20, Straight Talk, and select prepaid carriers) Unlocked Devices will not work with CDMA Carriers the kinds that don't use sim cards for service like Sprint, Verizon, Boost or Virgin (contact your network provider prior to purchasing for verification that they support GSM frequencies).",
         "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! WILL NOT WORK ON VERIZON OR SPRINT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
     ],
-    "overview": [
+    "more": [
         "Model Name: Galaxy J3",
-        "Wireless Carrier: T-Mobile, Unlocked, Straight Talk, Verizon, Sprint",
-        "Brand: Samsung Electronics",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 16 GB",
-        "Operating System: Google_android",
-        "Color: Silver",
-        "Cellular Technology: 4G, 3G, 2G",
-        "Year: 2017",
-        "Screen Size: 5 Inches"
+        "Year: 2017"
+    ],
+    "wireless_carrier": [
+        "T-Mobile",
+        "Unlocked",
+        "Straight Talk",
+        "Verizon",
+        "Sprint"
+    ],
+    "operating_system": "Android",
+    "color": "Silver",
+    "screen_size": "5",
+    "memory_storage_capacity": "16",
+    "cellular_technology": [
+        "4G",
+        "3G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B072V2BNM6",
@@ -48977,17 +49219,20 @@
         "This item is a refurbished unit, it is not new, therefore batteries expected to work up to 70%",
         "Made in China"
     ],
-    "overview": [
+    "more": [
         "Model Name: Pixel",
-        "Wireless Carrier: Unlocked",
-        "Brand: Google",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 128 GB",
-        "Operating System: Android",
-        "Color: Silver",
-        "Cellular Technology: 2G",
-        "Included Components: Adapter",
-        "Screen Size: 5 Inches"
+        "Included Components: Adapter"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "Silver",
+    "screen_size": "5",
+    "memory_storage_capacity": "128",
+    "cellular_technology": [
+        "2G"
     ],
     "content_type": "item",
     "id": "B0731KVYPN",
@@ -49507,17 +49752,22 @@
         "Only For GSM Carriers (Not for Verizon, Sprint, Net10, Boost Mobile or any Cdma Carrier).",
         "Does not work on ATT."
     ],
-    "overview": [
+    "more": [
         "Model Name: 105",
-        "Wireless Carrier: Verizon",
-        "Brand: Nokia",
         "Form Factor: Bar",
-        "Cellular Technology: 2G",
         "SIM card slot count: Single SIM",
         "Year: 2017",
-        "Screen Size: 1.8 Inches",
-        "Display Type: LED",
-        "Manufacturer: Nokia"
+        "Display Type: LED"
+    ],
+    "wireless_carrier": [
+        "Verizon"
+    ],
+    "operating_system": "",
+    "color": "",
+    "screen_size": "1.8",
+    "memory_storage_capacity": "",
+    "cellular_technology": [
+        "2G"
     ],
     "content_type": "item",
     "id": "B07579T83L",
@@ -51103,17 +51353,21 @@
         "Android nougat: clean, clutter free Android nougat out of the box bringing the latest Android Features. Ambient light sensor, accelerometer and e-compass",
         "A SIM card and service plan must be purchased separately"
     ],
-    "overview": [
+    "more": [
         "Model Name: Nokia 2",
-        "Wireless Carrier: AT&T",
-        "Brand: Nokia",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 8 GB",
-        "Operating System: Android 7.1",
-        "Color: Black",
-        "Cellular Technology: LTE",
         "SIM card slot count: Dual SIM",
         "Included Components: Nokia MicroUSB Charger, Device, Quick start guide, Charging/data cable"
+    ],
+    "wireless_carrier": [
+        "AT&T"
+    ],
+    "operating_system": "Android",
+    "color": "Black",
+    "screen_size": "",
+    "memory_storage_capacity": "8",
+    "cellular_technology": [
+        "LTE"
     ],
     "content_type": "item",
     "id": "B075FLG6MV",
@@ -55520,17 +55774,20 @@
         "Up to 7 hours of battery on 15 minutes of charging",
         "Smart camera with dual-pixel autofocus (12.2MP, f/1.8 aperture, 1.4\u00b5m)"
     ],
-    "overview": [
+    "more": [
         "Model Name: Pixel 2",
-        "Wireless Carrier: Unlocked",
-        "Brand: Google",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 64 GB",
-        "Operating System: Google_android",
-        "Color: White",
-        "Cellular Technology: 2G",
-        "Screen Size: 5 Inches",
         "Display Type: AMOLED"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "White",
+    "screen_size": "5",
+    "memory_storage_capacity": "64",
+    "cellular_technology": [
+        "2G"
     ],
     "content_type": "item",
     "id": "B0766NJPBN",
@@ -57455,17 +57712,21 @@
         "Successfully passed a full diagnostic test which ensures like-new functionality and removal of any prior-user personal information.",
         "Tested for battery health and guaranteed to have a minimum battery capacity of 80%."
     ],
-    "overview": [
+    "more": [
         "Model Name: Galaxy S8",
-        "Wireless Carrier: Unlocked",
-        "Brand: Samsung Electronics",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 64 GB",
-        "Color: Orchid Gray",
-        "Cellular Technology: 2G",
         "Year: 2018",
-        "Included Components: Adapter, USB Cable",
-        "Screen Size: 5.8 Inches"
+        "Included Components: Adapter, USB Cable"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "",
+    "color": "Orchid Gray",
+    "screen_size": "5.8",
+    "memory_storage_capacity": "64",
+    "cellular_technology": [
+        "2G"
     ],
     "content_type": "item",
     "id": "B076HVSJQR",
@@ -57621,17 +57882,21 @@
         "The device does not come with headphones or a SIM card. It does include a generic (Mfi certified) charger and charging cable.",
         "Inspected and guaranteed to have minimal cosmetic damage, which is not noticeable when the device is held at arm's length."
     ],
-    "overview": [
+    "more": [
         "Model Name: IPhone 8",
-        "Wireless Carrier: Unlocked",
-        "Brand: Apple",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 256 GB",
-        "Operating System: IOS",
-        "Color: Space Gray",
-        "Cellular Technology: 4G",
         "SIM card slot count: Single SIM",
         "Year: 2018"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "iOS",
+    "color": "Space Gray",
+    "screen_size": "",
+    "memory_storage_capacity": "256",
+    "cellular_technology": [
+        "4G"
     ],
     "content_type": "item",
     "id": "B07753NSQZ",
@@ -58645,13 +58910,17 @@
         "SMS Support USA LATIN CARRIBEAN Bands",
         "Windows 2000, XP, Vista, 7, 8 , 10 Mac OS X 10.5-10.8 / Huawei Voda Logo"
     ],
-    "overview": [
-        "Brand: HUAWEI",
+    "more": [
         "Internet service provider: Sprint",
         "Connectivity Technology: Wireless",
-        "Item Dimensions LxWxH: 3.8 x 1 x 0.4 inches",
-        "Color: White/Red"
+        "Item Dimensions LxWxH: 3.8 x 1 x 0.4 inches"
     ],
+    "wireless_carrier": "",
+    "operating_system": "",
+    "color": "White/Red",
+    "screen_size": "",
+    "memory_storage_capacity": "",
+    "cellular_technology": "",
     "content_type": "item",
     "id": "B0776ZJ1C3",
     "reviews": [
@@ -58715,17 +58984,19 @@
         "12MP Camera with f/1.8 aperture, Optical image stabilization, Quad-LED True Tone flash + 7MP Facetime Camera with Retina Flash, f/2.2 aperture",
         "Non-Removable Lithium Ion 1960 mAh Capacity"
     ],
-    "overview": [
+    "more": [
         "Model Name: IPhone 7",
-        "Brand: Apple",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 256 GB",
-        "Operating System: IOS",
-        "Color: Jet Black",
-        "Cellular Technology: 3G",
         "Included Components: Phone, charger",
-        "Screen Size: 4.7 Inches",
         "Display Type: LED"
+    ],
+    "wireless_carrier": "",
+    "operating_system": "iOS",
+    "color": "Jet Black",
+    "screen_size": "4.7",
+    "memory_storage_capacity": "256",
+    "cellular_technology": [
+        "3G"
     ],
     "content_type": "item",
     "id": "B077NJQPGB",
@@ -58842,17 +59113,22 @@
         "Successfully passed a full diagnostic test which ensures like-new functionality and removal of any prior-user personal information.",
         "Tested for battery health and guaranteed to have a minimum battery capacity of 80%."
     ],
-    "overview": [
+    "more": [
         "Model Name: IPhone 7 Plus",
-        "Wireless Carrier: Unlocked, Verizon",
-        "Brand: Apple",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 256 GB",
-        "Operating System: IOS 11",
-        "Color: Silver",
-        "Cellular Technology: 4G, 2G",
-        "Included Components: Adapter, USB Cable",
-        "Screen Size: 14 Inches"
+        "Included Components: Adapter, USB Cable"
+    ],
+    "wireless_carrier": [
+        "Unlocked",
+        "Verizon"
+    ],
+    "operating_system": "iOS",
+    "color": "Silver",
+    "screen_size": "14",
+    "memory_storage_capacity": "256",
+    "cellular_technology": [
+        "4G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B077NTKFDB",
@@ -59057,17 +59333,20 @@
         "5.1-inch Super AMOLED Curved Edge Multi-Touchscreen w/ Fingerprint sensor and Protective Corning Gorilla Glass 4",
         "16MP Camera + Front-Facing Camera w/ Dual-Video, Auto HDR, Panorama, and Optical Image Stabilization (OIS)"
     ],
-    "overview": [
-        "Wireless Carrier: T-Mobile",
-        "Brand: Samsung Electronics",
+    "more": [
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 64 GB",
-        "Color: White",
-        "Cellular Technology: 2G",
-        "Screen Size: 5.1 Inches",
         "Display Type: AMOLED",
-        "Manufacturer: Samsung",
         "Other camera features: Front"
+    ],
+    "wireless_carrier": [
+        "T-Mobile"
+    ],
+    "operating_system": "",
+    "color": "White",
+    "screen_size": "5.1",
+    "memory_storage_capacity": "64",
+    "cellular_technology": [
+        "2G"
     ],
     "content_type": "item",
     "id": "B079TZJF9F",
@@ -59106,17 +59385,22 @@
         "Successfully passed a full diagnostic test which ensures like-new functionality and removal of any prior-user personal information.",
         "Tested for battery health and guaranteed to have a minimum battery capacity of 80%."
     ],
-    "overview": [
+    "more": [
         "Model Name: Galaxy S9 Plus",
-        "Wireless Carrier: AT&T",
-        "Brand: Samsung Electronics",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 64 GB",
-        "Operating System: Android",
-        "Color: Lilac Purple",
-        "Cellular Technology: 4G, 2G",
         "SIM card slot count: Single SIM",
         "Year: 2018"
+    ],
+    "wireless_carrier": [
+        "AT&T"
+    ],
+    "operating_system": "Android",
+    "color": "Lilac Purple",
+    "screen_size": "",
+    "memory_storage_capacity": "64",
+    "cellular_technology": [
+        "4G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B07C65MFKH",
@@ -59270,18 +59554,20 @@
         "2.1GHz quad-core Samsung Exynos 74205 processor",
         "5.7-inch touchscreen display with a resolution of 2560 pixels by 1440 pixels 2.1GHz quad-core Samsung Exynos 74205 processor 16-megapixel primary camera on the rear and a 5-megapixel front shooter for selfies."
     ],
-    "overview": [
+    "more": [
         "Model Name: Galaxy Note 5",
-        "Wireless Carrier: AT&T",
-        "Brand: Samsung Electronics",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 64 GB",
-        "Color: Gold Platinum",
-        "Screen Size: 5.7 Inches",
         "Display Type: AMOLED",
-        "Manufacturer: Samsung",
         "Other camera features: Rear, Front"
     ],
+    "wireless_carrier": [
+        "AT&T"
+    ],
+    "operating_system": "",
+    "color": "Gold Platinum",
+    "screen_size": "5.7",
+    "memory_storage_capacity": "64",
+    "cellular_technology": "",
     "content_type": "item",
     "id": "B07FXYRG46",
     "reviews": [
@@ -59436,17 +59722,21 @@
         "The device does not come with headphones or a SIM card. It does include a generic (Mfi certified) charger and charging cable.",
         "Tested for battery health and guaranteed to have a minimum battery capacity of 80%."
     ],
-    "overview": [
+    "more": [
         "Model Name: IPhone 8",
-        "Wireless Carrier: AT&T",
-        "Brand: Apple",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 64 GB",
-        "Operating System: IOS 14",
-        "Color: Red",
-        "Cellular Technology: 4G",
         "SIM card slot count: Single SIM",
         "Year: 2018"
+    ],
+    "wireless_carrier": [
+        "AT&T"
+    ],
+    "operating_system": "iOS",
+    "color": "Red",
+    "screen_size": "",
+    "memory_storage_capacity": "64",
+    "cellular_technology": [
+        "4G"
     ],
     "content_type": "item",
     "id": "B07G7FG26S",
@@ -59615,17 +59905,22 @@
         "Frequencies Supported: GSM 850 / 900 / 1800 / 1900 ; HSDPA 850 / 1700(AWS) / 1900 ; LTE band 2(1900), 3(1800), 4(1700/2100), 5(850), 7(2600), 12(700)",
         "2600mAh Battery, Talk Time Up to 9 hours, Music Play Time of up to 71 hrs, Video Play Time up to 13 hrs, Internet Use Time on 3G: up to 11 hrs, on LTE: up to 12 hrs, on Wi-Fi: up to 13 hrs"
     ],
-    "overview": [
+    "more": [
         "Model Name: Galaxy J3",
-        "Wireless Carrier: Unlocked",
-        "Brand: Samsung Electronics",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 16 GB",
-        "Operating System: Android",
-        "Color: Silver",
-        "Cellular Technology: 4G, 3G, 2G",
-        "Year: 2017",
-        "Screen Size: 5.5 Inches"
+        "Year: 2017"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "Silver",
+    "screen_size": "5.5",
+    "memory_storage_capacity": "16",
+    "cellular_technology": [
+        "4G",
+        "3G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B07GW1DXFP",
@@ -60535,17 +60830,20 @@
         "Internal Memory: 128GB, 6GB RAM - microSD Up to 512GB",
         "BT - 5.0, A2DP, LE, aptX; NFC - Yes; USB - 3.1, Type-C 1.0 Reversible Connector"
     ],
-    "overview": [
+    "more": [
         "Model Name: Galaxy Note 9",
-        "Wireless Carrier: T-Mobile",
-        "Brand: Samsung Electronics",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 128 GB",
-        "Color: Ocean Blue",
-        "Cellular Technology: 2G",
-        "Screen Size: 6.4 Inches",
-        "Display Type: AMOLED",
-        "Manufacturer: Samsung"
+        "Display Type: AMOLED"
+    ],
+    "wireless_carrier": [
+        "T-Mobile"
+    ],
+    "operating_system": "",
+    "color": "Ocean Blue",
+    "screen_size": "6.4",
+    "memory_storage_capacity": "128",
+    "cellular_technology": [
+        "2G"
     ],
     "content_type": "item",
     "id": "B07GWFMLT8",
@@ -60792,17 +61090,21 @@
         "Quad Core 1. 4GHZ / 8GB (4. 1GB USER) 1GB Ram Support Micro SD Up to 256 gb (not included)",
         "5. 0 inch 540 x 960 (qHD) Factory Unlocked International Version Latin Specs"
     ],
-    "overview": [
+    "more": [
         "Model Name: Galaxy J2",
-        "Wireless Carrier: Unlocked",
-        "Brand: Samsung Electronics",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 16 GB",
-        "Operating System: Android",
-        "Color: Black",
-        "Cellular Technology: 4G",
         "SIM card slot count: Dual SIM",
         "Year: 2018"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "Black",
+    "screen_size": "",
+    "memory_storage_capacity": "16",
+    "cellular_technology": [
+        "4G"
     ],
     "content_type": "item",
     "id": "B07H8Q3C9T",
@@ -61919,7 +62221,7 @@
             "date": "2019-08-18T00:00:00Z",
             "verified": true,
             "title_review": "Just what i needed",
-            "body": NaN,
+            "body": "",
             "helpfulVotes": 0.0,
             "country": "United States",
             "content_type": "review",
@@ -63448,17 +63750,22 @@
     "originalPrice": 0.0,
     "description": "12MP primary camera with dual auto focus pixels, f/1.7 aperture, color balancing dual LED flash, 8x digital zoom for photos, 4x for video, drag to focus exposure and 5MP front facing camera 13.208 centimeters (5.2-inch) Full HD TFT IPS Corning Gorilla Glass 3 capacitive touchscreen with 1920 x 1080 pixels resolution Android v7 Nougat operating system with 2GHz Qualcomm Snapdragon 625 MSM8953 octa core processor, Adreno 506 @ 650MHz GPU, 4GB, 32GB internal memory expandable up to 128GB and dual SIM (nano+nano) dual-standby (4G+4G) 3000mAH lithium-ion battery",
     "about": [],
-    "overview": [
+    "more": [
         "Model Name: Moto G5S Plus",
-        "Wireless Carrier: Unlocked",
-        "Brand: Motorola",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 32 GB",
-        "Color: Blush Gold",
-        "Cellular Technology: 4G, 2G",
         "SIM card slot count: Dual SIM",
-        "Screen Size: 5.5 Inches",
         "Display Type: LCD"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "",
+    "color": "Blush Gold",
+    "screen_size": "5.5",
+    "memory_storage_capacity": "32",
+    "cellular_technology": [
+        "4G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B07HFKWDK7",
@@ -64145,17 +64452,20 @@
         "Octa-Core 2.7GHz + 1.7GHz CPU ; 128GB ROM, 6GB RAM ; Supports microSD, up to 512 GB (uses SIM 2 slot) ; 4000 mAh battery",
         "Android 8.1 Oreo"
     ],
-    "overview": [
+    "more": [
         "Model Name: Galaxy Note 9",
-        "Wireless Carrier: T-Mobile",
-        "Brand: Samsung Electronics",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 128 GB",
-        "Operating System: Android 8.1",
-        "Color: Ocean Blue",
-        "Cellular Technology: 2G",
-        "Screen Size: 6.4 Inches",
         "Display Type: AMOLED"
+    ],
+    "wireless_carrier": [
+        "T-Mobile"
+    ],
+    "operating_system": "Android",
+    "color": "Ocean Blue",
+    "screen_size": "6.4",
+    "memory_storage_capacity": "128",
+    "cellular_technology": [
+        "2G"
     ],
     "content_type": "item",
     "id": "B07KCQHWTN",
@@ -64272,17 +64582,21 @@
         "With a high 3000mAh capacity, and Qualcomm Snapdragon processor, the Experian 10 Plus gives you power you can rely on.",
         "Single SIM - Unlocked and compatible with carriers such as Verizon, AT And T, T-Mobile, Straight Talk, Cricket wireless, simple mobile, and others"
     ],
-    "overview": [
+    "more": [
         "Model Name: Xperia 10 Plus",
-        "Wireless Carrier: Unlocked",
-        "Brand: Sony",
         "Form Factor: Candy Bar",
-        "Memory Storage Capacity: 64 GB",
-        "Operating System: Android",
-        "Color: Black",
-        "Cellular Technology: 4G",
         "SIM card slot count: Single SIM",
         "Included Components: Charger and Type-C USB cable"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "Black",
+    "screen_size": "",
+    "memory_storage_capacity": "64",
+    "cellular_technology": [
+        "4G"
     ],
     "content_type": "item",
     "id": "B07MZ2TRTC",
@@ -65426,16 +65740,19 @@
         "Its nearly frameless cinematic Infinity Display offers more detail and clarity, more immersive and uninterrupted content, in a slim, balanced form",
         "Sees what you see. The pro-grade camera effortlessly captures epic, pro-quality images of the world as you see it."
     ],
-    "overview": [
-        "Wireless Carrier: Go Mobile",
-        "Brand: Samsung Electronics",
+    "more": [
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 8 GB",
-        "Color: White",
-        "Cellular Technology: 4G",
-        "Screen Size: 6.4 Inches",
-        "Manufacturer: Samsung Mobile",
         "Other camera features: Rear, Front"
+    ],
+    "wireless_carrier": [
+        "Go Mobile"
+    ],
+    "operating_system": "",
+    "color": "White",
+    "screen_size": "6.4",
+    "memory_storage_capacity": "8",
+    "cellular_technology": [
+        "4G"
     ],
     "content_type": "item",
     "id": "B07P2H2GZ8",
@@ -65570,17 +65887,20 @@
         "Included Components: Usb-C Digital Earbud",
         "Operating System: Android;Chrome Os"
     ],
-    "overview": [
+    "more": [
         "Model Name: Google Pixel 3",
-        "Wireless Carrier: Unlocked",
-        "Brand: Google",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 4 GB",
-        "Operating System: Chrome OS, Android",
-        "Color: Just Black",
-        "Cellular Technology: 4G",
-        "Included Components: USB-C digital earbud",
-        "Screen Size: 5.5 Inches"
+        "Included Components: USB-C digital earbud"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "Just Black",
+    "screen_size": "5.5",
+    "memory_storage_capacity": "4",
+    "cellular_technology": [
+        "4G"
     ],
     "content_type": "item",
     "id": "B07P8MQHSH",
@@ -66785,17 +67105,20 @@
     "about": [
         "ROM 128GB RAM 8GB"
     ],
-    "overview": [
-        "Wireless Carrier: Unlocked for All Carriers",
-        "Brand: Samsung Electronics",
+    "more": [
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 8 GB",
-        "Color: Black",
-        "Cellular Technology: 4G",
-        "Screen Size: 6.1 Inches",
         "Display Type: AMOLED",
-        "Manufacturer: Samsung",
         "Other camera features: Rear, Front"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "",
+    "color": "Black",
+    "screen_size": "6.1",
+    "memory_storage_capacity": "8",
+    "cellular_technology": [
+        "4G"
     ],
     "content_type": "item",
     "id": "B07PHFW8LV",
@@ -66940,17 +67263,21 @@
         "Instantly unlock your phone using fingerprint sensor or facial recognition",
         "Unlocked for the freedom to choose your carrier. Compatible with AT And T, Sprint, T-Mobile, and Verizon networks. SIM card not included. Customers may need to contact Sprint for activation on Sprint\u2019s network"
     ],
-    "overview": [
+    "more": [
         "Model Name: Moto Z3 Play",
-        "Wireless Carrier: Unlocked",
-        "Brand: Motorola",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 32 GB",
-        "Operating System: Android",
-        "Color: Deep Indigo",
-        "Cellular Technology: GSM/CDMA",
-        "Included Components: Device, charger",
-        "Screen Size: 6.01 Inches"
+        "Included Components: Device, charger"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "Deep Indigo",
+    "screen_size": "6.01",
+    "memory_storage_capacity": "32",
+    "cellular_technology": [
+        "GSM",
+        "CDMA"
     ],
     "content_type": "item",
     "id": "B07PR1Z2BF",
@@ -67263,17 +67590,22 @@
         "This device may not include a US warranty as some manufacturers do not honor warranties for international items. Please contact the seller for specific warranty information.",
         "The box contains: Your new device, USB cable, Charger (may be foreign), Earphones, Documentation."
     ],
-    "overview": [
+    "more": [
         "Model Name: A505F GSM ONLY",
-        "Wireless Carrier: AT&T",
-        "Brand: Samsung Electronics",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 64 GB",
-        "Operating System: Android",
-        "Color: White",
-        "Cellular Technology: 4G, 2G",
         "SIM card slot count: Dual SIM",
         "Included Components: Adapter, USB Cable"
+    ],
+    "wireless_carrier": [
+        "AT&T"
+    ],
+    "operating_system": "Android",
+    "color": "White",
+    "screen_size": "",
+    "memory_storage_capacity": "64",
+    "cellular_technology": [
+        "4G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B07QPTGJP5",
@@ -67702,17 +68034,22 @@
         "25MP + 5MP + 8MP with F1.7, F2.2 wide Angle and F2.2 with Flash | 25 MP front camers with F2.0",
         "International Model Compatible with Most GSM Carriers like T-Mobile, AT&T, MetroPCS, etc. Will NOT work with CDMA Carriers Such as Verizon, Sprint, Boost"
     ],
-    "overview": [
-        "Wireless Carrier: T-Mobile, Unlocked",
-        "Brand: Samsung Electronics",
+    "more": [
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 64 GB",
-        "Operating System: Android 9.0",
-        "Color: White",
-        "Cellular Technology: 4G, 2G",
         "SIM card slot count: Single SIM",
-        "Included Components: Adapter",
-        "Screen Size: 6.4 Inches"
+        "Included Components: Adapter"
+    ],
+    "wireless_carrier": [
+        "T-Mobile",
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "White",
+    "screen_size": "6.4",
+    "memory_storage_capacity": "64",
+    "cellular_technology": [
+        "4G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B07RJZH9N2",
@@ -67894,17 +68231,21 @@
         "3G HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100, 4G LTE band 1(2100), 2(1900), 3(1800), 4(1700/2100), 5(850), 7(2600), 8(900), 28(700), 38(2600), 39(1900), 40(2300), 41(2500)",
         "International model phone, Does NOT have US warranty, will work with Most GSM SIM cards in U.S. and world Including AT&T, T-Mobile, MetroPCS, Etc. Will NOT work with CDMA Carriers Such as Verizon, Sprint, Boost. FCC ID: 2AFZZ-RMSC3EG"
     ],
-    "overview": [
+    "more": [
         "Model Name: Xiaomi Redmi 7A (32GB, 2GB RAM) 5.45\" Display, Face ID, Dual SIM GSM Factory Unlocked (US + Global 4G LTE International Model) (Black)",
-        "Wireless Carrier: Unlocked",
-        "Brand: Xiaomi",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 2 GB",
-        "Operating System: Android",
-        "Color: Black",
-        "Cellular Technology: 2G",
         "SIM card slot count: Dual SIM",
         "Year: 2019"
+    ],
+    "wireless_carrier": [
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "Black",
+    "screen_size": "",
+    "memory_storage_capacity": "2",
+    "cellular_technology": [
+        "2G"
     ],
     "content_type": "item",
     "id": "B07TB7DJ2J",
@@ -68022,17 +68363,22 @@
         "3G HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100, 4G LTE band 1(2100), 2(1900), 3(1800), 4(1700/2100), 5(850), 7(2600), 8(900), 12(700), 13(700), 17(700), 20(800), 28(700), 38(2600), 40(2300), 41(2500), 66(1700/2100)",
         "International Model - No Warranty in US. Compatible with Most GSM Carriers like T-Mobile, AT&T, MetroPCS, etc. Will NOT work with CDMA Carriers Such as Verizon, Sprint, Boost. Box is Opened to insert US conversion Adapter."
     ],
-    "overview": [
-        "Wireless Carrier: AT&T",
-        "Brand: Samsung Electronics",
+    "more": [
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 128 GB",
-        "Operating System: Android 9.0",
-        "Color: Black",
-        "Cellular Technology: 4G, 3G, 2G",
         "SIM card slot count: Dual SIM",
-        "Included Components: Adapter",
-        "Screen Size: 6.4 Inches"
+        "Included Components: Adapter"
+    ],
+    "wireless_carrier": [
+        "AT&T"
+    ],
+    "operating_system": "Android",
+    "color": "Black",
+    "screen_size": "6.4",
+    "memory_storage_capacity": "128",
+    "cellular_technology": [
+        "4G",
+        "3G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B07WKSVF6X",
@@ -68201,17 +68547,24 @@
         "Dual Rear Camera - 13MP + 2MP, Front Camera - 8MP, Removable 3000mAh Battery, Android 9.0 (Pie)",
         "2G - GSM 850/900/1800/1900 MHz, 3G - WCDMA 850/900/1700/1900/2100 MHz, 4G - LTE B1 (2100), B2 (1900), B3 (1800), B4 (1700/2100), B5 (850), B7 (2600), B8 (900), B28 (700 APT)"
     ],
-    "overview": [
+    "more": [
         "Model Name: Moto E6 Plus",
-        "Wireless Carrier: T-Mobile, Unlocked",
-        "Brand: Motorola",
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 32 GB",
-        "Operating System: Android 9.0",
-        "Color: Graphite",
-        "Cellular Technology: 4G, 3G, 2G",
         "SIM card slot count: Dual SIM",
         "Year: 2019"
+    ],
+    "wireless_carrier": [
+        "T-Mobile",
+        "Unlocked"
+    ],
+    "operating_system": "Android",
+    "color": "Graphite",
+    "screen_size": "",
+    "memory_storage_capacity": "32",
+    "cellular_technology": [
+        "4G",
+        "3G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B07XVMYN2N",
@@ -68290,17 +68643,21 @@
         "2G bands: GSM 850 / 900 / 1800 / 1900, 3G bands: HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100, 4G bands: LTE band 1(2100), 2(1900), 3(1800), 4(1700/2100), 5(850), 7(2600), 8(900), 12(700), 17(700), 20(800), 28(700), 38(2600), 40(2300), 41(2500), 66(1700/2100)",
         "International model phone, will work with Most GSM SIM cards in U.S. and world Including AT&T, T-Mobile, MetroPCS, Etc. Does not have US warranty. Will NOT work with CDMA Carriers Such as Verizon, Sprint, Boost."
     ],
-    "overview": [
-        "Brand: Motorola",
+    "more": [
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 4 GB",
-        "Color: Grey Techno",
-        "Cellular Technology: 4G, 3G, 2G",
-        "Screen Size: 6.4 Inches",
         "Display Type: OLED",
-        "Manufacturer: Motorola",
         "Other camera features: Rear, Front",
         "Connectivity Technology: USB"
+    ],
+    "wireless_carrier": "",
+    "operating_system": "",
+    "color": "Grey Techno",
+    "screen_size": "6.4",
+    "memory_storage_capacity": "4",
+    "cellular_technology": [
+        "4G",
+        "3G",
+        "2G"
     ],
     "content_type": "item",
     "id": "B07XZMGC3J",
@@ -68352,18 +68709,20 @@
         "Experience HD Voice, Video Calling and Simultaneous Voice & Data. Enable Wi-Fi Calling and make calls anywhere you have a Wi-Fi connection.",
         "Qualcomm Snapdragon 670 2.0GHz + 1.7GHz, 64-bit Octa-Core"
     ],
-    "overview": [
-        "Wireless Carrier: Verizon",
-        "Brand: Google",
+    "more": [
         "Form Factor: Smartphone",
-        "Memory Storage Capacity: 64 GB",
-        "Color: Just Black",
-        "Screen Size: 5.9 Inches",
         "Display Type: OLED",
-        "Manufacturer: Google",
         "Other camera features: Front",
         "Connectivity Technology: Wi-Fi"
     ],
+    "wireless_carrier": [
+        "Verizon"
+    ],
+    "operating_system": "",
+    "color": "Just Black",
+    "screen_size": "5.9",
+    "memory_storage_capacity": "64",
+    "cellular_technology": "",
     "content_type": "item",
     "id": "B07YBHNTSK",
     "reviews": [

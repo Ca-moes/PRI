@@ -50,6 +50,7 @@ def main():
     details = pd.read_csv('data/20211230-details.csv')
 
     # Parse columns with lists
+    details['about'] = details['about'].map(ast.literal_eval)
     details['more'] = details['more'].map(ast.literal_eval)
 
 
