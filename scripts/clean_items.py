@@ -26,7 +26,7 @@ if __name__ == '__main__':
     # 9 Apple iPhone items had Asus as their Brand
     items.loc[items['title'].str.contains("iPhone"), ['brand']] = 'Apple'
 
-    details = pd.read_csv('data/items_details.csv')
+    details = pd.read_csv('data/details_clean.csv')
 
     items = items.merge(details, on='asin')
 

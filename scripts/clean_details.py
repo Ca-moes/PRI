@@ -20,7 +20,6 @@ def create_columns(list):
             elif index == "Memory Storage Capacity":
                 if "MB" in value:
                     continue
-                
                 value = value.split(" ")[0]
 
             elif index == "Cellular Technology":
@@ -48,7 +47,7 @@ def remove_strings(list):
     return [string for string in list if string.split(': ', 1)[0] not in to_drop]
 
 def main():
-    details = pd.read_csv('../data/items_details.csv')
+    details = pd.read_csv('data/20211230-details.csv')
 
     # Parse columns with lists
     details['more'] = details['more'].map(ast.literal_eval)
@@ -57,12 +56,8 @@ def main():
     df = details['more'].apply(lambda x: create_columns(x))
     details['more'] = details['more'].apply(lambda x: remove_strings(x))
 
-    for col in keep_indexes:
-        filename = col.replace(" ","") + ".txt"
-        df[col].value_counts().to_csv(filename)
-
     concated = pd.concat([details, df], axis=1)
-    concated.to_csv("items_details_clean.csv", index=False)
+    concated.to_csv("data/details_clean.csv", index=False)
 
 if __name__ == '__main__':
     main()

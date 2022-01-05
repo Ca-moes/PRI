@@ -46,7 +46,7 @@ def scrape(url):
     # Return the HTML of the page
     return r.content
 
-with open('urls.txt', 'r') as urllist, open('items_details.csv', 'w', newline='', encoding='utf-8') as outfile:
+with open('urls.txt', 'r') as urllist, open('details.csv', 'w', newline='', encoding='utf-8') as outfile:
     csv_columns = ['asin', 'description', 'about', 'overview']
 
     writer = csv.DictWriter(outfile, fieldnames=csv_columns)

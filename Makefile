@@ -24,6 +24,7 @@ seed: clean_up
 	python3 scripts/seed.py
 
 clean_up: concat
+	python3 scripts/clean_details.py
 	python3 scripts/clean_items.py
 	python3 scripts/clean_reviews.py
 
@@ -31,4 +32,4 @@ concat:
 	python3 scripts/concat.py
 
 clean:
-	rm -rf data/items_*.* data/reviews_*.* db/seed.sql stats/*.png
+	rm -rf data/items_*.* data/reviews_*.* data/details_*.* db/seed.sql stats/*.png
