@@ -1,20 +1,32 @@
 import { createTheme } from "@mui/material/styles";
-import darkScrollbar from "@mui/material/darkScrollbar";
 
 const theme = createTheme({
-    // palette: {
-    //     mode: "dark",
-    // },
-    // typography: {
-    //     fontFamily: ["Poppins", "Roboto", "sans-serif"].join(","),
-    // },
-    // components: {
-    //     MuiCssBaseline: {
-    //         styleOverrides: {
-    //             body: darkScrollbar(),
-    //         },
-    //     },
-    // },
+    typography: {
+        fontFamily: ["Poppins", "Roboto", "sans-serif"].join(","),
+    },
+
+    palette: {
+        mode: 'light',
+        primary: {
+          main: '#b37ee7',
+        },
+        secondary: {
+          main: '#cbaade',
+        },
+        background: {
+          default: '#ececec',
+        },
+      },
+      components: {
+        MuiAppBar: {
+          styleOverrides: {
+            root: {
+              backgroundColor: '#1f1f1f',
+              color: '#fff'
+            }
+          },
+        }
+      }
 });
 
 export default theme;
