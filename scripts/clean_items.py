@@ -1,7 +1,9 @@
 import pandas as pd
 
+pd.set_option("display.max_colwidth", 10000)
+
 if __name__ == '__main__':
-    items = pd.read_csv('data/items_all.csv')
+    items = pd.read_pickle('data/items_all.pkl')
 
     print("<==== Initial Info =====>")
     print(items.head())
@@ -21,10 +23,17 @@ if __name__ == '__main__':
     items.loc[items['price'] == 1, ['price']] = 1000
     items.loc[items['originalPrice'] == 1, ['originalPrice']] = 1000
 
+    # 9 Apple iPhone items had Asus as their Brand
+    items.loc[items['title'].str.contains("iPhone"), ['brand']] = 'Apple'
+
+    details = pd.read_pickle('data/details_clean.pkl')
+
+    items = items.merge(details, on='asin')
+
     print("\n<==== Clean Info =====>")
     print(items.head())
     print(items.info())
 
-    items.to_csv('data/items_clean.csv', index=False)
+    items.to_pickle('data/items_clean.pkl')
 
-    print("\n-> Cleaned items and saved to data/items_clean.csv\n")
+    print("\n-> Cleaned items and saved to data/items_clean.pkl\n")

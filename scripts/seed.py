@@ -1,7 +1,7 @@
 import pandas as pd
 
-items = pd.read_csv('data/items_clean.csv')
-reviews = pd.read_csv('data/reviews_clean.csv')
+items = pd.read_csv('data/items_clean.pkl')
+reviews = pd.read_csv('data/reviews_clean.pkl')
 
 with open("db/seed.sql", "w") as f:
     f.write("--BRANDS--\n")
