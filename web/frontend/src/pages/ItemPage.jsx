@@ -34,7 +34,6 @@ const ItemPage = () => {
     return (<Loading/>);
   }
 
-  console.log(itemInfo)
 
   return (<Container maxWidth="md" sx={{my: 7}}>
     <Grid container spacing={4} justifyContent="center">
