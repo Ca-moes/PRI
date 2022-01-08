@@ -8,8 +8,8 @@ class Item {
     this.rating = rating;
     this.reviewUrl = reviewUrl;
     this.totalRatings = totalRatings;
-    this.price = price;
-    this.originalPrice = originalPrice;
+    this.price = price.toFixed(2);
+    this.originalPrice = originalPrice.toFixed(2);
     this.description = description;
     this.about = about;
     this.more = more;
