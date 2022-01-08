@@ -12,7 +12,16 @@ function parseItem(doc) {
     doc.reviewUrl,
     doc.totalRatings,
     doc.price,
-    doc.originalPrice
+    doc.originalPrice,
+    doc.description,
+    doc.about,
+    doc.more,
+    doc.wireless_carrier,
+    doc.operating_system,
+    doc.color,
+    doc.screen_size,
+    doc.memory_storage_capacity,
+    doc.cellular_technology
   )
 }
 
