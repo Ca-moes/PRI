@@ -35,7 +35,7 @@ const ItemPage = () => {
   }
 
 
-  return (<Container maxWidth="md" sx={{my: 7}}>
+  return (<Container maxWidth="md" sx={{my: 5}}>
     <Grid container spacing={4} justifyContent="center">
       <Grid item sm={12} md={4}>
         <img src={itemInfo.image} alt="Item Image" style={{ width: '100%' }}/>
