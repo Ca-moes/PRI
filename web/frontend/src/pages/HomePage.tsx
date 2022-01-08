@@ -1,4 +1,5 @@
 import Button from "@mui/material/Button";
+import Phone from "../components/phone/Phone";
 import { AxiosResponse } from "axios";
 const axios = require('axios');
 
@@ -21,6 +22,7 @@ const HomePage = () => {
   return (
     <>
       <div>HomePage</div>
+      <Phone image="https://m.media-amazon.com/images/I/A1S4AmmN0pL._AC_UY218_ML3_.jpg"></Phone>
       <div> 
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus nibh turpis, quis dapibus nunc convallis egestas. Vivamus non magna ut nibh mollis consectetur. Fusce risus odio, interdum nec imperdiet quis, ultricies eget nisl. Nulla imperdiet quis odio sit amet maximus. Praesent pellentesque, ex non pretium fermentum, dui mauris congue est, et vulputate ex nibh finibus sapien. Duis commodo egestas quam vel auctor. Nunc justo urna, fermentum ut nisi in, maximus commodo est. Nulla facilisi. Integer ac enim sit amet lacus tincidunt pellentesque. Donec tempus erat quis ante tincidunt, sit amet faucibus libero imperdiet. Etiam varius posuere velit, et mattis augue mollis ac. Ut et magna risus.
