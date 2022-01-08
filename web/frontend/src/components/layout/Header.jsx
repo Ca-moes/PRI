@@ -3,14 +3,17 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import {Link} from "@mui/material";
 
-const pages = ['Phones', 'Reviews', 'About Us'];
+const pages = {
+  'Phones': '/items',
+  'Reviews': '/reviews',
+  'About Us': 'https://www.captiongenerator.com/1558322/Souto-be-like'
+}
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -27,11 +30,11 @@ const ResponsiveAppBar = () => {
     <AppBar position="sticky" color="primary">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography variant="h6" noWrap component="div" sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}>
-            <img src="/pri-logo-white.png" alt="Phone Prime Logo" height={40} />
-          </Typography>
+          <Link href="/" sx={{mr: 2, display: {xs: 'none', md: 'flex'}}}>
+            <img src="/pri-logo-white.png" alt="Phone Prime Logo" height={40}/>
+          </Link>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -40,7 +43,7 @@ const ResponsiveAppBar = () => {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
+              <MenuIcon/>
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -57,33 +60,29 @@ const ResponsiveAppBar = () => {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' },
+                display: {xs: 'block', md: 'none'},
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {Object.entries(pages).map((page) => (
+                <MenuItem key={page[0]} onClick={handleCloseNavMenu}>
+                  <Link href={page[1]} textAlign="center" underline="none">{page[0]}</Link>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-          >
-            <img src="/pri-logo-white.png" alt="Phone Prime Logo" height={40} />
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block', margin:'auto' }}
+          <Link href="/" sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
+            <img src="/pri-logo-white.png" alt="Phone Prime Logo" height={40}/>
+          </Link>
+          <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
+            {Object.entries(pages).map((page) => (
+              <Link
+                key={page[0]}
+                href={page[1]}
+                underline="none"
+                sx={{my: 2, color: 'white', display: 'block', margin: 'auto'}}
               >
-                {page}
-              </Button>
+                {page[0]}
+              </Link>
             ))}
           </Box>
         </Toolbar>
