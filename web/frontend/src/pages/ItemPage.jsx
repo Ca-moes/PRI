@@ -30,6 +30,10 @@ const ItemPage = () => {
     return detail ? detail + add : 'No information'
   }
 
+  const checkUndefined = (detail) => {
+    return detail === undefined ? [] : detail
+  }
+
   if (!itemInfo) {
     return (<Loading/>);
   }
@@ -84,12 +88,12 @@ const ItemPage = () => {
           </Grid>
           <Grid item>
             <Stack>
-              <Typography>{returnDetail(itemInfo.wireless_carrier.join(', '))}</Typography>
+              <Typography>{returnDetail(checkUndefined(itemInfo.wireless_carrier).join(', '))}</Typography>
               <Typography>{returnDetail(itemInfo.operating_system)}</Typography>
               <Typography>{returnDetail(itemInfo.color)}</Typography>
               <Typography>{returnDetail(itemInfo.screen_size, '"')}</Typography>
               <Typography>{returnDetail(itemInfo.memory_storage_capacity, ' GB')}</Typography>
-              <Typography>{returnDetail(itemInfo.cellular_technology.join(', '))}</Typography>
+              <Typography>{returnDetail(checkUndefined(itemInfo.cellular_technology).join(', '))}</Typography>
             </Stack>
           </Grid>
         </Grid>
