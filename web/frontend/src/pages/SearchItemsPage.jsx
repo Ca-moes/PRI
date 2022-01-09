@@ -1,46 +1,41 @@
 import React from "react"
+import axios from "axios";
 import Container from "@mui/material/Container";
-import {Grid, Slider, Stack, TextField, FormControlLabel, Checkbox} from "@mui/material";
-import Typography from "@mui/material/Typography";
+import {Grid, Slider, Stack, TextField} from "@mui/material";
 import Box from "@mui/material/Box";
 import CustomAccordion from "../components/CustomAccordion";
+import FacetCheckboxList from "../components/FacetCheckboxList";
 
 const SearchItemsPage = () => {
-  const [priceRange, setPriceRange] = React.useState([0, 1000]);
-  const [ratingRange, setRatingRange] = React.useState([0, 5]);
-  const [label, setLabel] = React.useState([]);
+  const [data, setData] = React.useState({numFound: 0, numPages: 1, query: {q: '*', page: 1}, items: [], facets: {}})
+
+  const searchItems = (params) => {
+    console.log(params)
+
+    axios.get('http://localhost:3001/api/items/search', {params: params})
+      .then(({data}) => {
+        setData(data)
+      });
+  }
+
+  React.useEffect(() => {
+    searchItems(data.query)
+  }, [])
+
+  console.log(data)
 
   const handlePriceChange = (event, newValue) => {
-    setPriceRange(newValue);
-    console.log(priceRange)
+    searchItems({...data.query, page: 1, price: newValue})
   };
 
   const handleRatingChange = (event, newValue) => {
-    setRatingRange(newValue);
-    console.log(ratingRange)
+    searchItems({...data.query, page: 1, rating: newValue})
   };
 
-  const isChecked = (value) => {
-    return label.includes(value);
+  const handleFilter = (filter, newValue) => {
+    let newParams = {...data.query, page: 1, filter: filter, [filter]: newValue}
+    searchItems(newParams)
   }
-
-  const handle = (event) => {
-    const curr = event.target.name
-
-    if (event.target.checked) {
-      label.push(curr)
-    }
-    else {
-      const index = label.indexOf(curr);
-      if (index > -1) {
-        label.splice(index, 1);
-      }
-    }
-
-    setLabel(label)
-  }
-
-  console.log(label)
 
   return (
     <Container maxWidth="lg" sx={{my: 5}}>
@@ -50,22 +45,20 @@ const SearchItemsPage = () => {
             <Stack spacing={2}>
               <TextField id="filled-basic" label="Search" variant="standard" sx={{mb: '1rem'}}/>
               <CustomAccordion title='Price'>
-                <Stack spacing={2} direction="row">
-                  <Slider
-                    value={priceRange}
-                    onChange={handlePriceChange}
-                    valueLabelDisplay="auto"
-                    step={50}
-                    min={0}
-                    max={1000}
-                  />
-                </Stack>
+                <Slider
+                  defaultValue={[0, 1000]}
+                  onChangeCommitted={handlePriceChange}
+                  valueLabelDisplay="auto"
+                  step={50}
+                  min={0}
+                  max={1000}
+                />
               </CustomAccordion>
               <CustomAccordion title='Rating'>
                 <Slider
                   getAriaLabel={() => 'Price range'}
-                  value={ratingRange}
-                  onChange={handleRatingChange}
+                  defaultValue={[0, 5]}
+                  onChangeCommitted={handleRatingChange}
                   valueLabelDisplay="auto"
                   step={0.1}
                   min={0}
@@ -74,49 +67,36 @@ const SearchItemsPage = () => {
                 />
               </CustomAccordion>
               <CustomAccordion title='Brand'>
-                <Box sx={{maxHeight: 200, overflowY: 'auto'}}>
-                  <Stack>
-                    <FormControlLabel
-                      label="End"
-                      control={
-                      <Checkbox
-                        checked={isChecked('End')}
-                        onChange={handle}
-                      />
-                      }
-                    />
-                  </Stack>
-                </Box>
+                {data.facets.brand &&
+                  <FacetCheckboxList filter='brand' facet={data.facets.brand} handleFilters={handleFilter}/>}
               </CustomAccordion>
               <CustomAccordion title='Carrier'>
-                <Typography>
-                  Meter lista checkboxes
-                </Typography>
+                {data.facets.wireless_carrier &&
+                  <FacetCheckboxList filter='wireless_carrier' facet={data.facets.wireless_carrier}
+                                     handleFilters={handleFilter}/>}
               </CustomAccordion>
               <CustomAccordion title='Operating System'>
-                <Typography>
-                  Meter lista checkboxes
-                </Typography>
+                {data.facets.operating_system &&
+                  <FacetCheckboxList filter='operating_system' facet={data.facets.operating_system}
+                                     handleFilters={handleFilter}/>}
               </CustomAccordion>
               <CustomAccordion title='Color'>
-                <Typography>
-                  Meter lista checkboxes
-                </Typography>
+                {data.facets.color &&
+                  <FacetCheckboxList filter='color' facet={data.facets.color} handleFilters={handleFilter}/>}
               </CustomAccordion>
               <CustomAccordion title='Screen Size'>
-                <Typography>
-                  Meter lista checkboxes
-                </Typography>
+                {data.facets.screen_size && <FacetCheckboxList filter='screen_size' facet={data.facets.screen_size}
+                                                               handleFilters={handleFilter}/>}
               </CustomAccordion>
               <CustomAccordion title='Storage Capacity'>
-                <Typography>
-                  Meter lista checkboxes
-                </Typography>
+                {data.facets.memory_storage_capacity &&
+                  <FacetCheckboxList filter='memory_storage_capacity' facet={data.facets.memory_storage_capacity}
+                                     handleFilters={handleFilter}/>}
               </CustomAccordion>
               <CustomAccordion title='Cellular Connectivity'>
-                <Typography>
-                  Meter lista checkboxes
-                </Typography>
+                {data.facets.cellular_technology &&
+                  <FacetCheckboxList filter='cellular_technology' facet={data.facets.cellular_technology}
+                                     handleFilters={handleFilter}/>}
               </CustomAccordion>
             </Stack>
           </Box>
