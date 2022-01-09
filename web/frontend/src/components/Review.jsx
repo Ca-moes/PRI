@@ -19,15 +19,6 @@ export default function ReviewCard() {
     setExpanded((prev) => !prev);
   };
 
-  // this.asin = asin;
-  // this.name = name;
-  // this.rating = rating;
-  // this.date = date;
-  // this.verified = verified;
-  // this.title = title;
-  // this.body = body;
-  // this.helpfulVotes = helpfulVotes;
-  // this.country = country;
   let props = {};
   props.asin = 'B19824381374'
   props.name = "Chris Smith";
