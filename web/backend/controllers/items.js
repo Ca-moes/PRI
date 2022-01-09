@@ -40,6 +40,7 @@ function searchItem(req, res) {
   console.log(req.query)
   const q = req.query.q;
   const start = (req.query.page - 1) * 10;
+  const sort = req.query.sort;
   const price = req.query.price;
   const rating = req.query.rating;
   const filter = req.query.filter;
@@ -50,7 +51,7 @@ function searchItem(req, res) {
   if (rating) fq.push(`rating_item:[${rating[0]} TO ${rating[1]}]`);
 
   let filters = Object.keys(req.query)
-  removeFromArray(filters, ['q', 'page', 'price', 'rating', 'filter'])
+  removeFromArray(filters, ['q', 'page', 'price', 'rating', 'filter', 'sort'])
   filters.forEach((el) => {
     if (filter && filter === el && req.query[el]) {
       fq.push(`{!tag=${el}}${el}:(` + req.query[el].map(e => "\"" + e + "\"").join(' ') + ')')
@@ -115,6 +116,7 @@ function searchItem(req, res) {
     'wt': 'json',
     'defType': 'edismax',
     'qf': 'title_item description about more',
+    'sort': sort,
     'json.facet': JSON.stringify(facets)
   }
 

@@ -33,7 +33,7 @@ export default function FacetCheckboxList({filter, facet, handleFilters}) {
           label={
             <Stack direction="row" spacing={1} alignItems="center">
               <Typography variant="body1" component="span">{value}</Typography>
-              <Typography variant="body2" component="span" color="primary">{count}</Typography>
+              <Typography variant="body2" component="span" color="primary">({count})</Typography>
             </Stack>
           }
         />
