@@ -58,9 +58,9 @@
         },
         {
             "name": "brand",
-            "type": "text_standard",
+            "type": "string",
             "indexed": true,
-            "stored": true
+            "stored": false
         },
         {
             "name": "title_item",
@@ -132,40 +132,40 @@
         },
         {
             "name": "wireless_carrier",
-            "type": "text_standard",
+            "type": "string",
             "indexed": true,
-            "stored": true,
+            "stored": false,
             "multiValued": true
         },
         {
             "name": "operating_system",
-            "type": "text_standard",
+            "type": "string",
             "indexed": true,
-            "stored": true
+            "stored": false
         },
         {
             "name": "color",
-            "type": "text_standard",
+            "type": "string",
             "indexed": true,
-            "stored": true
+            "stored": false
         },
         {
             "name": "screen_size",
             "type": "pfloat",
             "indexed": true,
-            "stored": true
+            "stored": false
         },
         {
             "name": "memory_storage_capacity",
             "type": "pfloat",
             "indexed": true,
-            "stored": true
+            "stored": false
         },
         {
             "name": "cellular_technology",
-            "type": "text_standard",
+            "type": "string",
             "indexed": true,
-            "stored": true,
+            "stored": false,
             "multiValued": true
         },
         {
