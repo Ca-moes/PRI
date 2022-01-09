@@ -22,6 +22,7 @@ const HomePage = () => {
     <>
       <div>HomePage</div>
       <Item 
+        asin="B00NKR9MJA"
         image="https://m.media-amazon.com/images/I/81dPV5oyW8S._AC_UL320_.jpg"
         title="Google Pixel 5a"
         rating={3}
@@ -29,6 +30,7 @@ const HomePage = () => {
         originalPrice={500}
       />
       <Item 
+        asin="B00N532DU4"
         image="https://m.media-amazon.com/images/I/81dPV5oyW8S._AC_UL320_.jpg"
         title="Google Pixel 5a"
         rating={3}

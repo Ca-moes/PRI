@@ -5,9 +5,10 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Loading from "../Loading"
 import Rating from '@mui/material/Rating';
-import Stack from "@mui/material/Stack"
-import Box from "@mui/material/Box"
-import Grid from "@mui/material/Grid"
+import Stack from "@mui/material/Stack";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 
 export default function Item(props) {
@@ -27,7 +28,7 @@ export default function Item(props) {
 
   return (
     <Card sx={{ maxWidth: 345, m:2 }}>
-      <CardActionArea  sx={{pb: 1}}>
+      <CardActionArea  sx={{pb: 1}} component={Link} to={"/item/"+ props.asin}>
         <CardMedia
           component="img"
           height="350"
