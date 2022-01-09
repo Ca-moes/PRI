@@ -99,7 +99,7 @@ export default function ReviewCard() {
 
   return (
     <>
-      <Paper elevation={2} sx={{ px: 2 }}>
+      <Paper elevation={2} sx={{ py: 3 }}>
         <Container>
           <Grid
             container
