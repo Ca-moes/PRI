@@ -23,8 +23,8 @@ export default function FacetCheckboxList({filter, facet, handleFilters}) {
   function FacetCheckbox(props) {
     const { index, style } = props;
 
-    const value = facet[index].val
-    const count = facet[index].count
+    const value = facet[index].val.toString();
+    const count = facet[index].count;
 
     return (
       <ListItem style={style} key={index} component="div" disablePadding>
