@@ -1,4 +1,7 @@
 import Button from "@mui/material/Button";
+import Item from "../components/phone/Item"
+import Review from '../components/Review'
+
 
 const axios = require('axios');
 
@@ -20,6 +23,23 @@ const HomePage = () => {
   return (
     <>
       <div>HomePage</div>
+
+      <Item 
+        asin="B00NKR9MJA"
+        image="https://m.media-amazon.com/images/I/81dPV5oyW8S._AC_UL320_.jpg"
+        title="Google Pixel 5a"
+        rating={3}
+        price={250}
+        originalPrice={500}
+      />
+      <Item 
+        asin="B00N532DU4"
+        image="https://m.media-amazon.com/images/I/81dPV5oyW8S._AC_UL320_.jpg"
+        title="Google Pixel 5a"
+        rating={3}
+        price={500}
+        originalPrice={0}
+      />
       <div>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus nibh turpis, quis dapibus nunc convallis
         egestas. Vivamus non magna ut nibh mollis consectetur. Fusce risus odio, interdum nec imperdiet quis, ultricies
@@ -107,6 +127,9 @@ const HomePage = () => {
         justo bibendum in. Nunc urna sem, iaculis at erat sit amet, feugiat vulputate urna. Lorem ipsum dolor sit amet,
         consectetur adipiscing elit. Aliquam accumsan porttitor imperdiet.
       </div>
+
+      <Review></Review>
+
       <Button variant="contained"> Hello </Button>
     </>
   );
