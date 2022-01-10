@@ -1,6 +1,17 @@
 const core = require('../config');
 const Item = require("../models/item");
 
+function removeFromArray(array, list) {
+  list.forEach((el) => {
+    const index = array.indexOf(el);
+    if (index > -1) {
+      array.splice(index, 1);
+    }
+  })
+
+  return array;
+}
+
 function parseItem(doc) {
   return new Item(
     doc.asin,
@@ -26,34 +37,109 @@ function parseItem(doc) {
 }
 
 function searchItem(req, res) {
-  const query = req.params.query;
+  const q = req.query.q;
+  const rows = 12
+  const start = (req.query.page - 1) * rows;
+  const sort = req.query.sort;
+  const price = req.query.price;
+  const rating = req.query.rating;
+  const filter = req.query.filter;
+
+  let fq = ['content_type:item']
+
+  if (price) fq.push(`price:[${price[0]} TO ${price[1]}]`);
+  if (rating) fq.push(`rating_item:[${rating[0]} TO ${rating[1]}]`);
+
+  let filters = Object.keys(req.query)
+  removeFromArray(filters, ['q', 'page', 'price', 'rating', 'filter', 'sort'])
+  filters.forEach((el) => {
+    if (filter && filter === el && req.query[el]) {
+      fq.push(`{!tag=${el}}${el}:(` + req.query[el].map(e => "\"" + e + "\"").join(' ') + ')')
+    } else {
+      fq.push(`${el}:(` + req.query[el].map(e => "\"" + e + "\"").join(' ') + ')')
+    }
+  })
+
+  const facets = {
+    'brand': {
+      'type': 'terms',
+      'field': 'brand',
+      'limit': 10,
+      'domain': {'excludeTags': 'brand'}
+    },
+    'wireless_carrier': {
+      'type': 'terms',
+      'field': 'wireless_carrier',
+      'limit': 100,
+      'domain': {'excludeTags': 'wireless_carrier'}
+    },
+    'operating_system': {
+      'type': 'terms',
+      'field': 'operating_system',
+      'limit': 100,
+      'domain': {'excludeTags': 'operating_system'}
+    },
+    'color': {
+      'type': 'terms',
+      'field': 'color',
+      'limit': 100,
+      'domain': {'excludeTags': 'color'}
+    },
+    'screen_size': {
+      'type': 'terms',
+      'field': 'screen_size',
+      'limit': 100,
+      'domain': {'excludeTags': 'screen_size'}
+    },
+    'memory_storage_capacity': {
+      'type': 'terms',
+      'field': 'memory_storage_capacity',
+      'limit': 100,
+      'domain': {'excludeTags': 'memory_storage_capacity'}
+    },
+    'cellular_technology': {
+      'type': 'terms',
+      'field': 'cellular_technology',
+      'limit': 100,
+      'domain': {'excludeTags': 'cellular_technology'}
+    }
+  }
 
   const params = {
-    'q': query,
+    'q': q,
     'q.op': 'OR',
-    'fq': 'content_type:item',
-    'start': 0,
-    'rows': 10,
+    'fq': fq,
+    'start': start,
+    'rows': rows,
     'wt': 'json',
     'defType': 'edismax',
-    'qf': 'brand title_item^1.5',
+    'qf': 'title_item description about more',
+    'sort': sort,
+    'json.facet': JSON.stringify(facets)
   }
 
   core.get('/select', {params: params})
     .then((response) => {
-      const num = response.data.response.numFound;
-
-      if(num === 0) {
-        return res.status(404).send('Not found');
-      }
-
       const items = [];
 
       response.data.response.docs.forEach((doc) => {
-        items.push(doc);
+        items.push(parseItem(doc));
       })
 
-      return res.send(items);
+      let parsedFacets = response.data.facets;
+      delete parsedFacets["count"];
+      parsedFacets = Object.fromEntries(Object.entries(parsedFacets).map(([key, {buckets}]) => [key, buckets]));
+
+      const numFound = response.data.response.numFound;
+      const numPages = Math.ceil(numFound / rows);
+
+      return res.send({
+        'numFound': numFound,
+        'numPages': numPages,
+        'query': req.query,
+        'items': items,
+        'facets': parsedFacets
+      });
     })
     .catch((error) => {
       console.log(error);
@@ -74,7 +160,7 @@ function getItemByAsin(req, res) {
 
       const num = response.data.response.numFound;
 
-      if(num === 0) {
+      if (num === 0) {
         return res.status(404).send('Not found');
       }
 
@@ -87,7 +173,7 @@ function getItemByAsin(req, res) {
     });
 }
 
-module.exports =  {
+module.exports = {
   searchItem,
   getItemByAsin,
 }

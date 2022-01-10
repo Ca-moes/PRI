@@ -70,7 +70,8 @@ export default function ReviewCard() {
     button = (
       <Button
         variant="contained"
-        endIcon={<ExpandLessIcon />}
+        size="small"
+        endIcon={<ExpandLessIcon/>}
         onClick={handleChange}
       >
         Read less
@@ -80,7 +81,8 @@ export default function ReviewCard() {
     button = (
       <Button
         variant="contained"
-        endIcon={<ExpandMoreIcon />}
+        size="small"
+        endIcon={<ExpandMoreIcon/>}
         onClick={handleChange}
       >
         Read more
@@ -90,7 +92,7 @@ export default function ReviewCard() {
 
   return (
     <>
-      <Paper elevation={2} sx={{ py: 3 }}>
+      <Paper elevation={2} sx={{py: 3}}>
         <Container>
           <Grid
             container
@@ -100,36 +102,36 @@ export default function ReviewCard() {
             spacing={1}
           >
             <Grid item>
-              <Typography variant="h5">On: {props.asin}</Typography>
+              <Typography variant="h6">On: {props.asin}</Typography>
             </Grid>
             <Grid item>
               <Stack direction="row" spacing={2} alignItems="center">
-                <Rating name="read-only" value={5} precision={0.1} readOnly />
-                <Typography variant="body1">{props.title}</Typography>
+                <Rating name="read-only" value={5} precision={0.1} readOnly/>
+                <Typography variant="h6">{props.title}</Typography>
               </Stack>
             </Grid>
             <Grid zeroMinWidth item>
               <Collapse in={expanded} collapsedSize={50}>
-                <Typography variant="body2">{props.body}</Typography>
+                <Typography>{props.body}</Typography>
               </Collapse>
               {button}
             </Grid>
-            <Grid item container direction="row" justifyContent="space-between" alignItems="center">
-              <Grid item >
-                <Stack direction="row" spacing={2} alignItems="center">
-                  <Typography variant="body1">By {props.name}</Typography>
+            <Grid item container direction="row" justifyContent="space-between" alignItems="center" sx={{mt: 1}}>
+              <Grid item>
+                <Stack direction="row" spacing={1} alignItems="center">
+                  <Typography variant="body2">By {props.name}</Typography>
                   <VerifiedIcon fontSize="small"/>
                 </Stack>
               </Grid>
-              <Grid item >
-                In {props.country} | {props.date}
+              <Grid item>
+                <Typography variant="body2">In {props.country} | {props.date}</Typography>
               </Grid>
             </Grid>
             <Grid item>
-                <Stack direction="row" spacing={2} alignItems="center">
-                  <ThumbsUpDownIcon fontSize="small"/>
-                  <Typography variant="body1">{props.helpfulVotes}</Typography>
-                </Stack>
+              <Stack direction="row" spacing={2} alignItems="center">
+                <ThumbsUpDownIcon fontSize="small"/>
+                <Typography variant="body1">{props.helpfulVotes}</Typography>
+              </Stack>
             </Grid>
           </Grid>
         </Container>

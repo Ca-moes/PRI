@@ -9,7 +9,7 @@ const Loading = () => {
       justifyContent="center"
       alignItems="center"
       container
-      style={{height: "90vh", width: "100%"}}
+      style={{height: "80vh", width: "100%"}}
     >
       <Grid item>
         <CircularProgress/>
