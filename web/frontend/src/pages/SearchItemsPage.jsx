@@ -16,9 +16,10 @@ import FacetCheckboxList from "../components/FacetCheckboxList";
 import MenuItem from "@mui/material/MenuItem";
 import Typography from "@mui/material/Typography";
 import SearchInput from "../components/SearchInput";
+import ItemCard from "../components/ItemCard";
 
 const SearchItemsPage = () => {
-  const [sort, setSort] = React.useState("rating_item desc");
+  const [sort, setSort] = React.useState("rating_item desc, totalRatings desc");
   const [data, setData] = React.useState({
     numFound: 0,
     numPages: 1,
@@ -28,6 +29,8 @@ const SearchItemsPage = () => {
   });
 
   const searchItems = (params) => {
+    window.scroll({top: 0, behavior: 'smooth'});
+
     axios.get('http://localhost:3001/api/items/search', {params: params})
       .then(({data}) => {
         setData(data)
@@ -146,18 +149,26 @@ const SearchItemsPage = () => {
                   onChange={handleSort}
                   label="Sort"
                 >
-                  <MenuItem value="rating_item desc">Rating (Descending)</MenuItem>
-                  <MenuItem value="rating_item asc">Rating (Ascending)</MenuItem>
+                  <MenuItem value="rating_item desc, totalRatings desc">Rating (Descending)</MenuItem>
+                  <MenuItem value="rating_item asc, totalRatings desc">Rating (Ascending)</MenuItem>
                   <MenuItem value="price desc">Price (Descending)</MenuItem>
                   <MenuItem value="price asc">Price (Ascending)</MenuItem>
                   <MenuItem value="div(price, originalPrice) asc">Best discount (%)</MenuItem>
                 </Select>
               </FormControl>
-              <Typography variant="body2">{data.numFound} Results</Typography>
+              <Typography variant="body2">
+                {data.items.length > 0 && <>{(data.query.page-1) * 12 + 1}-{(data.query.page-1)*12+data.items.length} of </>}
+                {data.numFound} Results
+              </Typography>
             </Stack>
+            <Grid container spacing={3} sx={{mt: 2, mb: 3}}>
+              {data.items.map((item, index) => (<Grid item key={index} xs={4}><ItemCard item={item}/></Grid>))}
+            </Grid>
             {data.numPages > 1 &&
-              <Pagination page={parseInt(data.query.page)} count={data.numPages} shape="rounded" color="secondary"
-                          onChange={handlePage}/>
+              <Grid container justifyContent="center">
+                <Pagination page={parseInt(data.query.page)} count={data.numPages} shape="rounded" color="secondary"
+                            onChange={handlePage}/>
+              </Grid>
             }
           </Box>
         </Grid>

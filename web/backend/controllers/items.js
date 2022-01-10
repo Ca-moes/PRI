@@ -38,7 +38,8 @@ function parseItem(doc) {
 
 function searchItem(req, res) {
   const q = req.query.q;
-  const start = (req.query.page - 1) * 10;
+  const rows = 12
+  const start = (req.query.page - 1) * rows;
   const sort = req.query.sort;
   const price = req.query.price;
   const rating = req.query.rating;
@@ -109,7 +110,7 @@ function searchItem(req, res) {
     'q.op': 'OR',
     'fq': fq,
     'start': start,
-    'rows': 10,
+    'rows': rows,
     'wt': 'json',
     'defType': 'edismax',
     'qf': 'title_item description about more',
@@ -122,7 +123,7 @@ function searchItem(req, res) {
       const items = [];
 
       response.data.response.docs.forEach((doc) => {
-        items.push(doc);
+        items.push(parseItem(doc));
       })
 
       let parsedFacets = response.data.facets;
@@ -130,7 +131,7 @@ function searchItem(req, res) {
       parsedFacets = Object.fromEntries(Object.entries(parsedFacets).map(([key, {buckets}]) => [key, buckets]));
 
       const numFound = response.data.response.numFound;
-      const numPages = Math.ceil(numFound / 10);
+      const numPages = Math.ceil(numFound / rows);
 
       return res.send({
         'numFound': numFound,
