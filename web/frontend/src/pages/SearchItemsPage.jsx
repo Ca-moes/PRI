@@ -1,20 +1,33 @@
 import React from "react"
 import axios from "axios";
 import Container from "@mui/material/Container";
-import {FormControl, Grid, InputLabel, Select, Slider, Stack, TextField} from "@mui/material";
+import {
+  FormControl,
+  Grid,
+  InputLabel,
+  Pagination,
+  Select,
+  Slider,
+  Stack,
+} from "@mui/material";
 import Box from "@mui/material/Box";
 import CustomAccordion from "../components/CustomAccordion";
 import FacetCheckboxList from "../components/FacetCheckboxList";
 import MenuItem from "@mui/material/MenuItem";
 import Typography from "@mui/material/Typography";
+import SearchInput from "../components/SearchInput";
 
 const SearchItemsPage = () => {
-  const [sort, setSort] = React.useState("rating_item desc")
-  const [data, setData] = React.useState({numFound: 0, numPages: 1, query: {q: '*', page: 1, sort}, items: [], facets: {}})
+  const [sort, setSort] = React.useState("rating_item desc");
+  const [data, setData] = React.useState({
+    numFound: 0,
+    numPages: 1,
+    query: {q: '*', page: 1, sort},
+    items: [],
+    facets: {}
+  });
 
   const searchItems = (params) => {
-    console.log(params)
-
     axios.get('http://localhost:3001/api/items/search', {params: params})
       .then(({data}) => {
         setData(data)
@@ -25,12 +38,9 @@ const SearchItemsPage = () => {
     searchItems(data.query)
   }, [])
 
-  console.log(data)
-
-  const handleSort = (event) => {
-    const sort = event.target.value
-    setSort(sort)
-    searchItems({...data.query, page: 1, sort})
+  const handleQuery = (query) => {
+    if (query === "") query = "*"
+    searchItems({q: query, page: 1})
   }
 
   const handlePriceChange = (event, newValue) => {
@@ -44,15 +54,29 @@ const SearchItemsPage = () => {
   const handleFilter = (filter, newValue) => {
     let newParams = {...data.query, page: 1, filter: filter, [filter]: newValue}
     searchItems(newParams)
-  }
+  };
+
+  const handleSort = (event) => {
+    const sort = event.target.value
+    setSort(sort)
+    searchItems({...data.query, page: 1, sort})
+  };
+
+  const handlePage = (event, value) => {
+    searchItems({...data.query, page: value})
+  };
 
   return (
     <Container maxWidth="lg" sx={{my: 5}}>
       <Grid container spacing={3}>
+        <Grid item xs={12}>
+          <Box sx={{backgroundColor: 'secondary.main', padding: '2rem'}}>
+            <SearchInput handleQuery={handleQuery}/>
+          </Box>
+        </Grid>
         <Grid item sm={12} md={3}>
           <Box sx={{backgroundColor: 'white', paddingX: '1rem', paddingY: '2rem'}}>
             <Stack spacing={2}>
-              <TextField id="filled-basic" label="Search" variant="standard" sx={{mb: '1rem'}}/>
               <CustomAccordion title='Price'>
                 <Slider
                   defaultValue={[0, 1000]}
@@ -131,6 +155,10 @@ const SearchItemsPage = () => {
               </FormControl>
               <Typography variant="body2">{data.numFound} Results</Typography>
             </Stack>
+            {data.numPages > 1 &&
+              <Pagination page={parseInt(data.query.page)} count={data.numPages} shape="rounded" color="secondary"
+                          onChange={handlePage}/>
+            }
           </Box>
         </Grid>
       </Grid>

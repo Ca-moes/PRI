@@ -37,7 +37,6 @@ function parseItem(doc) {
 }
 
 function searchItem(req, res) {
-  console.log(req.query)
   const q = req.query.q;
   const start = (req.query.page - 1) * 10;
   const sort = req.query.sort;
@@ -59,8 +58,6 @@ function searchItem(req, res) {
       fq.push(`${el}:(` + req.query[el].map(e => "\"" + e + "\"").join(' ') + ')')
     }
   })
-
-  console.log(fq)
 
   const facets = {
     'brand': {
@@ -122,12 +119,6 @@ function searchItem(req, res) {
 
   core.get('/select', {params: params})
     .then((response) => {
-      const num = response.data.response.numFound;
-
-      if (num === 0) {
-        return res.status(404).send('Not found');
-      }
-
       const items = [];
 
       response.data.response.docs.forEach((doc) => {
