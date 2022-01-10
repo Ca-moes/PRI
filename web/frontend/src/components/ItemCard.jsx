@@ -27,7 +27,7 @@ export default function ItemCard({item}) {
           alt={"Photo of " + item.title}
           sx={{py: 1, px: 1}}
         />
-        <Stack spacing={1} sx={{m: 2, minHeight: '12rem'}} justifyContent="center">
+        <Stack spacing={1} sx={{m: 2, minHeight: '11rem'}}>
           <Typography component="span">
             <b>{item.title.length > 50 ? item.title.substring(0, 50) + "..." : item.title}</b>
           </Typography>
@@ -43,19 +43,15 @@ export default function ItemCard({item}) {
               </>
               :
               <>
-                {
-                  <>
-                    <Stack direction="row" spacing={1} alignItems="center">
-                      <Typography component="span" variant="h5"><b>{item.price}</b>$</Typography>
-                      <Typography variant="body2" component="span"
-                                  className="grey-strikethrough">{item.originalPrice}$</Typography>
-                    </Stack>
-                    <Typography color="primary"  variant="body1" component="span">
-                      Save {discountFlat(item.price, item.originalPrice)}$
-                      ({discountPerc(item.price, item.originalPrice)}%)
-                    </Typography>
-                  </>
-                }
+                <Stack direction="row" spacing={1} alignItems="center">
+                  <Typography component="span" variant="h6"><b>{item.price}</b>$</Typography>
+                  <Typography variant="body2" component="span"
+                              className="grey-strikethrough">{item.originalPrice}$</Typography>
+                </Stack>
+                <Typography color="primary" variant="body1" component="span">
+                  Save {discountFlat(item.price, item.originalPrice)}$
+                  ({discountPerc(item.price, item.originalPrice)}%)
+                </Typography>
               </>
             }
           </>
