@@ -5,6 +5,7 @@ import PageLayout from "./components/layout/PageLayout";
 import ItemPage from "./pages/ItemPage";
 import SearchItemsPage from "./pages/SearchItemsPage";
 import SearchReviewsPage from "./pages/SearchReviewsPage";
+import AboutUsPage from "./pages/AboutUsPage";
 
 const AppRouter = () => (
   <PageLayout>

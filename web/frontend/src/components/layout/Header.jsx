@@ -11,8 +11,7 @@ import {Link} from "@mui/material";
 
 const pages = {
   'Phones': '/items',
-  'Reviews': '/reviews',
-  'About Us': 'https://www.captiongenerator.com/1558322/Souto-be-like'
+  'Reviews': '/reviews'
 }
 
 const ResponsiveAppBar = () => {
@@ -30,10 +29,7 @@ const ResponsiveAppBar = () => {
     <AppBar position="sticky" color="primary">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Box sx={{mr: 2, display: {xs: 'none', md: 'flex'}}}>
-            <img src="/pri-logo-white.png" alt="Phone Prime Logo" height={40}/>
-          </Box>
-
+          <img src="/pri-logo-white.png" alt="Phone Prime Logo" height={40}/>
           <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
             <IconButton
               size="large"
