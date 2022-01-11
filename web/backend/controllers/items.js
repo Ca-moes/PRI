@@ -156,8 +156,6 @@ function getItemByAsin(req, res) {
 
   core.get('/select', {params: params})
     .then((response) => {
-      console.log(response.data);
-
       const num = response.data.response.numFound;
 
       if (num === 0) {

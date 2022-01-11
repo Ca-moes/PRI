@@ -59,7 +59,9 @@ export default function ReviewCard({review}) {
             spacing={1}
           >
             <Grid item>
-              <Link href={`/item/${review.asin}`} underline="none" style={{color: 'grey'}}>on: {review.asin}</Link>
+              <Typography style={{color: 'grey'}}>on:&nbsp;
+                <Link href={`/item/${review.asin}`}>{review.asin}</Link>
+              </Typography>
             </Grid>
             <Grid item>
               <Stack direction="row" spacing={2} alignItems="center">

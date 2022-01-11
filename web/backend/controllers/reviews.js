@@ -31,20 +31,22 @@ function searchReview(req, res) {
   const rows = 10;
   const start = (req.query.page - 1) * rows;
   const sort = req.query.sort;
+  const asin = req.query.asin;
   const votes = req.query.votes;
   const rating = req.query.rating;
   const filter = req.query.filter;
   const fromDate = req.query.fromDate ? req.query.fromDate.replace(/T.*/,'T00:00:00Z') : null;
   const toDate = req.query.toDate ? req.query.toDate.replace(/T.*/,'T00:00:00Z') : null;
 
-  let fq = ['content_type:review']
+  let fq = ['content_type:review'];
 
+  if (asin) fq.push(`asin:${asin}`);
   if (votes) fq.push(`helpfulVotes:[${votes[0]} TO ${votes[1]}]`);
   if (rating) fq.push(`rating_review:[${rating[0]} TO ${rating[1]}]`);
   if (fromDate && toDate) fq.push(`date:[${fromDate} TO ${toDate}]`);
 
   let filters = Object.keys(req.query)
-  removeFromArray(filters, ['q', 'page', 'votes', 'rating', 'fromDate', 'toDate', 'filter', 'sort'])
+  removeFromArray(filters, ['q', 'page', 'asin', 'votes', 'rating', 'fromDate', 'toDate', 'filter', 'sort'])
   filters.forEach((el) => {
     if (filter && filter === el && req.query[el]) {
       fq.push(`{!tag=${el}}${el}:(` + req.query[el].map(e => "\"" + e + "\"").join(' ') + ')')
@@ -52,9 +54,6 @@ function searchReview(req, res) {
       fq.push(`${el}:(` + req.query[el].map(e => "\"" + e + "\"").join(' ') + ')')
     }
   })
-
-  console.log('==REQUEST==')
-  console.log(fq)
 
   const facets = {
     'country': {

@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
-import {FormControl, Grid, InputLabel, Pagination, Select, Slider, Stack, TextField} from "@mui/material";
+import {useParams} from "react-router-dom";
+import {FormControl, Grid, InputLabel, Link, Pagination, Select, Slider, Stack, TextField} from "@mui/material";
 import Box from "@mui/material/Box";
 import SearchInput from "../components/SearchInput";
 import CustomAccordion from "../components/CustomAccordion";
@@ -14,6 +15,8 @@ import DesktopDatePicker from '@mui/lab/DesktopDatePicker';
 import ReviewCard from "../components/ReviewCard";
 
 const SearchReviewsPage = () => {
+  const {asin} = useParams();
+
   const minDate = new Date('2003-11-24');
   const maxDate = new Date();
   const [fromDate, setFromDate] = React.useState(minDate);
@@ -29,6 +32,8 @@ const SearchReviewsPage = () => {
 
   const searchReviews = (params) => {
     window.scroll({top: 0, behavior: 'smooth'});
+
+    if (asin) params['asin'] = asin
 
     axios.get('http://localhost:3001/api/reviews/search', {params: params})
       .then(({data}) => {
@@ -82,6 +87,16 @@ const SearchReviewsPage = () => {
   return (
     <Container maxWidth="lg" sx={{my: 5}}>
       <Grid container spacing={3}>
+        {
+          asin &&
+          <Grid item xs={12}>
+            <Box sx={{backgroundColor: 'white', padding: '2rem'}}>
+              <Typography variant="h5">Reviews for&nbsp;
+                <Link href={`/item/${asin}`}>{asin}</Link>
+              </Typography>
+            </Box>
+          </Grid>
+        }
         <Grid item xs={12}>
           <Box sx={{backgroundColor: 'secondary.main', padding: '2rem'}}>
             <SearchInput handleQuery={handleQuery}/>

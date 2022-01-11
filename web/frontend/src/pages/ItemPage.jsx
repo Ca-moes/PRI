@@ -1,12 +1,12 @@
-import {useParams} from "react-router-dom";
 import React from "react";
+import {useParams} from "react-router-dom";
 import Loading from "../components/Loading";
 import Container from "@mui/material/Container";
 import {Grid, Link, Rating, Stack} from "@mui/material";
 import Typography from "@mui/material/Typography";
 
 import '../style/item.css';
-import ContentNotFound from "../components/layout/ContentNotFound";
+import ContentNotFound from "../components/ContentNotFound";
 import Box from "@mui/material/Box";
 
 const axios = require('axios');
@@ -96,6 +96,7 @@ const ItemPage = () => {
             <Grid item container spacing={3}>
               <Grid item>
                 <Stack>
+                  <Typography><b>ASIN</b></Typography>
                   <Typography><b>Carrier</b></Typography>
                   <Typography><b>Operating System</b></Typography>
                   <Typography><b>Color</b></Typography>
@@ -106,6 +107,7 @@ const ItemPage = () => {
               </Grid>
               <Grid item>
                 <Stack>
+                  <Typography>{itemInfo.asin}</Typography>
                   <Typography>{returnDetail(checkUndefined(itemInfo.wireless_carrier).join(', '))}</Typography>
                   <Typography>{returnDetail(itemInfo.operating_system)}</Typography>
                   <Typography>{returnDetail(itemInfo.color)}</Typography>
@@ -133,7 +135,7 @@ const ItemPage = () => {
               <Typography>{itemInfo.description}</Typography>
             </>
           }
-          <Link variant="h6" color="primary"><b>Check out this product's reviews</b></Link>
+          <Link href={`/reviews/${itemInfo.asin}`} variant="h6" color="primary"><b>Check out this product's reviews</b></Link>
         </Stack>
       </Box>
     </Container>
