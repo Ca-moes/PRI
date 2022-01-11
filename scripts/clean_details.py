@@ -23,7 +23,7 @@ def create_columns(list):
                 value = value.split(" ")[0]
 
             elif index == "Cellular Technology":
-                value = value.replace(" ", "").replace("/",",").upper().split(",")
+                value = value.replace("4G LTE", "4G,LTE").replace(" ", "").replace("/",",").upper().split(",")
 
             elif index == "Operating System":
                 if "android" in value.lower():

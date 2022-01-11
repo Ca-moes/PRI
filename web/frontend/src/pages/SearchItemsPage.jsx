@@ -22,7 +22,7 @@ const SearchItemsPage = () => {
   const [sort, setSort] = React.useState("rating_item desc, totalRatings desc");
   const [data, setData] = React.useState({
     numFound: 0,
-    numPages: 1,
+    numPages: 0,
     query: {q: '*', page: 1, sort},
     items: [],
     facets: {}
@@ -77,30 +77,37 @@ const SearchItemsPage = () => {
             <SearchInput handleQuery={handleQuery}/>
           </Box>
         </Grid>
-        <Grid item sm={12} md={3}>
-          <Box sx={{backgroundColor: 'white', paddingX: '1rem', paddingY: '2rem'}}>
+        <Grid item xs={12} md={3}>
+          <Box sx={{backgroundColor: 'white', padding: '1rem'}}>
             <Stack spacing={2}>
-              <CustomAccordion title='Price'>
-                <Slider
-                  defaultValue={[0, 1000]}
-                  onChangeCommitted={handlePriceChange}
-                  valueLabelDisplay="auto"
-                  step={50}
-                  min={0}
-                  max={1000}
-                />
-              </CustomAccordion>
+              <Typography variant="h6" sx={{m: 1}}><b>Filters</b></Typography>
               <CustomAccordion title='Rating'>
                 <Slider
-                  getAriaLabel={() => 'Price range'}
                   defaultValue={[0, 5]}
                   onChangeCommitted={handleRatingChange}
                   valueLabelDisplay="auto"
                   step={0.1}
                   min={0}
                   max={5}
-                  disableSwap
                 />
+                <Stack direction="row" justifyContent="space-between">
+                  <Typography variant="body2">0</Typography>
+                  <Typography variant="body2">5</Typography>
+                </Stack>
+              </CustomAccordion>
+              <CustomAccordion title='Price'>
+                <Slider
+                  defaultValue={[0, 2500]}
+                  onChangeCommitted={handlePriceChange}
+                  valueLabelDisplay="auto"
+                  step={50}
+                  min={0}
+                  max={2500}
+                />
+                <Stack direction="row" justifyContent="space-between">
+                  <Typography variant="body2">0</Typography>
+                  <Typography variant="body2">2500</Typography>
+                </Stack>
               </CustomAccordion>
               <CustomAccordion title='Brand'>
                 {data.facets.brand &&
@@ -137,8 +144,8 @@ const SearchItemsPage = () => {
             </Stack>
           </Box>
         </Grid>
-        <Grid item sm={12} md={9}>
-          <Box sx={{backgroundColor: 'white', paddingX: '1rem', paddingY: '2rem'}}>
+        <Grid item xs={12} md={9}>
+          <Box sx={{backgroundColor: 'white', padding: '1.5rem'}}>
             <Stack direction="row" alignItems="flex-end" justifyContent="space-between">
               <FormControl variant="standard" sx={{minWidth: 180}}>
                 <InputLabel id="select-sort-label">Sort</InputLabel>
@@ -157,7 +164,7 @@ const SearchItemsPage = () => {
                 </Select>
               </FormControl>
               <Typography variant="body2">
-                {data.items.length > 0 && <>{(data.query.page-1) * 12 + 1}-{(data.query.page-1)*12+data.items.length} of </>}
+                {data.items.length > 0 && <>{(data.query.page - 1) * 12 + 1}-{(data.query.page - 1) * 12 + data.items.length} of </>}
                 {data.numFound} Results
               </Typography>
             </Stack>

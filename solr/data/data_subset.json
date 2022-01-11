@@ -25835,7 +25835,8 @@
     "memory_storage_capacity": "128",
     "cellular_technology": [
         "5G",
-        "4GLTE"
+        "4G",
+        "LTE"
     ],
     "content_type": "item",
     "id": "B09GW969LH",
