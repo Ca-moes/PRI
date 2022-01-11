@@ -1,23 +1,4 @@
-import Button from "@mui/material/Button";
-import ReviewCard from '../components/ReviewCard'
-
-const axios = require('axios');
-
 const HomePage = () => {
-  // Make a request for a user with a given ID
-  axios.get('http://localhost:3001/test')
-    .then(function (response) {
-      // handle success
-      console.log(response);
-    })
-    .catch(function (error) {
-      // handle error
-      console.log(error);
-    })
-    .then(function () {
-      // always executed
-    });
-
   return (
     <>
       <div>HomePage</div>
@@ -108,10 +89,6 @@ const HomePage = () => {
         justo bibendum in. Nunc urna sem, iaculis at erat sit amet, feugiat vulputate urna. Lorem ipsum dolor sit amet,
         consectetur adipiscing elit. Aliquam accumsan porttitor imperdiet.
       </div>
-
-      <ReviewCard></ReviewCard>
-
-      <Button variant="contained"> Hello </Button>
     </>
   );
 };

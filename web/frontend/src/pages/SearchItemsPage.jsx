@@ -80,6 +80,7 @@ const SearchItemsPage = () => {
         <Grid item xs={12} md={3}>
           <Box sx={{backgroundColor: 'white', padding: '1rem'}}>
             <Stack spacing={2}>
+              <Typography variant="h6" sx={{m: 1}}><b>Filters</b></Typography>
               <CustomAccordion title='Rating'>
                 <Slider
                   defaultValue={[0, 5]}
@@ -88,7 +89,6 @@ const SearchItemsPage = () => {
                   step={0.1}
                   min={0}
                   max={5}
-                  disableSwap
                 />
                 <Stack direction="row" justifyContent="space-between">
                   <Typography variant="body2">0</Typography>
@@ -97,16 +97,16 @@ const SearchItemsPage = () => {
               </CustomAccordion>
               <CustomAccordion title='Price'>
                 <Slider
-                  defaultValue={[0, 1000]}
+                  defaultValue={[0, 2500]}
                   onChangeCommitted={handlePriceChange}
                   valueLabelDisplay="auto"
                   step={50}
                   min={0}
-                  max={1000}
+                  max={2500}
                 />
                 <Stack direction="row" justifyContent="space-between">
                   <Typography variant="body2">0</Typography>
-                  <Typography variant="body2">1000</Typography>
+                  <Typography variant="body2">2500</Typography>
                 </Stack>
               </CustomAccordion>
               <CustomAccordion title='Brand'>
@@ -145,7 +145,7 @@ const SearchItemsPage = () => {
           </Box>
         </Grid>
         <Grid item xs={12} md={9}>
-          <Box sx={{backgroundColor: 'white', paddingX: '1rem', paddingY: '2rem'}}>
+          <Box sx={{backgroundColor: 'white', padding: '1.5rem'}}>
             <Stack direction="row" alignItems="flex-end" justifyContent="space-between">
               <FormControl variant="standard" sx={{minWidth: 180}}>
                 <InputLabel id="select-sort-label">Sort</InputLabel>
@@ -164,7 +164,7 @@ const SearchItemsPage = () => {
                 </Select>
               </FormControl>
               <Typography variant="body2">
-                {data.items.length > 0 && <>{(data.query.page-1) * 12 + 1}-{(data.query.page-1)*12+data.items.length} of </>}
+                {data.items.length > 0 && <>{(data.query.page - 1) * 12 + 1}-{(data.query.page - 1) * 12 + data.items.length} of </>}
                 {data.numFound} Results
               </Typography>
             </Stack>
