@@ -29,10 +29,7 @@ const ResponsiveAppBar = () => {
     <AppBar position="sticky" color="primary">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-         
-            <img src="/pri-logo-white.png" alt="Phone Prime Logo" height={40}/>
-          
-
+          <img src="/pri-logo-white.png" alt="Phone Prime Logo" height={40}/>
           <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
             <IconButton
               size="large"
@@ -69,9 +66,9 @@ const ResponsiveAppBar = () => {
               ))}
             </Menu>
           </Box>
-          <Link href="/" sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
+          <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
             <img src="/pri-logo-white.png" alt="Phone Prime Logo" height={40}/>
-          </Link>
+          </Box>
           <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
             {Object.entries(pages).map((page) => (
               <Link

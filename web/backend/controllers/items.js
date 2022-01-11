@@ -38,7 +38,7 @@ function parseItem(doc) {
 
 function searchItem(req, res) {
   const q = req.query.q;
-  const rows = 12
+  const rows = 12;
   const start = (req.query.page - 1) * rows;
   const sort = req.query.sort;
   const price = req.query.price;

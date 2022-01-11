@@ -212,7 +212,7 @@
         },
         {
             "name": "country",
-            "type": "text_standard",
+            "type": "string",
             "indexed": true,
             "stored": true
         }

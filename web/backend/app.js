@@ -14,10 +14,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(cors());
 
-const index = require('./routes/index');
-
-app.use('/test', index);
-
 const items = require('./routes/items');
 
 app.use('/api/items', items);
