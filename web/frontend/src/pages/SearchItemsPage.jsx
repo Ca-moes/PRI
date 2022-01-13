@@ -19,7 +19,7 @@ import SearchInput from "../components/SearchInput";
 import ItemCard from "../components/ItemCard";
 
 const SearchItemsPage = () => {
-  const [sort, setSort] = React.useState("rating_item desc, totalRatings desc");
+  const [sort, setSort] = React.useState("relevancy");
   const [data, setData] = React.useState({
     numFound: 0,
     numPages: 0,
@@ -156,6 +156,7 @@ const SearchItemsPage = () => {
                   onChange={handleSort}
                   label="Sort"
                 >
+                  <MenuItem value="relevancy">Relevancy</MenuItem>
                   <MenuItem value="rating_item desc, totalRatings desc">Rating (Descending)</MenuItem>
                   <MenuItem value="rating_item asc, totalRatings desc">Rating (Ascending)</MenuItem>
                   <MenuItem value="price desc">Price (Descending)</MenuItem>

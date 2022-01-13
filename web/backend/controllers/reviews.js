@@ -79,9 +79,11 @@ function searchReview(req, res) {
     'wt': 'json',
     'defType': 'edismax',
     'qf': 'title_review body',
-    'sort': sort,
     'json.facet': JSON.stringify(facets)
   }
+
+  if (sort && (sort !== "relevancy")) params["sort"] = sort;
+  else params["rq"] = "{!ltr model=ltr_linear_reviews reRankDocs=100}"
 
   core.get('/select', {params: params})
     .then((response) => {
