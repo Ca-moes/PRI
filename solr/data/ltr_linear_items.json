@@ -1,0 +1,16 @@
+{
+  "name" : "ltr_linear_items",
+  "class" : "org.apache.solr.ltr.model.LinearModel",
+  "features" : [
+    { "name" : "originalScore" },
+    { "name" : "itemRating" },
+    { "name" : "itemTotalRatings" }
+  ],
+  "params" : {
+    "weights" : {
+      "originalScore" : 0.5,
+      "itemRating": 0.2,
+      "itemTotalRatings": 0.3
+    }
+  }
+}

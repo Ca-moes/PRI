@@ -1,0 +1,34 @@
+[
+  {
+    "name" : "originalScore",
+    "class" : "org.apache.solr.ltr.feature.OriginalScoreFeature",
+    "params" : {}
+  },
+
+  {
+    "name": "itemRating",
+    "class": "org.apache.solr.ltr.feature.SolrFeature",
+    "params" : { "q" : "{!func}div(rating_item, 5.0)" }
+  },
+  {
+    "name": "itemTotalRatings",
+    "class": "org.apache.solr.ltr.feature.SolrFeature",
+    "params" : { "q" : "{!func}scale(totalRatings, 0, 1)" }
+  },
+
+  {
+    "name": "reviewRating",
+    "class": "org.apache.solr.ltr.feature.SolrFeature",
+    "params" : { "q" : "{!func}div(rating_review, 5.0)" }
+  },
+  {
+    "name": "reviewVotes",
+    "class": "org.apache.solr.ltr.feature.SolrFeature",
+    "params" : { "q" : "{!func}scale(helpfulVotes, 0, 1)" }
+  },
+  {
+    "name" : "reviewRecency",
+    "class" : "org.apache.solr.ltr.feature.SolrFeature",
+    "params" : { "q" : "{!func}recip(ms(NOW,date), 3.16e-11, 1, 1)" }
+  }
+]
