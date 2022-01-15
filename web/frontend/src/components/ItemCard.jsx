@@ -31,7 +31,11 @@ export default function ItemCard({item}) {
           <Typography component="span">
             <b>{item.title.length > 50 ? item.title.substring(0, 50) + "..." : item.title}</b>
           </Typography>
-          <Rating name="read-only" size="small" value={item.rating} precision={1} readOnly sx={{mt: 1, mx: 2}}/>
+          <Stack direction="row" spacing={1} alignItems="center">
+            <Rating name="read-only" size="small" value={item.rating} precision={1} readOnly/>
+            <Typography component="span" style={{color: "grey"}}>({item.totalRatings})</Typography>
+          </Stack>
+
           <>
             {item.originalPrice == 0 ?
               <>
