@@ -3,16 +3,16 @@
   "class" : "org.apache.solr.ltr.model.LinearModel",
   "features" : [
     { "name" : "originalScore" },
-    { "name" : "reviewRating" },
     { "name" : "reviewVotes" },
-    { "name" : "reviewRecency" }
+    { "name" : "reviewRecency" },
+    { "name" : "reviewBodyLength" }
   ],
   "params" : {
     "weights" : {
-      "originalScore" : 0.35,
-      "reviewRating": 0.15,
-      "reviewVotes": 0.2,
-      "reviewRecency": 0.3
+      "originalScore" : 0.4,
+      "reviewVotes": 0.3,
+      "reviewRecency": 0.15,
+      "reviewBodyLength": 0.15
     }
   }
 }

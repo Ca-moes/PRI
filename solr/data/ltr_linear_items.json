@@ -4,13 +4,15 @@
   "features" : [
     { "name" : "originalScore" },
     { "name" : "itemRating" },
-    { "name" : "itemTotalRatings" }
+    { "name" : "itemTotalRatings" },
+    { "name" : "itemDiscount" }
   ],
   "params" : {
     "weights" : {
-      "originalScore" : 0.5,
-      "itemRating": 0.2,
-      "itemTotalRatings": 0.3
+      "originalScore" : 0.4,
+      "itemRating": 0.1,
+      "itemTotalRatings": 0.25,
+      "itemDiscount": 0.25
     }
   }
 }
