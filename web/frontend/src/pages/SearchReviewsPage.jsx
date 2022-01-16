@@ -21,7 +21,7 @@ const SearchReviewsPage = () => {
   const maxDate = new Date();
   const [fromDate, setFromDate] = React.useState(minDate);
   const [toDate, setToDate] = React.useState(maxDate);
-  const [sort, setSort] = React.useState("rating_review desc, helpfulVotes desc");
+  const [sort, setSort] = React.useState("relevancy");
   const [data, setData] = React.useState({
     numFound: 0,
     numPages: 0,
@@ -182,6 +182,7 @@ const SearchReviewsPage = () => {
                   onChange={handleSort}
                   label="Sort"
                 >
+                  <MenuItem value="relevancy">Relevancy</MenuItem>
                   <MenuItem value="rating_review desc, helpfulVotes desc">Rating (Descending)</MenuItem>
                   <MenuItem value="rating_review asc, helpfulVotes desc">Rating (Ascending)</MenuItem>
                   <MenuItem value="helpfulVotes desc, rating_review desc">Helpful Votes (Descending)</MenuItem>
