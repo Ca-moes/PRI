@@ -113,12 +113,12 @@ function searchItem(req, res) {
     'rows': rows,
     'wt': 'json',
     'defType': 'edismax',
-    'qf': 'title_item description about more',
+    'qf': 'title_item^2 description^1.5 about more',
     'json.facet': JSON.stringify(facets)
   }
 
   if (sort && (sort !== "relevancy")) params["sort"] = sort;
-  else params["rq"] = "{!ltr model=ltr_linear_items reRankDocs=100}"
+  else params["rq"] = "{!ltr model=ltr_linear_items reRankDocs=500}"
 
   core.get('/select', {params: params})
     .then((response) => {

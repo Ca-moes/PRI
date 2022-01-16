@@ -28,19 +28,6 @@
                     {"class":"solr.LowerCaseFilterFactory"}
                 ]
             }
-        },
-        {
-            "name":"text_standard",
-            "class":"solr.TextField",
-            "analyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            }
         }
     ],
     "add-field": [
@@ -125,7 +112,7 @@
         },
         {
             "name": "more",
-            "type": "text_body",
+            "type": "title",
             "indexed": true,
             "stored": true,
             "multiValued": true
@@ -170,8 +157,8 @@
         },
         {
             "name": "name",
-            "type": "text_standard",
-            "indexed": true,
+            "type": "string",
+            "indexed": false,
             "stored": true
         },
         {
