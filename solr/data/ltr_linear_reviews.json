@@ -1,0 +1,18 @@
+{
+  "name" : "ltr_linear_reviews",
+  "class" : "org.apache.solr.ltr.model.LinearModel",
+  "features" : [
+    { "name" : "originalScore" },
+    { "name" : "reviewVotes" },
+    { "name" : "reviewRecency" },
+    { "name" : "reviewBodyLength" }
+  ],
+  "params" : {
+    "weights" : {
+      "originalScore" : 0.4,
+      "reviewVotes": 0.3,
+      "reviewRecency": 0.1,
+      "reviewBodyLength": 0.2
+    }
+  }
+}

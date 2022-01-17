@@ -28,19 +28,6 @@
                     {"class":"solr.LowerCaseFilterFactory"}
                 ]
             }
-        },
-        {
-            "name":"text_standard",
-            "class":"solr.TextField",
-            "analyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            }
         }
     ],
     "add-field": [
@@ -58,9 +45,9 @@
         },
         {
             "name": "brand",
-            "type": "text_standard",
+            "type": "string",
             "indexed": true,
-            "stored": true
+            "stored": false
         },
         {
             "name": "title_item",
@@ -125,53 +112,53 @@
         },
         {
             "name": "more",
-            "type": "text_body",
+            "type": "title",
             "indexed": true,
             "stored": true,
             "multiValued": true
         },
         {
             "name": "wireless_carrier",
-            "type": "text_standard",
+            "type": "string",
             "indexed": true,
-            "stored": true,
+            "stored": false,
             "multiValued": true
         },
         {
             "name": "operating_system",
-            "type": "text_standard",
+            "type": "string",
             "indexed": true,
-            "stored": true
+            "stored": false
         },
         {
             "name": "color",
-            "type": "text_standard",
+            "type": "string",
             "indexed": true,
-            "stored": true
+            "stored": false
         },
         {
             "name": "screen_size",
             "type": "pfloat",
             "indexed": true,
-            "stored": true
+            "stored": false
         },
         {
             "name": "memory_storage_capacity",
             "type": "pfloat",
             "indexed": true,
-            "stored": true
+            "stored": false
         },
         {
             "name": "cellular_technology",
-            "type": "text_standard",
+            "type": "string",
             "indexed": true,
-            "stored": true,
+            "stored": false,
             "multiValued": true
         },
         {
             "name": "name",
-            "type": "text_standard",
-            "indexed": true,
+            "type": "string",
+            "indexed": false,
             "stored": true
         },
         {
@@ -212,7 +199,7 @@
         },
         {
             "name": "country",
-            "type": "text_standard",
+            "type": "string",
             "indexed": true,
             "stored": true
         }

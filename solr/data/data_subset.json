@@ -25244,7 +25244,7 @@
         "Unlocked"
     ],
     "operating_system": "Android",
-    "color": "BLACK",
+    "color": "Black",
     "screen_size": "6.5",
     "memory_storage_capacity": "4",
     "cellular_technology": [
@@ -25523,7 +25523,7 @@
         "Unlocked"
     ],
     "operating_system": "Android",
-    "color": "BLUE",
+    "color": "Blue",
     "screen_size": "6.4",
     "memory_storage_capacity": "128",
     "cellular_technology": [
@@ -25835,7 +25835,8 @@
     "memory_storage_capacity": "128",
     "cellular_technology": [
         "5G",
-        "4GLTE"
+        "4G",
+        "LTE"
     ],
     "content_type": "item",
     "id": "B09GW969LH",

@@ -17,13 +17,16 @@ def create_columns(list):
             elif index == "Screen Size":
                 value = value.split(" ")[0]
 
+            elif index == "Color":
+                value = value.title()
+
             elif index == "Memory Storage Capacity":
                 if "MB" in value:
                     continue
                 value = value.split(" ")[0]
 
             elif index == "Cellular Technology":
-                value = value.replace(" ", "").replace("/",",").upper().split(",")
+                value = value.replace("4G LTE", "4G,LTE").replace(" ", "").replace("/",",").upper().split(",")
 
             elif index == "Operating System":
                 if "android" in value.lower():
