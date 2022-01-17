@@ -17,6 +17,7 @@ sleep 5
 # Append LTR config to solrconfig
 echo -e "\n--- LTR plugin config"
 sed -i $'/<\/config>/{e cat /data/ltr_config.xml\n}' /var/solr/data/amazon/conf/solrconfig.xml
+sed -i $'/<\/config>/{e cat /data/ltr_config.xml\n}' /var/solr/data/amazon-subset/conf/solrconfig.xml
 
 
 # Copy synonyms file to Solr
@@ -66,6 +67,25 @@ echo -e "\n--- curl ltr reviews linear model"
 curl -XPUT -H 'Content-type:application/json' \
     --data-binary "@/data/ltr_linear_reviews.json" \
     'http://localhost:8983/solr/amazon/schema/model-store'
+
+
+# LTR Features
+echo -e "\n--- curl ltr features amazon-subset"
+curl -XPUT -H 'Content-type:application/json' \
+    --data-binary "@/data/ltr_features.json" \
+    'http://localhost:8983/solr/amazon-subset/schema/feature-store'
+
+
+# LTR Models
+echo -e "\n--- curl ltr items linear model amazon-subset"
+curl -XPUT -H 'Content-type:application/json' \
+    --data-binary "@/data/ltr_linear_items.json" \
+    'http://localhost:8983/solr/amazon-subset/schema/model-store'
+
+echo -e "\n--- curl ltr reviews linear model amazon-subset"
+curl -XPUT -H 'Content-type:application/json' \
+    --data-binary "@/data/ltr_linear_reviews.json" \
+    'http://localhost:8983/solr/amazon-subset/schema/model-store'
 
 
 # Restart in foreground mode so we can access the interface
