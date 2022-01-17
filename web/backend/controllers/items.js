@@ -64,43 +64,43 @@ function searchItem(req, res) {
     'brand': {
       'type': 'terms',
       'field': 'brand',
-      'limit': 10,
+      'limit': -1,
       'domain': {'excludeTags': 'brand'}
     },
     'wireless_carrier': {
       'type': 'terms',
       'field': 'wireless_carrier',
-      'limit': 100,
+      'limit': -1,
       'domain': {'excludeTags': 'wireless_carrier'}
     },
     'operating_system': {
       'type': 'terms',
       'field': 'operating_system',
-      'limit': 100,
+      'limit': -1,
       'domain': {'excludeTags': 'operating_system'}
     },
     'color': {
       'type': 'terms',
       'field': 'color',
-      'limit': 100,
+      'limit': -1,
       'domain': {'excludeTags': 'color'}
     },
     'screen_size': {
       'type': 'terms',
       'field': 'screen_size',
-      'limit': 100,
+      'limit': -1,
       'domain': {'excludeTags': 'screen_size'}
     },
     'memory_storage_capacity': {
       'type': 'terms',
       'field': 'memory_storage_capacity',
-      'limit': 100,
+      'limit': -1,
       'domain': {'excludeTags': 'memory_storage_capacity'}
     },
     'cellular_technology': {
       'type': 'terms',
       'field': 'cellular_technology',
-      'limit': 100,
+      'limit': -1,
       'domain': {'excludeTags': 'cellular_technology'}
     }
   }
@@ -118,7 +118,7 @@ function searchItem(req, res) {
   }
 
   if (sort && (sort !== "relevancy")) params["sort"] = sort;
-  else params["rq"] = "{!ltr model=ltr_linear_items reRankDocs=500}"
+  else params["rq"] = "{!ltr model=ltr_linear_items reRankDocs=200}"
 
   core.get('/select', {params: params})
     .then((response) => {

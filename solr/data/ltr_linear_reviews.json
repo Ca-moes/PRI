@@ -11,8 +11,8 @@
     "weights" : {
       "originalScore" : 0.4,
       "reviewVotes": 0.3,
-      "reviewRecency": 0.15,
-      "reviewBodyLength": 0.15
+      "reviewRecency": 0.1,
+      "reviewBodyLength": 0.2
     }
   }
 }

@@ -59,7 +59,7 @@ function searchReview(req, res) {
     'country': {
       'type': 'terms',
       'field': 'country',
-      'limit': 20,
+      'limit': -1,
       'domain': {'excludeTags': 'country'}
     },
     'verified': {
@@ -83,7 +83,7 @@ function searchReview(req, res) {
   }
 
   if (sort && (sort !== "relevancy")) params["sort"] = sort;
-  else params["rq"] = "{!ltr model=ltr_linear_reviews reRankDocs=500}"
+  else params["rq"] = "{!ltr model=ltr_linear_reviews reRankDocs=200}"
 
   core.get('/select', {params: params})
     .then((response) => {
