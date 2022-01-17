@@ -17,6 +17,9 @@ def create_columns(list):
             elif index == "Screen Size":
                 value = value.split(" ")[0]
 
+            elif index == "Color":
+                value = value.title()
+
             elif index == "Memory Storage Capacity":
                 if "MB" in value:
                     continue
